@@ -12,8 +12,11 @@ var mainCtx = mainCanvas.getContext("2d");
 // A létező billentyűket tartalmaző tömb
 var keys = [];
 
+// A szöveg beúszási sebessége
+var textSpeed = 2;
+
 // textloader-ből betöltött szöveg
-var currentText = "this is a test text";
+var currentText = "THIS IS A TEST TEXT";
 
 window.onload = function () {
     mainCanvas.width = cWidth;
@@ -21,26 +24,24 @@ window.onload = function () {
     
     mainCtx.font = "48pt segoe";
     
+    startGame();
+    
     setInterval(update, 1000/120);
     setInterval(draw, 1000/60);
-    
-    var Key = new key('A', 200, 200);
-    Key.visible = true;
-    Key.heigth = 100;
-    Key.width = 100;
-    //Key.speedX = 1;
-    //Key.speedY = 1;
-    keys.push(Key);
 }
 
 $(document).keydown(function(e) {
-    for(var i = 0; i < keys.length; i++) {
-        // Ha megnyomják a 'key' megfelelő karakteréhez tartozó billentyűt, töröljük
-        if(e.keyCode === keys[i].getKey()) {
-            keys.splice(i, 1);
-        }
+    if(keys.length > 0 && e.keyCode == keys[0].getKey()) {
+        keys.splice(0, 1);
     }
 });
+
+// A játék elindítása
+function startGame() {
+    for(var i = 0; i < currentText.length; i++) {
+        var Key = createKey(currentText[i], cWidth+i*100, cHeight/2 - 50);
+    }
+}
 
 function draw() {
     // Képernyő törlése
@@ -56,5 +57,24 @@ function update() {
     // Létező billentyűk logikájának futtatása
     for(var i = 0; i < keys.length; i++) {
         keys[i].update();
+    }
+}
+
+// Key factory
+function createKey(character, x, y) {
+    var Key = new key(character, x, y);
+    Key.visible = true;
+    Key.heigth = 100;
+    Key.width = 100;
+    Key.speedX = -textSpeed;
+    keys.push(Key);
+    return Key;
+}
+
+function deleteKey(key) {
+    for(var i = 0; i < keys.length; i++) {
+        if(keys[i] === key) {
+            keys.splice(i, 1);
+        }
     }
 }

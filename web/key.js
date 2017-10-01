@@ -35,7 +35,7 @@ var charMap = [
   "NONCONVERT", // [29]
   "ACCEPT", // [30]
   "MODECHANGE", // [31]
-  "SPACE", // [32]
+  " ", // [32]
   "PAGE_UP", // [33]
   "PAGE_DOWN", // [34]
   "END", // [35]
@@ -288,6 +288,10 @@ class key {
     update() {
         this.x = this.x + this.speedX;
         this.y = this.y + this.speedY;
+        
+        if(this.x + this.width < 0) {
+            destroyKey(this);
+        }
     }
     
     getKey() {
