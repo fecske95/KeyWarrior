@@ -22,13 +22,13 @@ window.onload = function () {
 }
 
 function draw() {
-    /*for(var i = 0; i < keys.length; i++) {
+    for(var i = 0; i < keys.length; i++) {
         keys[i].draw();
-    }*/
+    }
 }
 
 function update() {
-    /*for(var i = 0; i < keys.length; i++) {
+    for(var i = 0; i < keys.length; i++) {
         keys[i].update();
-    }*/
+    }
 }
