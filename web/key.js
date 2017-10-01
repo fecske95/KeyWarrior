@@ -18,7 +18,7 @@ class key {
     draw() {
        // mainCtx.clearRect(this.x,this.y,this.width,this.heigth);
         mainCtx.drawImage(keyGfx,0,0,keyGfx.width,keyGfx.height, this.x, this.y,this.width,this.heigth);
-        mainCtx.fillText(this.character, this.x+this.width/2, this.y+this.heigth/2);
+        mainCtx.fillText(this.character, this.x+this.width/2 - 24, this.y+this.heigth/2 + 24);
     }
 
     update() 

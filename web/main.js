@@ -14,6 +14,8 @@ window.onload = function () {
     mainCanvas.width = cWidth;
     mainCanvas.height = cHeight;
     
+    mainCtx.font = "48pt segoe";
+    
     setInterval(update, 1000/120);
     setInterval(draw, 1000/60);
     
