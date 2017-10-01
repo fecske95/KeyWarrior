@@ -290,7 +290,7 @@ class key {
         this.y = this.y + this.speedY;
         
         if(this.x + this.width < 0) {
-            destroyKey(this);
+            deleteKey(this);
         }
     }
     
