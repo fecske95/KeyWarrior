@@ -14,14 +14,19 @@ window.onload = function () {
     mainCanvas.width = cWidth;
     mainCanvas.height = cHeight;
     
-    setInterval(update, 1000/60);
+    setInterval(update, 1000/120);
     setInterval(draw, 1000/60);
     
     var Key = new key('A', 200, 200);
+    Key.heigth = 100;
+    Key.width = 100;
+    //Key.speedX = 1;
+    //Key.speedY = 1;
     keys.push(Key);
 }
 
 function draw() {
+    mainCtx.clearRect(0,0,mainCanvas.width,mainCanvas.height);
     for(var i = 0; i < keys.length; i++) {
         keys[i].draw();
     }

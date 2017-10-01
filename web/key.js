@@ -1,5 +1,5 @@
 var keyGfx = new Image();
-keyGfx.src = "images/key.jpg";
+keyGfx.src = "images/key.png";
 
 class key {
     
@@ -16,15 +16,15 @@ class key {
     }
 
     draw() {
-        mainCtx.drawImage(keyGfx, this.x, this.y);
-        mainCtx.fillText(this.character, this.x+this.width/2, this.y+this.heigth);    
+       // mainCtx.clearRect(this.x,this.y,this.width,this.heigth);
+        mainCtx.drawImage(keyGfx,0,0,keyGfx.width,keyGfx.height, this.x, this.y,this.width,this.heigth);
+        mainCtx.fillText(this.character, this.x+this.width/2, this.y+this.heigth/2);
     }
 
     update() 
     {
         this.x = this.x + this.speedX;
         this.y = this.y + this.speedY;
-    
     }
 }
 
