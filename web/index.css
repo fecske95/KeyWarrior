@@ -1,0 +1,8 @@
+@keyframes key-line-1 {
+    from {
+        left: calc(100%);
+    }
+    to {
+        left: calc(0%);
+    }
+}

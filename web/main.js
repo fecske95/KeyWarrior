@@ -15,8 +15,6 @@ var keys = [];
 // A szöveg beúszási sebessége
 var textSpeed = 2;
 
-
-
 // textloader-ből betöltött szöveg
 var currentText = "THIS IS A TEST TEXT";
 
@@ -66,6 +64,8 @@ function update() {
 
 // Key factory
 function createKey(character, x, y) {
+    var tagName = "Key_" + keys.length;
+    var element = document.createElement(tagName);
     var Key = new key(character, x, y);
     Key.visible = true;
     Key.heigth = 100;

@@ -264,9 +264,9 @@ var charMap = [
 
 class key {
     
-    constructor(char, x, y) {
+    constructor(element, char, x, y) {
         this.character = char;
-        this.image = new Image();
+        this.element = element;
 
         this.x = x;
         this.y = y;
