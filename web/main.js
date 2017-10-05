@@ -15,14 +15,18 @@ var keys = [];
 // A szöveg beúszási sebessége
 var textSpeed = 2;
 
+
+
 // textloader-ből betöltött szöveg
 var currentText = "THIS IS A TEST TEXT";
+
+
 
 window.onload = function () {
     mainCanvas.width = cWidth;
     mainCanvas.height = cHeight;
     
-    mainCtx.font = "48pt segoe";
+    mainCtx.font = "48pt segoe";   
     
     startGame();
     
