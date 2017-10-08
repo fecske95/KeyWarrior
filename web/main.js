@@ -24,7 +24,9 @@ window.onload = function () {
     mainCanvas.width = cWidth;
     mainCanvas.height = cHeight;
     
-    mainCtx.font = "48pt segoe";   
+    mainCtx.font = "48pt segoe";  
+    
+    
     
     startGame();
     
