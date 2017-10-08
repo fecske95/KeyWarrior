@@ -1,8 +1,45 @@
+#gameboard {
+    display: block;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 50%;
+    width: 1049px;
+    transform: translateX(-50%);
+    overflow: hidden;
+    /*background-image: url(keyboard.png);
+    background-position: center bottom;
+    background-repeat: no-repeat;*/
+}
+
+.key {
+    background-image: url(images/key.png);
+    background-size: 100px;
+    position: absolute;
+    left: 50%;
+    top: 0px;
+    width: 100px;
+    height: 100px;
+}
+
+.key * {
+    display: block;
+    color: black;
+    position: absolute;
+    font-size: 24px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#key-r {
+    left: 319px;
+    background-color: gray;
+    animation: key-line-1 4s infinite;
+}
+
 @keyframes key-line-1 {
-    from {
-        left: calc(100%);
-    }
     to {
-        left: calc(0%);
+        top: calc(100% + 100px);
     }
 }

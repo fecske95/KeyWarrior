@@ -1,4 +1,6 @@
-class textloader {  
+window.KeyWarrior = window.KeyWarrior || {};
+
+class TextLoader {    
     constructor() {}
     
 /*
@@ -28,7 +30,6 @@ class textloader {
         rawfile.open("GET","Texts/Tesztszoveg.txt",false);
         rawfile.onreadystatechange = function() 
         {
-
             if (rawfile.readyState === 4)
                 {
                     if (rawfile.status === 200 || rawfile.status == 0)
@@ -41,3 +42,5 @@ class textloader {
         return allText;
     }
 }
+
+window.KeyWarrior.TextLoader = TextLoader;
