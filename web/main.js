@@ -7,18 +7,32 @@ var keysOnScreen = [];
 // textloader-ből betöltött szöveg
 var currentText = "THIS IS A TEST TEXT";
 
+//Helyes/helytelen találatok
+var correctHits = 0;
+var wrongHits = 0;
+
 window.onload = function () {
     startGame();
 };
 
 $(document).keydown(function (e) {
-    if (keysOnScreen.length > 0 && e.keyCode === keysOnScreen[0].getKey()) {
-        removeKey(keysOnScreen[0]);
+    if (keysOnScreen.length > 0) {
+        if (e.keyCode === keysOnScreen[0].getKey()) {
+            removeKey(keysOnScreen[0]);
+            correctHits++;
+        }
+        else {
+            wrongHits++;
+        }
+        updateStats();
     }
 });
 
 // A játék elindítása
 function startGame() {
+    correctHits = 0;
+    wrongHits = 0;
+
     for (var i = 0; i < currentText.length; i++) {
         var key = generateKey(currentText[i]);
 
@@ -40,7 +54,12 @@ function scheduleForRemove(key, time) {
         if (document.getElementById("gameboard").contains(key.element)) {
             removeKey(key);
         }
-    }, time); 
+    }, time);
+}
+
+function updateStats() {
+    var span = document.getElementById("hits");
+    span.innerText = "Helyes/helytelen találatok: " + correctHits + " / " + wrongHits;
 }
 
 // Key factory
