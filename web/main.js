@@ -1,26 +1,18 @@
-// Skálázáshoz
-var cWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-
-var cHeight = window.innerHeight ||
-    document.documentElement.clientHeight ||
-    document.body.clientHeight;
-
-// Billentyű canvas
-var mainCanvas = document.getElementById("MainCanvas");
-var mainCtx = mainCanvas.getContext("2d");
+// Namespace definíció, minden js fájl tetejére kell
+window.KeyWarrior = window.KeyWarrior || {};
 
 // A létező billentyűket tartalmaző tömb
-var keys = [];
-
-// A szöveg beúszási sebessége
-var textSpeed = 2;
+var keysOnScreen = [];
 
 // textloader-ből betöltött szöveg
 var currentText = "THIS IS A TEST TEXT";
 
-
+//Helyes/helytelen találatok
+var correctHits = 0;
+var wrongHits = 0;
 
 window.onload = function () {
+<<<<<<< HEAD
     mainCanvas.width = cWidth;
     mainCanvas.height = cHeight;
     
@@ -28,59 +20,67 @@ window.onload = function () {
     
     
     
+=======
+>>>>>>> 56819571f3283c759e3519dbd420e8034aca2896
     startGame();
-    
-    setInterval(update, 1000/120);
-    setInterval(draw, 1000/60);
-}
+};
 
-$(document).keydown(function(e) {
-    if(keys.length > 0 && e.keyCode == keys[0].getKey()) {
-        keys.splice(0, 1);
+$(document).keydown(function (e) {
+    if (keysOnScreen.length > 0) {
+        if (e.keyCode === keysOnScreen[0].getKey()) {
+            removeKey(keysOnScreen[0]);
+            correctHits++;
+        }
+        else {
+            wrongHits++;
+        }
+        updateStats();
     }
 });
 
 // A játék elindítása
 function startGame() {
-    for(var i = 0; i < currentText.length; i++) {
-        var Key = createKey(currentText[i], cWidth+i*100, cHeight/2 - 50);
+    correctHits = 0;
+    wrongHits = 0;
+
+    for (var i = 0; i < currentText.length; i++) {
+        var key = generateKey(currentText[i]);
+
+        // Pozícionálás
+        key.element.style.top = -i * 100 + 'px';
+
+        // CSS Animáció beállítása
+        var animationTime = 4 + (i + 1);
+        key.element.style["animation-duration"] = animationTime + 's';
+        key.element.style["animation-iteration-count"] = 1;
+
+        scheduleForRemove(key, animationTime * 1000);
     }
 }
 
-function draw() {
-    // Képernyő törlése
-    mainCtx.clearRect(0,0,mainCanvas.width,mainCanvas.height);
-    
-    // Létező billentyűk kirajzolása
-    for(var i = 0; i < keys.length; i++) {
-        keys[i].draw();
-    }
+// Timer-t indít a billentyű eltűntetésére
+function scheduleForRemove(key, time) {
+    setTimeout(function () {
+        if (document.getElementById("gameboard").contains(key.element)) {
+            removeKey(key);
+        }
+    }, time);
 }
 
-function update() {
-    // Létező billentyűk logikájának futtatása
-    for(var i = 0; i < keys.length; i++) {
-        keys[i].update();
-    }
+function updateStats() {
+    var span = document.getElementById("hits");
+    span.innerText = "Helyes/helytelen találatok: " + correctHits + " / " + wrongHits;
 }
 
 // Key factory
-function createKey(character, x, y) {
-    var tagName = "Key_" + keys.length;
-    var element = document.createElement(tagName);
-    var Key = new key(character, x, y);
-    Key.visible = true;
-    Key.heigth = 100;
-    Key.width = 100;
-    Key.speedX = -textSpeed;
-    keys.push(Key);
-    return Key;
+function removeKey(key) {
+    document.getElementById("gameboard").removeChild(key.element);
+    keysOnScreen.splice(keysOnScreen.findIndex(x => x === key), 1);
 }
 
-function deleteKey(key) {
-    for(var i = 0; i < keys.length; i++) {
-        if(keys[i] === key) {
-            keys.splice(i, 1);
-        }
-    }
+function generateKey(letter) {
+    var key = new window.KeyWarrior.Key(letter);
+    document.getElementById("gameboard").appendChild(key.element);
+    keysOnScreen.push(key);
+    return key;
 }
