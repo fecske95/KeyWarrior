@@ -12,16 +12,6 @@ var correctHits = 0;
 var wrongHits = 0;
 
 window.onload = function () {
-<<<<<<< HEAD
-    mainCanvas.width = cWidth;
-    mainCanvas.height = cHeight;
-    
-    mainCtx.font = "48pt segoe";  
-    
-    
-    
-=======
->>>>>>> 56819571f3283c759e3519dbd420e8034aca2896
     startGame();
 };
 
@@ -40,29 +30,34 @@ $(document).keydown(function (e) {
 
 // A játék elindítása
 function startGame() {
+    var textLoader = new window.KeyWarrior.TextLoader();
+    textLoader.getRandomText(function(text) {
+        currentText = text;
+
+        for (var i = 0; i < Math.sqrt(currentText.length); i++) {
+            var key = generateKey(currentText[i]);
+
+            // Pozícionálás
+            key.element.style.top = -i * 100 + 'px';
+
+            // CSS Animáció beállítása
+            var animationTime = 4 + (i + 1);
+            key.element.style["animation-duration"] = animationTime + 's';
+            key.element.style["animation-iteration-count"] = 1;
+
+            scheduleForRemove(key, animationTime * 1000);
+        }
+    });
+    
     correctHits = 0;
     wrongHits = 0;
-
-    for (var i = 0; i < currentText.length; i++) {
-        var key = generateKey(currentText[i]);
-
-        // Pozícionálás
-        key.element.style.top = -i * 100 + 'px';
-
-        // CSS Animáció beállítása
-        var animationTime = 4 + (i + 1);
-        key.element.style["animation-duration"] = animationTime + 's';
-        key.element.style["animation-iteration-count"] = 1;
-
-        scheduleForRemove(key, animationTime * 1000);
-    }
 }
 
 // Timer-t indít a billentyű eltűntetésére
 function scheduleForRemove(key, time) {
     setTimeout(function () {
-        if (document.getElementById("gameboard").contains(key.element)) {
-            removeKey(key);
+        if(document.getElementById("gameboard").contains(key.element)) {
+                removeKey(key);
         }
     }, time);
 }
