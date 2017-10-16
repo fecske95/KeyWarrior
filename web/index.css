@@ -1,4 +1,4 @@
-#gameboard {
+﻿#gameboard {
     display: block;
     position: absolute;
     top: 0px;
@@ -32,14 +32,203 @@
     transform: translate(-50%, -50%);
 }
 
+/* line 0 */
+
+
+
+/* line 1 */
+
+#key-q {
+    left: 19px;
+    background-color: gray;
+    animation: key-line-1 4s 1;
+}
+
+#key-w {
+    left: 119px;
+    background-color: gray;
+    animation: key-line-1 4s 1;
+}
+
+#key-e {
+    left: 219px;
+    background-color: gray;
+    animation: key-line-1 4s 1;
+}
+
 #key-r {
     left: 319px;
     background-color: gray;
-    animation: key-line-1 4s infinite;
+    animation: key-line-1 4s 1;
 }
 
+#key-t {
+    left: 419px;
+    background-color: gray;
+    animation: key-line-1 4s 1;
+}
+
+#key-z {
+    left: 519px;
+    background-color: gray;
+    animation: key-line-1 4s 1;
+}
+
+#key-u {
+    left: 619px;
+    background-color: gray;
+    animation: key-line-1 4s 1;
+}
+
+#key-i {
+    left: 719px;
+    background-color: gray;
+    animation: key-line-1 4s 1;
+}
+
+#key-o {
+    left: 819px;
+    background-color: gray;
+    animation: key-line-1 4s 1;
+}
+
+#key-p {
+    left: 919px;
+    background-color: gray;
+    animation: key-line-1 4s 1;
+}
+
+/* line 2 */
+
+#key-a {
+    left: 39px;
+    background-color: gray;
+    animation: key-line-2 4s 1;
+}
+
+#key-s {
+    left: 139px;
+    background-color: gray;
+    animation: key-line-2 4s 1;
+}
+
+#key-d {
+    left: 239px;
+    background-color: gray;
+    animation: key-line-2 4s 1;
+}
+
+#key-f {
+    left: 339px;
+    background-color: gray;
+    animation: key-line-2 4s 1;
+}
+
+#key-g {
+    left: 439px;
+    background-color: gray;
+    animation: key-line-2 4s 1;
+}
+
+#key-h {
+    left: 539px;
+    background-color: gray;
+    animation: key-line-2 4s 1;
+}
+
+#key-j {
+    left: 639px;
+    background-color: gray;
+    animation: key-line-2 4s 1;
+}
+
+#key-k {
+    left: 739px;
+    background-color: gray;
+    animation: key-line-2 4s 1;
+}
+
+#key-l {
+    left: 839px;
+    background-color: gray;
+    animation: key-line-2 4s 1;
+}
+
+/* line 3 */
+
+#key-y {
+    left: 94px;
+    background-color: gray;
+    animation: key-line-3 4s 1;
+}
+
+#key-x {
+    left: 194px;
+    background-color: gray;
+    animation: key-line-3 4s 1;
+}
+
+#key-c {
+    left: 294px;
+    background-color: gray;
+    animation: key-line-3 4s 1;
+}
+
+#key-v {
+    left: 394px;
+    background-color: gray;
+    animation: key-line-3 4s 1;
+}
+
+#key-b {
+    left: 494px;
+    background-color: gray;
+    animation: key-line-3 4s 1;
+}
+
+#key-n {
+    left: 594px;
+    background-color: gray;
+    animation: key-line-3 4s 1;
+}
+
+#key-m {
+    left: 694px;
+    background-color: gray;
+    animation: key-line-3 4s 1;
+}
+
+/*
 @keyframes key-line-1 {
     to {
         top: calc(100% + 100px);
     }
 }
+*/
+
+@keyframes key-line-0 {
+      to {
+        top: calc(100% - 379px);
+      }
+    }
+
+@keyframes key-line-1 {
+      to {
+        top: calc(100% - 279px);
+      }
+    }
+
+@keyframes key-line-2 {
+      to {
+        top: calc(100% - 179px);
+      }
+    }
+
+@keyframes key-line-3 {
+      to {
+        top: calc(100% - 79px);
+      }
+    }
+
+
+

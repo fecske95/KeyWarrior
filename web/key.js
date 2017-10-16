@@ -8,7 +8,9 @@ class Key {
         this.element.setAttribute("id", "key-" + char);
         this.element.className = "key";
         this.element.innerHTML = "<span>" + char + "</span>";
+        /*
         this.element.setAttribute("style", "animation: key-line-1 4s 1;");
+        */
     }
 
     getKey() {

@@ -71,11 +71,13 @@ function updateStats() {
 function removeKey(key) {
     document.getElementById("gameboard").removeChild(key.element);
     keysOnScreen.splice(keysOnScreen.findIndex(x => x === key), 1);
+    
 }
 
 function generateKey(letter) {
     var key = new window.KeyWarrior.Key(letter);
     document.getElementById("gameboard").appendChild(key.element);
+    key.element.setAttribute("style",key.animation);
     keysOnScreen.push(key);
     return key;
 }
