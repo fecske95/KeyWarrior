@@ -1,4 +1,5 @@
 ﻿#gameboard-background {
+    overflow: hidden;
     background: linear-gradient(white, black);
     border-style: solid;
     border-color: black;
@@ -14,9 +15,13 @@
 
 #gameboard {
     overflow: hidden;
-    /*background-image: url(keyboard.png);
-    background-position: center bottom;
-    background-repeat: no-repeat;*/
+    position: absolute;
+    display: block;
+    top: 0px;
+    bottom: 100px;
+    width: 100%;
+    transform-style: preserve-3d;
+    transform: perspective(600px) rotateX(20deg);
 }
 
 .key {
