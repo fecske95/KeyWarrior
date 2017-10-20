@@ -1,0 +1,187 @@
+/* line 0 */
+
+#keyboardkey-1 {
+    left: 330px;
+    top: calc(100% - 350px);
+}
+
+#keyboardkey-2 {
+    left: 400px;
+    top: calc(100% - 350px);
+}
+
+#keyboardkey-3 {
+    left: 470px;
+    top: calc(100% - 350px);
+}
+
+#keyboardkey-4 {
+    left: 540px;
+    top: calc(100% - 350px);
+}
+
+#keyboardkey-5 {
+    left: 610px;
+    top: calc(100% - 350px);
+}
+
+#keyboardkey-6 {
+    left: 680px;
+    top: calc(100% - 350px);
+}
+
+#keyboardkey-7 {
+    left: 750px;
+    top: calc(100% - 350px);
+}
+
+#keyboardkey-8 {
+    left: 820px;
+    top: calc(100% - 350px);
+}
+
+#keyboardkey-9 {
+    left: 890px;
+    top: calc(100% - 350px);
+}
+
+#keyboardkey-0 {
+    left: 960px;
+    top: calc(100% - 350px);
+}
+
+/* line 1 */
+
+#keyboardkey-q {
+    left: 350px; 
+    top: calc(100% - 280px);
+}
+
+#keyboardkey-w {
+    left: 420px; 
+    top: calc(100% - 280px); 
+}
+
+#keyboardkey-e {
+    left: 490px; 
+    top: calc(100% - 280px);
+}
+
+#keyboardkey-r {
+    left: 560px;
+    top: calc(100% - 280px);
+}
+
+#keyboardkey-t {
+    left: 630px;
+    top: calc(100% - 280px);
+}
+
+#keyboardkey-y {
+    left: 700px; 
+    top: calc(100% - 280px);
+}
+
+#keyboardkey-u {
+    left: 770px;
+    top: calc(100% - 280px);
+}
+
+#keyboardkey-i {
+    left: 840px;
+    top: calc(100% - 280px);
+}
+
+#keyboardkey-o {
+    left: 910px;
+    top: calc(100% - 280px);
+}
+
+#keyboardkey-p {
+    left: 980px;
+    top: calc(100% - 280px);
+}
+
+/* line 2 */
+
+#keyboardkey-a {
+    left: 370px;
+    top: calc(100% - 210px);
+}
+
+#keyboardkey-s {
+    left: 440px;
+    top: calc(100% - 210px);
+}
+
+#keyboardkey-d {
+    left: 510px;
+    top: calc(100% - 210px);
+}
+
+#keyboardkey-f {
+    left: 580px;
+    top: calc(100% - 210px);
+}
+
+#keyboardkey-g {
+    left: 650px;
+    top: calc(100% - 210px);
+}
+
+#keyboardkey-h {
+    left: 720px;
+    top: calc(100% - 210px);
+}
+
+#keyboardkey-j {
+    left: 790px;
+    top: calc(100% - 210px);
+}
+
+#keyboardkey-k {
+    left: 860px;
+    top: calc(100% - 210px);
+}
+
+#keyboardkey-l {
+    left: 930px;
+    top: calc(100% - 210px);
+}
+
+/* line 3 */
+
+#keyboardkey-z {
+    left: 390px;
+    top: calc(100% - 140px);
+}
+
+#keyboardkey-x {
+    left: 460px;
+    top: calc(100% - 140px);
+}
+
+#keyboardkey-c {
+    left: 530px;
+    top: calc(100% - 140px);
+}
+
+#keyboardkey-v {
+    left: 600px;
+    top: calc(100% - 140px);
+}
+
+#keyboardkey-b {
+    left: 670px;
+    top: calc(100% - 140px);
+}
+
+#keyboardkey-n {
+    left: 740px;
+    top: calc(100% - 140px);
+}
+
+#keyboardkey-m {
+    left: 810px;
+    top: calc(100% - 140px);
+}

@@ -1,0 +1,32 @@
+@keyframes key-line-0 {
+    to {
+        top: calc(100% - 350px);
+    }
+}
+
+@keyframes key-line-1 {
+    to {
+        top: calc(100% - 280px);
+    }
+}
+
+@keyframes key-line-2 {
+    to {
+        top: calc(100% - 210px);
+    }
+}
+
+@keyframes key-line-3 {
+    to {
+        top: calc(100% - 140px);
+    }
+}
+
+@keyframes currentkey-outline {
+    from {
+        color: gray;
+    }
+    to {
+        color: white;
+    }
+}

@@ -5,12 +5,10 @@ class Key {
         this.letter = char;
 
         this.element = document.createElement("div");
-        this.element.setAttribute("id", "key-" + char);
+        this.element.setAttribute("id", "key-" + char.toLowerCase());
         this.element.className = "key";
         this.element.innerHTML = "<span>" + char + "</span>";
-        /*
-        this.element.setAttribute("style", "animation: key-line-1 4s 1;");
-        */
+        this.element.style["animation-timing-function"] = "linear";
     }
 
     getKey() {

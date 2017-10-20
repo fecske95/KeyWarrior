@@ -1,13 +1,13 @@
 window.KeyWarrior = window.KeyWarrior || {};
 
 class TextLoader {    
-    constructor() {}
-
-getRandomText(cb) {
-  var wikiApi = "https://en.wikipedia.org/w/api.php?action=query&titles=Google&prop=revisions&rvprop=content&format=json&callback=?";
-  $.getJSON( wikiApi, {
-    format: "json"
-  })
+  constructor() {}
+  
+  getRandomText(cb) {
+    var wikiApi = "https://en.wikipedia.org/w/api.php?action=query&titles=Google&prop=revisions&rvprop=content&format=json&callback=?";
+    $.getJSON( wikiApi, {
+      format: "json"
+    })
     .done(function(data) {
       if (!data || !data.query || !data.query.pages || !Object.keys(data.query.pages)[0]) {
         alert("Can't get wiki content");
@@ -15,10 +15,11 @@ getRandomText(cb) {
         var page = data.query.pages[Object.keys(data.query.pages)[0]];
         
         var content = page.revisions[0]['*'];
+
         cb(content);
       }
     });
-    }
+  }
 }
 
 window.KeyWarrior.TextLoader = TextLoader;
