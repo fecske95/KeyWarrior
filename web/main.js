@@ -74,6 +74,10 @@ function startGame() {
 
             // CSS Animáció beállítása
             key.container.style["animation-duration"] = keyAnimationTime + 's';
+            
+            if(keysOnScreen.findIndex(x => x === key) == 0) {
+                key.element.style["animation"] = "currentkey-mark 1s infinite";
+            }
 
             scheduleForRemove(key, keyAnimationTime * 1000);
             letterCounter++;
@@ -105,7 +109,6 @@ function updateStats() {
 
 function removeKey(key, reason) {
     keysOnScreen.splice(keysOnScreen.findIndex(x => x === key), 1);
-    //keysOnScreen[0].element.style["animation"] = "currentkey-outline 1s infinite";
 
     if (reason === 1) {
         key.element.style["animation"] = "correct-key 1s 1";
@@ -120,6 +123,8 @@ function removeKey(key, reason) {
         keyToRemove.container.removeChild(keyToRemove.element);
         document.getElementById("gameboard").removeChild(keyToRemove.container);
     }, 1000);
+
+    keysOnScreen[0].element.style["animation"] = "currentkey-mark 1s infinite";
 
 }
 

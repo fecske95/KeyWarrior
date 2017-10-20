@@ -22,14 +22,9 @@
     }
 }
 
-@keyframes currentkey-outline {
-    from {
-        border-color: yellow;
-        border-style: solid;
-        border-width: 5px;
-    }
+@keyframes currentkey-mark {
     to {
-        border-color: white;
+        box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
     }
 }
 @keyframes correct-key {
