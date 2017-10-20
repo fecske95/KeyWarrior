@@ -18,10 +18,10 @@
     position: absolute;
     display: block;
     top: 0px;
-    bottom: 100px;
+    bottom: 0px;
     width: 100%;
     transform-style: preserve-3d;
-    transform: perspective(600px) rotateX(20deg);
+    transform: perspective(1200px) rotateX(45deg);
 }
 
 .key {
