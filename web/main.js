@@ -41,7 +41,9 @@ $(document).keydown(function (e) {
             removeKey(keysOnScreen[0], 1);
             correctHits++;
         } else {
-            wrongHits++;
+            if(e.keyCode !== 16) {
+                wrongHits++;
+            }
         }
         updateStats();
     }
