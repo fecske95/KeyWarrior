@@ -24,9 +24,23 @@
 
 @keyframes currentkey-outline {
     from {
-        color: gray;
+        border-color: yellow;
+        border-style: solid;
+        border-width: 5px;
     }
     to {
-        color: white;
+        border-color: white;
+    }
+}
+@keyframes correct-key {
+    to {
+        transform: scale(1.5, 1.5);
+        opacity: 0.0;
+    }
+}
+@keyframes missed-key {
+    to {
+        transform: scale(1.5, 1.5); 
+        opacity: 0.0;
     }
 }
