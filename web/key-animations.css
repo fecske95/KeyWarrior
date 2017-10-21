@@ -27,15 +27,17 @@
         box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
     }
 }
+
 @keyframes correct-key {
     to {
         transform: scale(1.5, 1.5);
         opacity: 0.0;
     }
 }
+
 @keyframes missed-key {
     to {
-        transform: scale(1.5, 1.5); 
+        transform: scale(1.5, 1.5);
         opacity: 0.0;
     }
 }

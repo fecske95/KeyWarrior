@@ -19,7 +19,7 @@ var letterCounter = 0;
 var generatorTimer;
 
 // Gyakorlatilag a billentyűk sebessége (másodpercben vett idő, amíg elér a helyére)
-var keyAnimationTime = 6;
+var keyAnimationTime = 3;
 
 window.onload = function () {
     startGame();
@@ -41,7 +41,7 @@ $(document).keydown(function (e) {
             removeKey(keysOnScreen[0], 1);
             correctHits++;
         } else {
-            if(e.keyCode !== 16) {
+            if (e.keyCode !== 16) {
                 wrongHits++;
             }
         }
@@ -62,20 +62,22 @@ function startGame() {
     textLoader.getRandomText(function (text) {
 
         // Ideiglenes megoldás a szűrésre
-        for (var i = 0; i < text.length; i++) {
+        /*for (var i = 0; i < text.length; i++) {
             var code = text.charCodeAt(i);
             if (code > 48 && code < 90 && !(code > 57 && code < 65)) {
                 currentText += text[i];
             }
-        }
+        }*/
+
+        currentText = text;
 
         generatorTimer = setInterval(() => {
             var key = generateKey(currentText[letterCounter]);
 
             // CSS Animáció beállítása
             key.container.style["animation-duration"] = keyAnimationTime + 's';
-            
-            if(keysOnScreen.findIndex(x => x === key) == 0) {
+
+            if (keysOnScreen.findIndex(x => x === key) == 0) {
                 key.element.style["animation"] = "currentkey-mark 1s infinite";
             }
 
@@ -86,7 +88,7 @@ function startGame() {
                 clearInterval(generatorTimer);
                 letterCounter = 0;
             }
-        }, 2000);
+        }, 1000);
     });
 
     correctHits = 0;
