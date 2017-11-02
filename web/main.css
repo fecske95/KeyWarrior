@@ -33,12 +33,29 @@
     animation-timing-function: linear;
 }
 
+.space-container {
+    position: absolute;
+    left: 50%;
+    top: 0px;
+    width: 310px;
+    height: 70px;
+    animation-timing-function: linear;    
+}
+
 .key {
     background-image: url(images/key.png);
-    background-size: 70px;
     position: absolute;
     top: 0px;
     width: 70px;
+    height: 70px;
+    animation-timing-function: linear;
+}
+
+.keyclass-space {
+    background-image: url(images/space.png);
+    position: absolute;
+    top: 0px;
+    width: 310px;
     height: 70px;
     animation-timing-function: linear;
 }

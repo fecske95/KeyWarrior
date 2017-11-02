@@ -9,9 +9,18 @@ class Key {
         this.element.innerHTML = "<span>" + char + "</span>";
 
         this.container = document.createElement("div");
-        this.container.className = "key-container";
-        this.container.setAttribute("id", "key-" + char.toLowerCase());
-        this.container.appendChild(this.element);      
+
+        if(char === ' ') {
+            this.element.className = "keyclass-space";
+            this.container.className = "space-container";
+            this.container.setAttribute("id", "key-space");
+        }
+        else {
+            this.container.className = "key-container";
+            this.container.setAttribute("id", "key-" + char.toLowerCase());
+        }
+
+        this.container.appendChild(this.element);
     }
 
     getKey() {

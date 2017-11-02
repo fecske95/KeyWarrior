@@ -1,3 +1,9 @@
+@keyframes key-space {
+    to {
+        top: calc(100% - 70px);
+    }
+}
+
 @keyframes key-line-0 {
     to {
         top: calc(100% - 350px);

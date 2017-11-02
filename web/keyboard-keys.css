@@ -1,3 +1,11 @@
+#keyboardkey-space {
+    background-image: url(images/space.png);
+    background-size: 310px 70px;
+    width: 310px;
+    left: 540px;
+    top: calc(100% - 70px);
+}
+
 /* line 0 */
 
 #keyboardkey-1 {

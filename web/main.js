@@ -19,7 +19,7 @@ var letterCounter = 0;
 var generatorTimer;
 
 // Gyakorlatilag a billentyűk sebessége (másodpercben vett idő, amíg elér a helyére)
-var keyAnimationTime = 3;
+var keyAnimationTime = 6;
 
 window.onload = function () {
     startGame();
@@ -61,18 +61,11 @@ function startGame() {
     createKeyboard();
     textLoader.getRandomText(function (text) {
 
-        // Ideiglenes megoldás a szűrésre
-        /*for (var i = 0; i < text.length; i++) {
-            var code = text.charCodeAt(i);
-            if (code > 48 && code < 90 && !(code > 57 && code < 65)) {
-                currentText += text[i];
-            }
-        }*/
-
         currentText = text;
 
         generatorTimer = setInterval(() => {
-            var key = generateKey(currentText[letterCounter]);
+            var char = currentText[letterCounter];
+            var key = generateKey(char);
 
             // CSS Animáció beállítása
             key.container.style["animation-duration"] = keyAnimationTime + 's';
@@ -88,7 +81,7 @@ function startGame() {
                 clearInterval(generatorTimer);
                 letterCounter = 0;
             }
-        }, 1000);
+        }, 400);
     });
 
     correctHits = 0;
@@ -114,10 +107,19 @@ function removeKey(key, reason) {
 
     if (reason === 1) {
         key.element.style["animation"] = "correct-key 1s 1";
-        key.element.style["background-image"] = "url(images/key_green.png)";
+        if (key.letter === ' ') {
+            key.element.style["background-image"] = "url(images/space_green.png)";
+        } else {
+            key.element.style["background-image"] = "url(images/key_green.png)";
+        }
+
     } else {
         key.element.style["animation"] = "missed-key 1s 1";
-        key.element.style["background-image"] = "url(images/key_red.png)";
+        if (key.letter === ' ') {
+            key.element.style["background-image"] = "url(images/space_red.png)";
+        } else {
+            key.element.style["background-image"] = "url(images/key_red.png)";
+        }
     }
 
     var keyToRemove = key;
@@ -127,7 +129,6 @@ function removeKey(key, reason) {
     }, 1000);
 
     keysOnScreen[0].element.style["animation"] = "currentkey-mark 1s infinite";
-
 }
 
 // Key factory
@@ -148,13 +149,22 @@ function createKeyboard() {
 
         gameboard.appendChild(createKeyboardKey(String.fromCharCode(i)));
     }
+    gameboard.appendChild(createKeyboardKey(' '));
 }
 
 function createKeyboardKey(letter) {
     var element = document.createElement("div");
-    element.setAttribute("id", "keyboardkey-" + letter);
+
+    if(letter === ' ') {
+        element.setAttribute("id", "keyboardkey-space");
+    }
+    else {
+        element.setAttribute("id", "keyboardkey-" + letter);
+    }
+
     element.className = "keyboardkey";
     element.innerHTML = "<span>" + letter + "</span>";
     element.style["animation-timing-function"] = "linear";
+
     return element;
 }

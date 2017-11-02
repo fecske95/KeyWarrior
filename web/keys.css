@@ -1,3 +1,9 @@
+#key-space {
+    width: 310px;
+    left: 540px;
+    animation: key-space 4s forwards;
+}
+
 /* line 0 */
 
 #key-1 {
