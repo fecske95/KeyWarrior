@@ -15,6 +15,7 @@ var correctHits = 0;
 var wrongHits = 0;
 
 var letterCounter = 0;
+var currentLetterCounter = 0;
 
 var generatorTimer;
 
@@ -76,9 +77,6 @@ $(document).keydown(function (e) {
             if(paused) {
                 resume();
             }
-            if(code === currentText.charCodeAt(currentText.length)) {
-                endGame();
-            }
             correctHits++;
         } else {
             if (code !== 16) {
@@ -132,7 +130,7 @@ function startGame() {
     var textLoader = new window.KeyWarrior.TextLoader();
     createKeyboard();
     textLoader.getRandomText(function (text) {
-        currentText = text;
+        currentText = "text";
 
         generatorTimer = setInterval(generateNext, 600);
     });
@@ -167,6 +165,11 @@ function removeKey(key, reason) {
     }
 
     scheduleForRemove(key);
+    currentLetterCounter++;
+
+    if(currentLetterCounter === currentText.length) {
+        endGame();
+    }
 
     if(keysOnScreen.length > 0) {
         keysOnScreen[0].element.style["animation"] = "currentkey-mark 1s infinite";
@@ -296,5 +299,24 @@ function resume() {
 }
 
 function endGame() {
-    
+    var panel = document.createElement("div");
+    panel.className = "panel";
+    document.getElementById("gameboard-background").appendChild(panel);
+
+    var endtext = document.createElement("span");
+    endtext.innerHTML = "Congratulations!";
+    endtext.setAttribute("id", "endtext");
+    panel.appendChild(endtext);
+
+    var percentage = document.createElement("span");
+    percentage.innerHTML = "50%";
+    percentage.setAttribute("id", "percentage");
+    panel.appendChild(percentage);
+
+    var exitbutton = document.createElement("button");
+    exitbutton.className = "keybutton";
+    exitbutton.innerHTML = "<span>Finish</span>";
+    exitbutton.setAttribute("id", "exitbutton");
+    exitbutton.setAttribute("onclick", "location.href='index.html';");
+    panel.appendChild(exitbutton);
 }
