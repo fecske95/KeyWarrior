@@ -21,43 +21,65 @@ var generatorTimer;
 // Gyakorlatilag a billentyűk sebessége (másodpercben vett idő, amíg elér a helyére)
 var keyAnimationTime = 6;
 
+var paused = false;
+
 window.onload = function () {
     startGame();
 };
 
 $(document).keydown(function (e) {
-    if (e.keyCode === 16) {
-        shiftHeld = true;
-        document.getElementById("keyboardkey-shift").style["background-image"] = "url(images/key_pressed.png)";
+    var code = e.keyCode;
+    var id = "keyboardkey-" + String.fromCharCode(code).toLowerCase();
+    var backgroundImage = "url(images/key_pressed.png)";
+
+    switch (code) {
+        case 16:
+            shiftHeld = true;
+            id = "keyboardkey-shift";
+            break;
+
+        case 188:
+            code = 44;
+            id = "keyboardkey-comma";
+            break;
+
+        case 189:
+            code = 45;
+            id = "keyboardkey-minus";
+            break;
+
+        case 190:
+            code = 46;
+            id = "keyboardkey-period";
+            break;
+
+        case 32:
+            id = "keyboardkey-space";
+            backgroundImage = "url(images/space_pressed.png)";
+            break;
+    }
+
+    var element = document.getElementById(id);
+    if(element !== null) {
+        element.style["background-image"] = backgroundImage;
     }
 
     if (keysOnScreen.length > 0) {
         var modifier = 32;
-        var code = e.keyCode;
-
-        switch (code) {
-            case 188:
-                code = 44;
-                break;
-
-            case 189:
-                code = 45;
-                break;
-
-            case 190:
-                code = 46;
-                break;
-        }
 
         if (shiftHeld || code <= 57 || code >= 91) {
             modifier = 0;
         }
-        console.log(code + " , " + keysOnScreen[0].key + " , " + keysOnScreen[0].letter);
+
         if (code + modifier === keysOnScreen[0].key) {
             removeKey(keysOnScreen[0], 1);
+            if(paused) {
+                resume();
+            }
             correctHits++;
         } else {
             if (code !== 16) {
+                pause();
                 wrongHits++;
             }
         }
@@ -66,9 +88,39 @@ $(document).keydown(function (e) {
 });
 
 $(document).keyup(function (e) {
-    if (e.keyCode == 16) {
-        shiftHeld = false;
-        document.getElementById("keyboardkey-shift").style["background-image"] = "url(images/key.png)";
+    var code = e.keyCode;
+    var id = "keyboardkey-" + String.fromCharCode(code).toLowerCase();
+    var backgroundImage = "url(images/key.png)";
+
+    switch (code) {
+        case 16:
+            shiftHeld = false;
+            id = "keyboardkey-shift";
+            break;
+
+        case 188:
+            code = 44;
+            id = "keyboardkey-comma";
+            break;
+
+        case 189:
+            code = 45;
+            id = "keyboardkey-minus";
+            break;
+
+        case 190:
+            code = 46;
+            id = "keyboardkey-period";
+            break;
+
+        case 32:
+            id = "keyboardkey-space";
+            backgroundImage = "url(images/space.png)";
+            break;
+    }
+    var element = document.getElementById(id);
+    if(element !== null) {
+        element.style["background-image"] = backgroundImage;
     }
 });
 
@@ -77,46 +129,18 @@ function startGame() {
     var textLoader = new window.KeyWarrior.TextLoader();
     createKeyboard();
     textLoader.getRandomText(function (text) {
-
         currentText = text;
 
-        generatorTimer = setInterval(() => {
-            var char = currentText[letterCounter];
-            var key = generateKey(char);
-
-            // CSS Animáció beállítása
-            key.container.style["animation-duration"] = keyAnimationTime + 's';
-
-            if (keysOnScreen.findIndex(x => x === key) == 0) {
-                key.element.style["animation"] = "currentkey-mark 1s infinite";
-            }
-
-            scheduleForRemove(key, keyAnimationTime * 1000);
-            letterCounter++;
-
-            if (letterCounter >= currentText.length) {
-                clearInterval(generatorTimer);
-                letterCounter = 0;
-            }
-        }, 600);
+        generatorTimer = setInterval(generateNext, 600);
     });
 
     correctHits = 0;
     wrongHits = 0;
 }
 
-// Timer-t indít a billentyű eltűntetésére
-function scheduleForRemove(key, time) {
-    setTimeout(function () {
-        if (document.getElementById("gameboard").contains(key.container)) {
-            removeKey(key, 0);
-        }
-    }, time);
-}
-
 function updateStats() {
     var span = document.getElementById("hits");
-    span.innerText = "Helyes/helytelen találatok: " + correctHits + " / " + wrongHits;
+    span.innerText = "Correct/Wrong: " + correctHits + " / " + wrongHits;
 }
 
 function removeKey(key, reason) {
@@ -139,21 +163,61 @@ function removeKey(key, reason) {
         }
     }
 
-    var keyToRemove = key;
-    setTimeout(function () {
-        keyToRemove.container.removeChild(keyToRemove.element);
-        document.getElementById("gameboard").removeChild(keyToRemove.container);
-    }, 1000);
+    scheduleForRemove(key);
 
-    keysOnScreen[0].element.style["animation"] = "currentkey-mark 1s infinite";
+    if(keysOnScreen.length > 0) {
+        keysOnScreen[0].element.style["animation"] = "currentkey-mark 1s infinite";
+    }
+
+    if(paused) {
+        resume();
+    }
+}
+
+function scheduleForRemove(key) {
+    setTimeout(function () {
+        var element = document.getElementById("gameboard");
+        if(element !== null && element.contains(key.container)) {
+            document.getElementById("gameboard").removeChild(key.container);
+        }
+    }, 1000);  
 }
 
 // Key factory
-function generateKey(letter) {
+function createKey(letter) {
     var key = new window.KeyWarrior.Key(letter);
     document.getElementById("gameboard").appendChild(key.container);
     keysOnScreen.push(key);
+    setAnimationEnd(key);
+
     return key;
+}
+
+function setAnimationEnd(key) {
+    key.container.addEventListener("animationend", function(e) {
+        removeKey(key, 0);
+    }, false);
+}
+
+function generateNext() {
+    if(!paused) {
+        var char = currentText[letterCounter];
+        var key = createKey(char);
+
+        // CSS Animáció beállítása
+        key.container.style["animation-duration"] = keyAnimationTime + 's';
+
+        if (keysOnScreen.findIndex(x => x === key) === 0) {
+            key.element.style["animation"] = "currentkey-mark 1s infinite";
+        }
+
+        letterCounter++;
+
+        if (letterCounter >= currentText.length) {
+            clearInterval(generatorTimer);
+            letterCounter = 0;
+        }
+    }
 }
 
 function createKeyboard() {
@@ -196,7 +260,7 @@ function createKeyboardKey(letter) {
             id = "keyboardkey-minus";
             break;
 
-        // Shift
+            // Shift
         case '^':
             id = "keyboardkey-shift";
             element.innerHTML = "<span>" + "Shift" + "</span>";
@@ -206,4 +270,24 @@ function createKeyboardKey(letter) {
     element.setAttribute("id", id);
     document.getElementById("gameboard").appendChild(element);
     return element;
+}
+
+function pause() {
+    for(var i = 0; i < keysOnScreen.length; i++) {
+        keysOnScreen[i].container.style["-webkit-animation-play-state"] = "paused";
+        keysOnScreen[i].container.style["-moz-animation-play-state"] = "paused";
+        keysOnScreen[i].container.style["-o-animation-play-state"] = "paused";
+        keysOnScreen[i].container.style["animation-play-state"] = "paused";
+    }
+    paused = true;
+}
+
+function resume() {
+    for(var i = 0; i < keysOnScreen.length; i++) {
+        keysOnScreen[i].container.style["-webkit-animation-play-state"] = "running";
+        keysOnScreen[i].container.style["-moz-animation-play-state"] = "running";
+        keysOnScreen[i].container.style["-o-animation-play-state"] = "running";
+        keysOnScreen[i].container.style["animation-play-state"] = "running";
+    }
+    paused = false;
 }

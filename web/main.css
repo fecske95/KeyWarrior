@@ -30,6 +30,9 @@
     top: 0px;
     width: 70px;
     height: 70px;
+    animation-fill-mode: forwards;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
     animation-timing-function: linear;
 }
 
@@ -39,7 +42,7 @@
     top: 0px;
     width: 310px;
     height: 70px;
-    animation-timing-function: linear;    
+    animation-timing-function: linear;
 }
 
 .key {
