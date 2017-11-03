@@ -76,6 +76,9 @@ $(document).keydown(function (e) {
             if(paused) {
                 resume();
             }
+            if(code === currentText.charCodeAt(currentText.length)) {
+                endGame();
+            }
             correctHits++;
         } else {
             if (code !== 16) {
@@ -290,4 +293,8 @@ function resume() {
         keysOnScreen[i].container.style["animation-play-state"] = "running";
     }
     paused = false;
+}
+
+function endGame() {
+    
 }
