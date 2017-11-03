@@ -28,20 +28,36 @@ window.onload = function () {
 $(document).keydown(function (e) {
     if (e.keyCode === 16) {
         shiftHeld = true;
+        document.getElementById("keyboardkey-shift").style["background-image"] = "url(images/key_pressed.png)";
     }
 
     if (keysOnScreen.length > 0) {
         var modifier = 32;
+        var code = e.keyCode;
 
-        if (shiftHeld || e.keyCode <= 57) {
-            modifier = 0;
+        switch (code) {
+            case 188:
+                code = 44;
+                break;
+
+            case 189:
+                code = 45;
+                break;
+
+            case 190:
+                code = 46;
+                break;
         }
 
-        if (e.keyCode + modifier === keysOnScreen[0].getKey()) {
+        if (shiftHeld || code <= 57 || code >= 91) {
+            modifier = 0;
+        }
+        console.log(code + " , " + keysOnScreen[0].key + " , " + keysOnScreen[0].letter);
+        if (code + modifier === keysOnScreen[0].key) {
             removeKey(keysOnScreen[0], 1);
             correctHits++;
         } else {
-            if (e.keyCode !== 16) {
+            if (code !== 16) {
                 wrongHits++;
             }
         }
@@ -52,6 +68,7 @@ $(document).keydown(function (e) {
 $(document).keyup(function (e) {
     if (e.keyCode == 16) {
         shiftHeld = false;
+        document.getElementById("keyboardkey-shift").style["background-image"] = "url(images/key.png)";
     }
 });
 
@@ -81,7 +98,7 @@ function startGame() {
                 clearInterval(generatorTimer);
                 letterCounter = 0;
             }
-        }, 400);
+        }, 600);
     });
 
     correctHits = 0;
@@ -140,31 +157,53 @@ function generateKey(letter) {
 }
 
 function createKeyboard() {
-    var gameboard = document.getElementById("gameboard");
-
     for (var i = 48; i <= 122; i++) {
         if (i == 58) {
             i = 97;
         }
 
-        gameboard.appendChild(createKeyboardKey(String.fromCharCode(i)));
+        createKeyboardKey(String.fromCharCode(i));
     }
-    gameboard.appendChild(createKeyboardKey(' '));
+
+    createKeyboardKey(' ');
+    createKeyboardKey(',');
+    createKeyboardKey('.');
+    createKeyboardKey('-');
+    createKeyboardKey('^');
 }
 
 function createKeyboardKey(letter) {
     var element = document.createElement("div");
-
-    if(letter === ' ') {
-        element.setAttribute("id", "keyboardkey-space");
-    }
-    else {
-        element.setAttribute("id", "keyboardkey-" + letter);
-    }
-
-    element.className = "keyboardkey";
     element.innerHTML = "<span>" + letter + "</span>";
-    element.style["animation-timing-function"] = "linear";
+    element.className = "keyboardkey";
 
+    var id = "keyboardkey-" + letter;
+
+    switch (letter) {
+        case ' ':
+            id = "keyboardkey-space";
+            break;
+
+        case ',':
+            id = "keyboardkey-comma";
+            break;
+
+        case '.':
+            id = "keyboardkey-period";
+            break;
+
+        case '-':
+            id = "keyboardkey-minus";
+            break;
+
+        // Shift
+        case '^':
+            id = "keyboardkey-shift";
+            element.innerHTML = "<span>" + "Shift" + "</span>";
+            break;
+    }
+
+    element.setAttribute("id", id);
+    document.getElementById("gameboard").appendChild(element);
     return element;
 }

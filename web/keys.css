@@ -1,9 +1,3 @@
-#key-space {
-    width: 310px;
-    left: 540px;
-    animation: key-space 4s forwards;
-}
-
 /* line 0 */
 
 #key-1 {
@@ -53,6 +47,11 @@
 
 #key-0 {
     left: 960px;
+    animation: key-line-0 4s forwards;
+}
+
+#key-minus {
+    left: 1030px;
     animation: key-line-0 4s forwards;
 }
 
@@ -190,4 +189,22 @@
 #key-m {
     left: 810px;
     animation: key-line-3 4s forwards;
+}
+
+#key-comma {
+    left: 880px;
+    animation: key-line-3 4s forwards;
+}
+
+#key-period {
+    left: 950px;
+    animation: key-line-3 4s forwards;
+}
+
+/* line 4 */
+
+#key-space {
+    width: 310px;
+    left: 540px;
+    animation: key-space 4s forwards;
 }

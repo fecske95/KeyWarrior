@@ -10,20 +10,36 @@ class Key {
 
         this.container = document.createElement("div");
 
-        if(char === ' ') {
-            this.element.className = "keyclass-space";
-            this.container.className = "space-container";
-            this.container.setAttribute("id", "key-space");
-        }
-        else {
-            this.container.className = "key-container";
-            this.container.setAttribute("id", "key-" + char.toLowerCase());
+        // Speciális karakterek kezelése
+
+        var id = "key-" + char.toLowerCase();
+        this.container.className = "key-container";
+
+        switch (char) {
+            case ' ':
+                this.element.className = "keyclass-space";
+                this.container.className = "space-container";
+                id = "key-space";
+                break;
+
+            case ',':
+                id = "key-comma";
+                break;
+
+            case '.':
+                id = "key-period";
+                break;
+
+            case '-':
+                id = "key-minus";
+                break;
         }
 
+        this.container.setAttribute("id", id);
         this.container.appendChild(this.element);
     }
 
-    getKey() {
+    get key() {
         return this.letter.charCodeAt(0);
     }
 }

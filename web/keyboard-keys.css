@@ -58,6 +58,11 @@
     top: calc(100% - 350px);
 }
 
+#keyboardkey-minus {
+    left: 1030px;
+    top: calc(100% - 350px);
+}
+
 /* line 1 */
 
 #keyboardkey-q {
@@ -159,6 +164,11 @@
 
 /* line 3 */
 
+#keyboardkey-shift {
+    left: 320px;
+    top: calc(100% - 140px);
+}
+
 #keyboardkey-z {
     left: 390px;
     top: calc(100% - 140px);
@@ -191,5 +201,15 @@
 
 #keyboardkey-m {
     left: 810px;
+    top: calc(100% - 140px);
+}
+
+#keyboardkey-comma {
+    left: 880px;
+    top: calc(100% - 140px);
+}
+
+#keyboardkey-period {
+    left: 950px;
     top: calc(100% - 140px);
 }
