@@ -1,18 +1,44 @@
 body {
     overflow: hidden;
-    background: linear-gradient(white, black);
+    background: linear-gradient(135deg, #000000, #aaaaaa, #000000);
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-size: 400% 400%;
+    -webkit-animation: background-animation 15s ease infinite;
+    -moz-animation: background-animation 15s ease infinite;
+    animation: background-animation 15s ease infinite;
+}
+
+#logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 #start {
-    top: 300px;
+    top: 400px;
     left: 50%;
     transform: translateX(-50%);
 }
 
 #options {
-    top: 450px;
+    top: 600px;
     left: 50%;
     transform: translateX(-50%);
+}
+
+@-webkit-keyframes background-animation {
+    0%{background-position:0% 4%}
+    50%{background-position:100% 97%}
+    100%{background-position:0% 4%}
+}
+@-moz-keyframes background-animation {
+    0%{background-position:0% 4%}
+    50%{background-position:100% 97%}
+    100%{background-position:0% 4%}
+}
+@keyframes background-animation { 
+    0%{background-position:0% 4%}
+    50%{background-position:100% 97%}
+    100%{background-position:0% 4%}
 }
