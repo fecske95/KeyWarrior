@@ -9,6 +9,15 @@ body {
     animation: background-animation 15s ease infinite;
 }
 
+.floating-key {
+    position: absolute;
+    background-image: url(../images/key.png);
+}
+
+#key-container {
+    position: absolute;
+}
+
 #logo {
     position: absolute;
     left: 50%;
