@@ -24,44 +24,27 @@ var keyAnimationTime = 6;
 
 var paused = false;
 
+var keyboard;
+
 window.onload = function () {
     startGame();
 };
 
 $(document).keydown(function (e) {
     var code = e.keyCode;
-    var id = "keyboardkey-" + String.fromCharCode(code).toLowerCase();
+    var id = keyboard.getIdForKeyCode(code);
     var backgroundImage = "url(images/key_pressed.png)";
 
-    switch (code) {
-        case 16:
-            shiftHeld = true;
-            id = "keyboardkey-shift";
-            break;
+    if(code === 16) {
+        shiftHeld = true;
+    }
 
-        case 188:
-            code = 44;
-            id = "keyboardkey-comma";
-            break;
-
-        case 189:
-            code = 45;
-            id = "keyboardkey-minus";
-            break;
-
-        case 190:
-            code = 46;
-            id = "keyboardkey-period";
-            break;
-
-        case 32:
-            id = "keyboardkey-space";
-            backgroundImage = "url(images/space_pressed.png)";
-            break;
+    if (id === "keyboardkey-space") {
+        backgroundImage = "url(images/space_pressed.png)";
     }
 
     var element = document.getElementById(id);
-    if(element !== null) {
+    if (element !== null) {
         element.style["background-image"] = backgroundImage;
     }
 
@@ -74,7 +57,7 @@ $(document).keydown(function (e) {
 
         if (code + modifier === keysOnScreen[0].key) {
             removeKey(keysOnScreen[0], 1);
-            if(paused) {
+            if (paused) {
                 resume();
             }
             correctHits++;
@@ -89,38 +72,15 @@ $(document).keydown(function (e) {
 });
 
 $(document).keyup(function (e) {
-    var code = e.keyCode;
-    var id = "keyboardkey-" + String.fromCharCode(code).toLowerCase();
+    var id = keyboard.getIdForKeyCode(e.keyCode);
     var backgroundImage = "url(images/key.png)";
 
-    switch (code) {
-        case 16:
-            shiftHeld = false;
-            id = "keyboardkey-shift";
-            break;
-
-        case 188:
-            code = 44;
-            id = "keyboardkey-comma";
-            break;
-
-        case 189:
-            code = 45;
-            id = "keyboardkey-minus";
-            break;
-
-        case 190:
-            code = 46;
-            id = "keyboardkey-period";
-            break;
-
-        case 32:
-            id = "keyboardkey-space";
-            backgroundImage = "url(images/space.png)";
-            break;
+    if (id === "keyboardkey-space") {
+        backgroundImage = "url(images/space.png)";
     }
+
     var element = document.getElementById(id);
-    if(element !== null) {
+    if (element !== null) {
         element.style["background-image"] = backgroundImage;
     }
 });
@@ -128,9 +88,9 @@ $(document).keyup(function (e) {
 // A játék elindítása
 function startGame() {
     var textLoader = new window.KeyWarrior.TextLoader();
-    createKeyboard();
+    keyboard = new window.KeyWarrior.Keyboard();
     textLoader.getRandomText(function (text) {
-        currentText = "text";
+        currentText = text;
 
         generatorTimer = setInterval(generateNext, 600);
     });
@@ -167,15 +127,15 @@ function removeKey(key, reason) {
     scheduleForRemove(key);
     currentLetterCounter++;
 
-    if(currentLetterCounter === currentText.length) {
+    if (currentLetterCounter === currentText.length) {
         endGame();
     }
 
-    if(keysOnScreen.length > 0) {
+    if (keysOnScreen.length > 0) {
         keysOnScreen[0].element.style["animation"] = "currentkey-mark 1s infinite";
     }
 
-    if(paused) {
+    if (paused) {
         resume();
     }
 }
@@ -183,32 +143,22 @@ function removeKey(key, reason) {
 function scheduleForRemove(key) {
     setTimeout(function () {
         var element = document.getElementById("gameboard");
-        if(element !== null && element.contains(key.container)) {
+        if (element !== null && element.contains(key.container)) {
             document.getElementById("gameboard").removeChild(key.container);
         }
-    }, 1000);  
-}
-
-// Key factory
-function createKey(letter) {
-    var key = new window.KeyWarrior.Key(letter);
-    document.getElementById("gameboard").appendChild(key.container);
-    keysOnScreen.push(key);
-    setAnimationEnd(key);
-
-    return key;
+    }, 1000);
 }
 
 function setAnimationEnd(key) {
-    key.container.addEventListener("animationend", function(e) {
+    key.container.addEventListener("animationend", function (e) {
         removeKey(key, 0);
     }, false);
 }
 
 function generateNext() {
-    if(!paused) {
+    if (!paused) {
         var char = currentText[letterCounter];
-        var key = createKey(char);
+        var key = window.KeyWarrior.Key.createKey(char);
 
         // CSS Animáció beállítása
         key.container.style["animation-duration"] = keyAnimationTime + 's';
@@ -226,60 +176,8 @@ function generateNext() {
     }
 }
 
-function createKeyboard() {
-    for (var i = 48; i <= 122; i++) {
-        if (i == 58) {
-            i = 97;
-        }
-
-        createKeyboardKey(String.fromCharCode(i));
-    }
-
-    createKeyboardKey(' ');
-    createKeyboardKey(',');
-    createKeyboardKey('.');
-    createKeyboardKey('-');
-    createKeyboardKey('^');
-}
-
-function createKeyboardKey(letter) {
-    var element = document.createElement("div");
-    element.innerHTML = "<span>" + letter + "</span>";
-    element.className = "keyboardkey";
-
-    var id = "keyboardkey-" + letter;
-
-    switch (letter) {
-        case ' ':
-            id = "keyboardkey-space";
-            break;
-
-        case ',':
-            id = "keyboardkey-comma";
-            break;
-
-        case '.':
-            id = "keyboardkey-period";
-            break;
-
-        case '-':
-            id = "keyboardkey-minus";
-            break;
-
-            // Shift
-        case '^':
-            id = "keyboardkey-shift";
-            element.innerHTML = "<span>" + "Shift" + "</span>";
-            break;
-    }
-
-    element.setAttribute("id", id);
-    document.getElementById("gameboard").appendChild(element);
-    return element;
-}
-
 function pause() {
-    for(var i = 0; i < keysOnScreen.length; i++) {
+    for (var i = 0; i < keysOnScreen.length; i++) {
         keysOnScreen[i].container.style["-webkit-animation-play-state"] = "paused";
         keysOnScreen[i].container.style["-moz-animation-play-state"] = "paused";
         keysOnScreen[i].container.style["-o-animation-play-state"] = "paused";
@@ -289,7 +187,7 @@ function pause() {
 }
 
 function resume() {
-    for(var i = 0; i < keysOnScreen.length; i++) {
+    for (var i = 0; i < keysOnScreen.length; i++) {
         keysOnScreen[i].container.style["-webkit-animation-play-state"] = "running";
         keysOnScreen[i].container.style["-moz-animation-play-state"] = "running";
         keysOnScreen[i].container.style["-o-animation-play-state"] = "running";

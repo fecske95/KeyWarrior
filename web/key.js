@@ -10,15 +10,25 @@ class Key {
 
         this.container = document.createElement("div");
 
-        // Speciális karakterek kezelése
-
-        var id = "key-" + char.toLowerCase();
         this.container.className = "key-container";
 
+        if(char === ' ') {
+            this.element.className = "keyclass-space";
+            this.container.className = "space-container";
+        }
+
+        this.container.setAttribute("id", Key.getIdForCharacter(char));
+        this.container.appendChild(this.element);
+    }
+
+    get key() {
+        return this.letter.charCodeAt(0);
+    }
+
+    static getIdForCharacter(char) {
+        var id = "key-" + char.toLowerCase();
         switch (char) {
             case ' ':
-                this.element.className = "keyclass-space";
-                this.container.className = "space-container";
                 id = "key-space";
                 break;
 
@@ -34,13 +44,16 @@ class Key {
                 id = "key-minus";
                 break;
         }
-
-        this.container.setAttribute("id", id);
-        this.container.appendChild(this.element);
+        return id;
     }
 
-    get key() {
-        return this.letter.charCodeAt(0);
+    static createKey(letter) {
+        var key = new this(letter);
+        document.getElementById("gameboard").appendChild(key.container);
+        keysOnScreen.push(key);
+        setAnimationEnd(key);
+    
+        return key;      
     }
 }
 
