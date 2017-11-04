@@ -46,7 +46,7 @@
 }
 
 .key {
-    background-image: url(images/key.png);
+    background-image: url(../images/key.png);
     position: absolute;
     top: 0px;
     width: 70px;
@@ -55,7 +55,7 @@
 }
 
 .keyclass-space {
-    background-image: url(images/space.png);
+    background-image: url(../images/space.png);
     position: absolute;
     top: 0px;
     width: 310px;
@@ -75,7 +75,7 @@
 }
 
 .keyboardkey {
-    background-image: url(images/key.png);
+    background-image: url(../images/key.png);
     background-size: 70px;
     position: absolute;
     width: 70px;
