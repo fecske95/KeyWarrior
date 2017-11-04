@@ -100,8 +100,8 @@ function startGame() {
 }
 
 function updateStats() {
-    var span = document.getElementById("hits");
-    span.innerText = "Correct/Wrong: " + correctHits + " / " + wrongHits;
+    document.getElementById("correct-hits").innerText = correctHits;
+    document.getElementById("wrong-hits").innerText = wrongHits;
 }
 
 function removeKey(key, reason) {

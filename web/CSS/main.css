@@ -1,11 +1,41 @@
-﻿#gameboard-background {
+﻿body {
+    background: linear-gradient(135deg, #222222, #aaaaaa, #222222);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     overflow: hidden;
-    background: linear-gradient(white, black);
-    border-style: solid;
-    border-color: black;
-    border-width: 5px;
-    display: block;
+}
+
+#indicator-div {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.hit-indicator {
     position: absolute;
+    font-family: "FFF Forward";
+    font-size: 48px;
+    width: 100%;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;  
+}
+
+#correct-hits {
+    color: lime;
+}
+
+#wrong-hits {
+    color: red;
+    text-align: right;
+}
+
+#gameboard-background {
+    overflow: hidden;
+    position: absolute;
+    display: block;
     top: 0px;
     bottom: 0px;
     left: 50%;
@@ -92,4 +122,9 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+}
+
+@font-face {
+    font-family: "FFF Forward";
+    src: url(fonts/FFFFORWA.TTF);
 }
