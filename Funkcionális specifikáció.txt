@@ -25,3 +25,43 @@ fölé és piros színre vált ami helytelen eredményt ad.
 			-Amennyiben elfogynak a leütni kívánt karakterek megjelenik egy menü ablak amelyben százalékos formában
 kiértékelődik felhasználó által elért teljesítmény. Ebben a menüben lehetőségünk van visszatérni a főmenübe melyet a program 
 elején láthatunk, és lehetőségünk van új játékot kezdeni.
+-----------------------------
+
+A rendszer céljai és nem céljai:
+	-
+Jelenlegi helyzet leírása:
+	-
+Vágyálom rendszer leírása:
+	-A rendszer képes legyen egy adott szöveg beolvasására az alkalmazáson belül
+	-A beolvasott szöveget időzítve, helyes sorrendben képes legyen visszaadni
+	-Helyes találat után legyen jól látható mi a soron következő karakter amit le kell ütni
+	-Legyen jól látható mely billentyű került lenyomásra
+	-Kapjon a felhasználó egyértelmű visszajelzést a helyes és helytelen találatokról
+	-Százalékos formában értékelődjön ki az elért teljesítmény
+	-Egyszerű és áttekinthető menüt kapjon a felhasználó
+	-Legyen az alkalmazás életkortól függetlenül használható
+A rendszerre vonatkozó külső megszorítások: pályázat, törvények, rendeletek, szabványok és ajánlások felsorolása:
+	-
+Jelenlegi üzleti folyamatok modellje:
+	-
+Igényelt üzleti folyamatok modellje:
+	-
+Követelménylista:
+	-Bármely korosztály számára elérhető legyen
+	-Korszerű design
+	-Könnyű elsajátítás
+	-Multiplatform támogatás
+	-Alacsony gépigény
+	-Hibamentes futás
+Használati esetek [Use cases]:
+	-Tanulási lehetőség megvalósítása
+Megfeleltetés, hogyan fedik le a használati esetek a követelményeket:
+	-
+Képernyő tervek:
+	-
+Forgatókönyvek:
+	-
+Funkció – követelmény megfeleltetés:
+	-
+Fogalomszótár:
+	-
