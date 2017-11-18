@@ -3,10 +3,12 @@
 
 <head>
     <title>KeyWarrior</title>
+    <link rel="stylesheet" type="text/css" href="CSS/dropdown-list.css">
     <link rel="stylesheet" type="text/css" href="CSS/buttons.css">
     <link rel="stylesheet" type="text/css" href="CSS/index.css">
 
     <script type="text/javascript" src="JS/jquery.js"></script>
+    <script type="text/javascript" src="JS/dropdownlist.js"></script>
     <script type="text/javascript" src="JS/menuanimation.js"></script>
 </head>
 
@@ -14,7 +16,28 @@
     <div id="key-container"></div>
     <img id="logo" src="images/logo.png"></img>
     <button id="start" class="keybutton" onclick="location.href='game.html';"><span>Start Game</span></button>
-    <button id="options" class="keybutton"><span>Options</span></button>
+
+    <div class="panel" id="panel-options">
+        <button id="easy" class="keybutton difficulty-button"><span>Easy</span></button>
+        <button id="medium" class="keybutton difficulty-button"><span>Medium</span></button>
+        <button id="hard" class="keybutton difficulty-button"><span>Hard</span></button>
+
+        <span class="scrollbar-title" id="char-speed">Character speed:</span>
+        <div id="scrollbar-keyspeed" class="scrollbar"><div class="force-overflow"></div></div>
+        <span class="scrollbar-title" id="spawn-speed">Character spawn speed:</span>
+        <div id="scrollbar-generatorspeed" class="scrollbar"><div class="force-overflow"></div></div>
+    </div>
+
+    <div class="panel" id="panel-choosetext">
+        <div class="dropdown" id="text-dropdown">
+            <button onclick="showList()" class="dropbtn">Choose Text!</button>
+            <div id="text-list" class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
+    </div>
 </body>
 
 </html>
