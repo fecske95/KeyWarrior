@@ -54,7 +54,7 @@ class Keyboard {
     }
 
     getIdForKeyCode(keyCode) {
-        var id = "keyboardkey-" + String.fromCharCode(keyCode).toLowerCase();
+        var id;
 
         switch (keyCode) {
             case 16:
@@ -63,23 +63,22 @@ class Keyboard {
                 break;
 
             case 188:
-                code = 44;
                 id = "keyboardkey-comma";
                 break;
 
             case 189:
-                code = 45;
                 id = "keyboardkey-minus";
                 break;
 
             case 190:
-                code = 46;
                 id = "keyboardkey-period";
                 break;
 
             case 32:
                 id = "keyboardkey-space";
                 break;
+            default:
+                id = "keyboardkey-" + String.fromCharCode(keyCode).toLowerCase();
         }
 
         return id;

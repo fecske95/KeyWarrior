@@ -17,7 +17,7 @@ function mouseDown(e) {
 }
 
 function mouseMove(e) {
-    if(clickedThumb !== null) {
+    if(clickedThumb !== null && clickedThumb.className === "pointer") {
         var bounds = clickedThumb.parentElement.getBoundingClientRect();
         var x = e.clientX - bounds.left;
         if(x > bounds.width) {

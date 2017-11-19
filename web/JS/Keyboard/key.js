@@ -17,7 +17,7 @@ class Key {
             this.container.className = "space-container";
         }
 
-        this.container.setAttribute("id", Key.getIdForCharacter(char));
+        this.container.classList.add(Key.getClassForCharacter(char));
         this.container.appendChild(this.element);
     }
 
@@ -25,26 +25,26 @@ class Key {
         return this.letter.charCodeAt(0);
     }
 
-    static getIdForCharacter(char) {
-        var id = "key-" + char.toLowerCase();
+    static getClassForCharacter(char) {
+        var classname = "key-" + char.toLowerCase();
         switch (char) {
             case ' ':
-                id = "key-space";
+                classname = "key-space";
                 break;
 
             case ',':
-                id = "key-comma";
+                classname = "key-comma";
                 break;
 
             case '.':
-                id = "key-period";
+                classname = "key-period";
                 break;
 
             case '-':
-                id = "key-minus";
+                classname = "key-minus";
                 break;
         }
-        return id;
+        return classname;
     }
 
     static createKey(letter) {

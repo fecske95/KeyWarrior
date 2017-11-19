@@ -31,13 +31,16 @@ window.onload = function () {
 };
 
 $(document).keydown(function (e) {
-    var code = e.keyCode;
-    var id = keyboard.getIdForKeyCode(code);
-    var backgroundImage = "url(images/key_pressed.png)";
 
+    //handling SHIFT key
+    var code = e.keyCode;
     if(code === 16) {
         shiftHeld = true;
     }
+
+    // adding highlight style
+    var id = keyboard.getIdForKeyCode(code);
+    var backgroundImage = "url(images/key_pressed.png)";
 
     if (id === "keyboardkey-space") {
         backgroundImage = "url(images/space_pressed.png)";
@@ -47,15 +50,16 @@ $(document).keydown(function (e) {
     if (element !== null) {
         element.style["background-image"] = backgroundImage;
     }
+});
 
+$(document).keypress(function (e) {
+    var code = e.keyCode;
+
+    console.log("Key pressed", code);
+    
     if (keysOnScreen.length > 0) {
-        var modifier = 32;
-
-        if (shiftHeld || code <= 57 || code >= 91) {
-            modifier = 0;
-        }
-
-        if (code + modifier === keysOnScreen[0].key) {
+        
+        if (code === keysOnScreen[0].key) {
             removeKey(keysOnScreen[0], 1);
             if (paused) {
                 resume();
@@ -76,6 +80,14 @@ $(document).keydown(function (e) {
 });
 
 $(document).keyup(function (e) {
+
+    // handling SHIFT key
+    var code = e.keyCode;
+    if(code === 16) {
+        shiftHeld = false;
+    }
+
+    // removing highlight style
     var id = keyboard.getIdForKeyCode(e.keyCode);
     var backgroundImage = "url(images/key.png)";
 
@@ -94,8 +106,7 @@ function startGame() {
     var textLoader = new window.KeyWarrior.TextLoader();
     keyboard = new window.KeyWarrior.Keyboard();
     textLoader.getRandomText(function (text) {
-        // currentText = text;
-        currentText = "text";
+        currentText = text;
 
         var textIndicator = document.getElementById("text-span");
         textIndicator.innerHTML = currentText;

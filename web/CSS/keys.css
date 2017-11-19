@@ -1,209 +1,209 @@
 /* line 0 */
 
-#key-1 {
+.key-1 {
     left: 330px;
     animation-name: key-line-0;
 }
 
-#key-2 {
+.key-2 {
     left: 400px;
     animation-name: key-line-0;
 }
 
-#key-3 {
+.key-3 {
     left: 470px;
     animation-name: key-line-0;
 }
 
-#key-4 {
+.key-4 {
     left: 540px;
     animation-name: key-line-0;
 }
 
-#key-5 {
+.key-5 {
     left: 610px;
     animation-name: key-line-0;
 }
 
-#key-6 {
+.key-6 {
     left: 680px;
     animation-name: key-line-0;
 }
 
-#key-7 {
+.key-7 {
     left: 750px;
     animation-name: key-line-0;
 }
 
-#key-8 {
+.key-8 {
     left: 820px;
     animation-name: key-line-0;
 }
 
-#key-9 {
+.key-9 {
     left: 890px;
     animation-name: key-line-0;
 }
 
-#key-0 {
+.key-0 {
     left: 960px;
     animation-name: key-line-0;
 }
 
-#key-minus {
+.key-minus {
     left: 1030px;
     animation-name: key-line-0;
 }
 
 /* line 1 */
 
-#key-q {
+.key-q {
     left: 350px; 
     animation-name: key-line-1;
 }
 
-#key-w {
+.key-w {
     left: 420px; 
     animation-name: key-line-1;
 }
 
-#key-e {
+.key-e {
     left: 490px; 
     animation-name: key-line-1;
 }
 
-#key-r {
+.key-r {
     left: 560px;
     animation-name: key-line-1;
 }
 
-#key-t {
+.key-t {
     left: 630px;
     animation-name: key-line-1;
 }
 
-#key-y {
+.key-y {
     left: 700px; 
     animation-name: key-line-1;
 }
 
-#key-u {
+.key-u {
     left: 770px;
     animation-name: key-line-1;
 }
 
-#key-i {
+.key-i {
     left: 840px;
     animation-name: key-line-1;
 }
 
-#key-o {
+.key-o {
     left: 910px;
     animation-name: key-line-1;
 }
 
-#key-p {
+.key-p {
     left: 980px;
     animation-name: key-line-1;
 }
 
 /* line 2 */
 
-#key-a {
+.key-a {
     left: 370px;
     animation-name: key-line-2;
 }
 
-#key-s {
+.key-s {
     left: 440px;
     animation-name: key-line-2;
 }
 
-#key-d {
+.key-d {
     left: 510px;
     animation-name: key-line-2;
 }
 
-#key-f {
+.key-f {
     left: 580px;
     animation-name: key-line-2;
 }
 
-#key-g {
+.key-g {
     left: 650px;
     animation-name: key-line-2;
 }
 
-#key-h {
+.key-h {
     left: 720px;
     animation-name: key-line-2;
 }
 
-#key-j {
+.key-j {
     left: 790px;
     animation-name: key-line-2;
 }
 
-#key-k {
+.key-k {
     left: 860px;
     animation-name: key-line-2;
 }
 
-#key-l {
+.key-l {
     left: 930px;
     animation-name: key-line-2;
 }
 
 /* line 3 */
 
-#key-z {
+.key-z {
     left: 390px;
     animation-name: key-line-3;
 }
 
-#key-x {
+.key-x {
     left: 460px;
     animation-name: key-line-3;
 }
 
-#key-c {
+.key-c {
     left: 530px;
     animation-name: key-line-3;
 }
 
-#key-v {
+.key-v {
     left: 600px;
     animation-name: key-line-3;
 }
 
-#key-b {
+.key-b {
     left: 670px;
     animation-name: key-line-3;
 }
 
-#key-n {
+.key-n {
     left: 740px;
     animation-name: key-line-3;
 }
 
-#key-m {
+.key-m {
     left: 810px;
     animation-name: key-line-3;
 }
 
-#key-comma {
+.key-comma {
     left: 880px;
     animation-name: key-line-3;
 }
 
-#key-period {
+.key-period {
     left: 950px;
     animation-name: key-line-3;
 }
 
 /* line 4 */
 
-#key-space {
+.key-space {
     width: 310px;
     left: 540px;
     animation-name: key-space;
