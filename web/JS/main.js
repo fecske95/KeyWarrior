@@ -90,7 +90,8 @@ function startGame() {
     var textLoader = new window.KeyWarrior.TextLoader();
     keyboard = new window.KeyWarrior.Keyboard();
     textLoader.getRandomText(function (text) {
-        currentText = text;
+        // currentText = text;
+        currentText = "text";
 
         generatorTimer = setInterval(generateNext, 600);
     });
@@ -199,7 +200,8 @@ function resume() {
 function endGame() {
     var panel = document.createElement("div");
     panel.className = "panel";
-    document.getElementById("gameboard-background").appendChild(panel);
+    panel.id = "stat-panel";
+    document.body.appendChild(panel);
 
     var endtext = document.createElement("span");
     endtext.innerHTML = "Congratulations!";
@@ -213,8 +215,10 @@ function endGame() {
 
     var exitbutton = document.createElement("button");
     exitbutton.className = "keybutton";
-    exitbutton.innerHTML = "<span>Finish</span>";
+    exitbutton.innerHTML = "Finish";
     exitbutton.setAttribute("id", "exitbutton");
     exitbutton.setAttribute("onclick", "location.href='index.html';");
     panel.appendChild(exitbutton);
+
+    document.getElementById("game-container").style["filter"] = "blur(5px)";
 }

@@ -4,20 +4,20 @@
 <head>
     <title>KeyWarrior</title>
     <link href="https://fonts.googleapis.com/css?family=Nova+Square|Ubuntu" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="CSS/fonts.css">
     <link rel="stylesheet" type="text/css" href="CSS/dropdown-list.css">
-    <link rel="stylesheet" type="text/css" href="CSS/buttons.css">
+    <link rel="stylesheet" type="text/css" href="CSS/ui-style.css">
     <link rel="stylesheet" type="text/css" href="CSS/index.css">
 
     <script type="text/javascript" src="JS/jquery.js"></script>
     <script type="text/javascript" src="JS/dropdownlist.js"></script>
     <script type="text/javascript" src="JS/menuanimation.js"></script>
+    <script type="text/javascript" src="JS/slider.js"></script>
 </head>
 
 <body>
     <div id="key-container"></div>
 
-    <section id="game-menu">
+    <section id="game-menu" onmouseup="mouseUp(event)" onmousedown="mouseDown(event)" onmousemove="mouseMove(event)">
         <img id="logo" src="images/logo.png" />
 
         <div id="top-menu">

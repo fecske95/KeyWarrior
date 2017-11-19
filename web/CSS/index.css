@@ -1,6 +1,7 @@
 * {
     font-family: 'Nova Square', cursive;
     font-size: 24px;
+    user-select: none;
 }
 
 body {
@@ -67,35 +68,6 @@ span {
 
 #game-menu #panel-options #game-settings span {
     color: white;
-}
-
-.slider {
-    width: 80%;
-    margin: 30px 15px;
-    color: white;
-    display: inline-block;
-    border-bottom: 1px solid white;
-}
-
-.slider .pointer {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    border: 1px solid grey;
-    border-radius: 100%;
-    background-color: white;
-    position: relative;
-    transform: translateX(-50%);
-    left: 0%;
-    top: 17px;
-}
-
-.panel {
-    background-color: rgba(0, 0, 0, 0.5);
-    border-style: solid;
-    border-color: black;
-    border-width: 2px;
-    border-radius: 10px;
 }
 
 #easy {
