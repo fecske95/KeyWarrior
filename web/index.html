@@ -3,6 +3,8 @@
 
 <head>
     <title>KeyWarrior</title>
+    <link href="https://fonts.googleapis.com/css?family=Nova+Square|Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="CSS/fonts.css">
     <link rel="stylesheet" type="text/css" href="CSS/dropdown-list.css">
     <link rel="stylesheet" type="text/css" href="CSS/buttons.css">
     <link rel="stylesheet" type="text/css" href="CSS/index.css">
@@ -14,30 +16,48 @@
 
 <body>
     <div id="key-container"></div>
-    <img id="logo" src="images/logo.png"></img>
-    <button id="start" class="keybutton" onclick="location.href='game.html';"><span>Start Game</span></button>
 
-    <div class="panel" id="panel-options">
-        <button id="easy" class="keybutton difficulty-button"><span>Easy</span></button>
-        <button id="medium" class="keybutton difficulty-button"><span>Medium</span></button>
-        <button id="hard" class="keybutton difficulty-button"><span>Hard</span></button>
+    <section id="game-menu">
+        <img id="logo" src="images/logo.png" />
 
-        <span class="scrollbar-title" id="char-speed">Character speed:</span>
-        <div id="scrollbar-keyspeed" class="scrollbar"><div class="force-overflow"></div></div>
-        <span class="scrollbar-title" id="spawn-speed">Character spawn speed:</span>
-        <div id="scrollbar-generatorspeed" class="scrollbar"><div class="force-overflow"></div></div>
-    </div>
+        <div id="top-menu">
 
-    <div class="panel" id="panel-choosetext">
-        <div class="dropdown" id="text-dropdown">
-            <button onclick="showList()" class="dropbtn">Choose Text!</button>
-            <div id="text-list" class="dropdown-content">
-              <a href="#">Link 1</a>
-              <a href="#">Link 2</a>
-              <a href="#">Link 3</a>
+            <button id="start" onclick="location.href='game.html';">Start Game</button>
+
+            <div class="panel" id="panel-choosetext">
+                <div class="dropdown" id="text-dropdown">
+                    <button onclick="showList()" class="dropbtn">Choose Text!</button>
+                    <div id="text-list" class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
             </div>
-          </div>
-    </div>
+
+        </div>
+
+        <div class="panel" id="panel-options">
+            <div id="difficulty">
+                <button id="easy" class="difficulty-button">Easy</button>
+                <button id="medium" class="difficulty-button">Medium</button>
+                <button id="hard" class="difficulty-button">Hard</button>
+            </div>
+
+            <div id="game-settings">
+                <span>Character speed:</span>
+                <div id="scrollbar-keyspeed" class="slider">
+                    <div class="pointer"></div>
+                </div>
+                <span>Character spawn speed:</span>
+                <div id="scrollbar-generatorspeed" class="slider">
+                    <div class="pointer"></div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
 </body>
 
 </html>

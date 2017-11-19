@@ -1,3 +1,8 @@
+* {
+    font-family: 'Nova Square', cursive;
+    font-size: 24px;
+}
+
 body {
     overflow: hidden;
     background: linear-gradient(135deg, #000000, #aaaaaa, #000000);
@@ -9,26 +14,80 @@ body {
     animation: background-animation 15s ease infinite;
 }
 
-.floating-key {
-    position: absolute;
-    background-image: url(../images/key.png);
+span {
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;  
 }
 
-#key-container {
-    position: absolute;
-}
-
-#logo {
-    top: -100px;
+#game-menu {
+    width: 700px;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
 }
 
-#start {
-    top: 250px;
-    left: 40%;
+#game-menu #top-menu {
+    position: initial;
+    margin-top: 60px;
+}
+
+#game-menu #top-menu #start {
+    display: inline-block;
+}
+
+#game-menu #top-menu #panel-choosetext {
+    display: inline-block;
+    padding: 20px;
+    position: absolute;
+    right: 0;
+}
+
+#game-menu #top-menu #panel-choosetext button {
+    width: 260px;
+    height: 60px;
+}
+
+#game-menu #panel-options {
+    margin-top: 60px;
+}
+
+#game-menu #panel-options #difficulty button {
+    display: inline-block;
+    width: calc(33% - 15px);
+    margin: 5px;
+    box-sizing: border-box;
+}
+
+#game-menu #panel-options #game-settings {
+    margin: 10px;
+}
+
+#game-menu #panel-options #game-settings span {
+    color: white;
+}
+
+.slider {
+    width: 80%;
+    margin: 30px 15px;
+    color: white;
+    display: inline-block;
+    border-bottom: 1px solid white;
+}
+
+.slider .pointer {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid grey;
+    border-radius: 100%;
+    background-color: white;
+    position: relative;
     transform: translateX(-50%);
+    left: 0%;
+    top: 17px;
 }
 
 .panel {
@@ -37,113 +96,28 @@ body {
     border-color: black;
     border-width: 2px;
     border-radius: 10px;
-    position: absolute;
-}
-
-#panel-options {
-    padding: 10px;
-    width: 600px;
-    height: 300px;
-    top: 400px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-#panel-choosetext {
-    width: 250px;
-    height: 100px;
-    left: 825px;
-    top: 250px;
-}
-
-#text-dropdown {
-    left: 50%;
-    top: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-}
-
-.difficulty-button {
-    width: 150px;
-    height: 80px;
-    top: 5%;
 }
 
 #easy {
-    left: 5%;
     background-color: lime;
 }
 
 #medium {
-    left: 37.5%;
     background-color: yellow;
 }
 
 #hard {
-    left: 70%;
     background-color: red;
 }
 
-.scrollbar
-{
+.floating-key {
     position: absolute;
-	float: left;
-	height: 30px;
-	width: 200px;
-    overflow-x: scroll;
+    background-image: url(../images/key.png);
 }
 
-.force-overflow
-{
-    min-width: 450px;
-    background-color: white;
-}
-
-.scrollbar::-webkit-scrollbar-track
-{
-	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	border-radius: 10px;
-	background-color: #F5F5F5;
-}
-
-.scrollbar::-webkit-scrollbar
-{
-    width: 200px;
-}
-
-.scrollbar::-webkit-scrollbar-thumb
-{
-    border-radius: 10px;
-	box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-	background-color: #D62929;
-}
-
-#scrollbar-keyspeed {
-    top: 50%;
-}
-
-#scrollbar-generatorspeed {
-    top: 80%;
-}
-
-.scrollbar-title {
-    font-family: "FFF Forward";
-    font-size: 20px;
-    color: white;
+#key-container {
     position: absolute;
-    text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000; 
-}
-
-#char-speed {
-    top: 40%;
-}
-
-#spawn-speed {
-    top: 70%;
+    filter: blur(5px);
 }
 
 @-webkit-keyframes background-animation {
@@ -160,9 +134,4 @@ body {
     0%{background-position:0% 4%}
     50%{background-position:100% 97%}
     100%{background-position:0% 4%}
-}
-
-@font-face {
-    font-family: "FFF Forward";
-    src: url(fonts/FFFFORWA.TTF);
 }
