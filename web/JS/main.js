@@ -60,6 +60,10 @@ $(document).keydown(function (e) {
             if (paused) {
                 resume();
             }
+
+            var textIndicator = document.getElementById("text-span");
+            textIndicator.innerHTML = textIndicator.innerHTML.slice(1, textIndicator.innerHTML.length);
+
             correctHits++;
         } else {
             if (code !== 16) {
@@ -92,6 +96,9 @@ function startGame() {
     textLoader.getRandomText(function (text) {
         // currentText = text;
         currentText = "text";
+
+        var textIndicator = document.getElementById("text-span");
+        textIndicator.innerHTML = currentText;
 
         generatorTimer = setInterval(generateNext, 600);
     });
