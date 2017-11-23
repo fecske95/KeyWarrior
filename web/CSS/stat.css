@@ -1,3 +1,11 @@
+#stat-panel span {
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;  
+}
+
 #stat-panel {
     position: absolute;
     left: 50%;
@@ -22,11 +30,39 @@
 
 #percentage {
     font-size: 48px;
-    top: 300px;
+    top: 400px;
     color: white;
 }
 
 #exitbutton {
     top: 500px;
     font-size: 24px;
+}
+
+#scoretext {
+    top: 200px;
+    font-size: 64px;
+    color: limegreen;
+}
+
+#star-div {
+    top: 300px;
+    width: auto;
+    height: 80px;
+}
+
+.star {
+    display: inline-block;
+    position: initial !important;
+    width: 80px;
+    height: 80px;
+    margin: 5px;
+    box-sizing: border-box;
+    background-image: url(../images/star.png);
+    background-size: 80px;
+    transform: none !important;
+}
+
+.star-full {
+    background-image: url(../images/star_full.png);
 }

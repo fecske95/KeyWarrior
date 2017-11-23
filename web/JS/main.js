@@ -26,7 +26,27 @@ var paused = false;
 
 var keyboard;
 
-var removeAnimation = function(e) {
+var countMiss = true;
+
+var score = 0;
+var multiplier = 1;
+var maxMultiplier = 6;
+
+var scorePerKey = 5;
+var scorePerSpecialCharacter = 8;
+var streak = 0;
+
+var maxStars = 5;
+
+var Difficulties = {
+    EASY: 0,
+    MEDIUM: 1,
+    HARD: 2
+};
+
+var difficulty = Difficulties.MEDIUM;
+
+var removeAnimation = function (e) {
     removeKey(0);
 };
 
@@ -38,7 +58,7 @@ $(document).keydown(function (e) {
 
     //handling SHIFT key
     var code = e.keyCode;
-    if(code === 16) {
+    if (code === 16) {
         shiftHeld = true;
     }
 
@@ -58,18 +78,23 @@ $(document).keydown(function (e) {
 
 $(document).keypress(function (e) {
     var code = e.keyCode;
-    
+
     if (keysOnScreen.length > 0) {
-        
+
         if (code === keysOnScreen[0].key) {
+            score += getScoreForChar(keysOnScreen[0].letter) * (difficulty + multiplier);
             removeKey(1);
 
             correctHits++;
+            streak++;
         } else {
-            if (code !== 16) {
+            if (countMiss && code !== 16) {
                 wrongHits++;
+                countMiss = false;
+                streak = 0;
             }
         }
+        multiplier = DetermineMultiplier();
         updateStats();
     }
 });
@@ -78,7 +103,7 @@ $(document).keyup(function (e) {
 
     // handling SHIFT key
     var code = e.keyCode;
-    if(code === 16) {
+    if (code === 16) {
         shiftHeld = false;
     }
 
@@ -101,7 +126,7 @@ function startGame() {
     var textLoader = new window.KeyWarrior.TextLoader();
     keyboard = new window.KeyWarrior.Keyboard();
     textLoader.getRandomText(function (text) {
-        currentText = text;
+        currentText = "text";
 
         var textIndicator = document.getElementById("text-span");
         textIndicator.innerHTML = currentText;
@@ -116,12 +141,14 @@ function startGame() {
 function updateStats() {
     document.getElementById("correct-hits").innerText = correctHits;
     document.getElementById("wrong-hits").innerText = wrongHits;
+    document.getElementById("score-span").innerText = score;
+    document.getElementById("mul-span").innerText = multiplier + 'x';
 }
 
 function removeKey(reason) {
     if (reason === 1) {
         keysOnScreen[0].element.style["animation"] = "correct-key 1s 1";
-        if (keysOnScreen.letter === ' ') {
+        if (keysOnScreen[0].letter === ' ') {
             keysOnScreen[0].element.style["background-image"] = "url(images/space_green.png)";
         } else {
             keysOnScreen[0].element.style["background-image"] = "url(images/key_green.png)";
@@ -134,6 +161,8 @@ function removeKey(reason) {
         } else {
             keysOnScreen[0].element.style["background-image"] = "url(images/key_red.png)";
         }
+        wrongHits++;
+        updateStats();
     }
 
     scheduleForRemove(keysOnScreen[0].container);
@@ -147,13 +176,14 @@ function removeKey(reason) {
 
     if (currentLetterCounter >= currentText.length) {
         endGame();
-    }
-    else {
+    } else {
         generateNext();
     }
 
     var textIndicator = document.getElementById("text-span");
     textIndicator.innerHTML = textIndicator.innerHTML.slice(1, textIndicator.innerHTML.length);
+
+    countMiss = true;
 }
 
 function scheduleForRemove(keyElement) {
@@ -190,8 +220,26 @@ function generateNext() {
     }
 }
 
+function DetermineMultiplier() {
+    var mul = Math.ceil(streak / (15 + streak * 0.1));
+    if(mul > maxMultiplier) {
+        mul = maxMultiplier;
+    }
+
+    return mul;
+}
+
 function endGame() {
-    var percents = correctHits / currentText.length * 100;
+    var percents = (currentText.length - wrongHits) / currentText.length * 100;
+    var maxScore = 0;
+    for(var i = 0; i < currentText.length; i++) {
+        maxScore += getScoreForChar(currentText[i]);
+    }
+
+    var stars = Math.floor((score / maxScore * 100) / 20);
+    if(stars > maxStars) {
+        stars = maxStars;
+    }
 
     var panel = document.createElement("div");
     panel.className = "panel";
@@ -202,6 +250,27 @@ function endGame() {
     endtext.innerHTML = "Congratulations!";
     endtext.setAttribute("id", "endtext");
     panel.appendChild(endtext);
+
+    var scoretext = document.createElement("span");
+    scoretext.innerHTML = "Score: " + score;
+    scoretext.setAttribute("id", "scoretext");
+    panel.appendChild(scoretext);
+
+    var stardiv = document.createElement("div");
+    stardiv.setAttribute("id", "star-div");
+    panel.appendChild(stardiv);
+
+    var starCounter = 1;
+    for(var i = 0; i < maxStars; i++) {
+        var starElement = document.createElement("div");
+        starElement.classList.add("star");
+
+        if(starCounter <= stars) {
+            starElement.classList.add("star-full");
+            starCounter++;
+        }
+        stardiv.appendChild(starElement);
+    }
 
     var percentage = document.createElement("span");
     percentage.innerHTML = percents + '%';
@@ -216,4 +285,26 @@ function endGame() {
     panel.appendChild(exitbutton);
 
     document.getElementById("game-container").style["filter"] = "blur(5px)";
+}
+
+function getScoreForChar(char) {
+    var score;
+    switch (char) {
+        // fallthrough
+        case '-':
+        case ',': 
+        case '.':
+            score = scorePerSpecialCharacter;
+            break;
+
+        case ' ':
+            score = 2;
+            break;
+
+        default:
+            score = scorePerKey;
+            break;
+    }
+
+    return score;
 }

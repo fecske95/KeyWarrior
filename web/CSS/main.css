@@ -152,3 +152,25 @@
     color: black;
     background-color: white;
 }
+
+#score-panel {
+    position: absolute;
+    top: calc(100% - 400px);
+    margin: 10px;
+    width: 250px;
+    height: 200px;
+}
+
+#score-panel * {
+    position: absolute;
+    font-family: 'Nova Square', cursive;
+    font-size: 42px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#mul-span {
+    top: 50%;
+    color: lime;
+}
+
