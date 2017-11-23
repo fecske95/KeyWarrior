@@ -26,6 +26,10 @@ var paused = false;
 
 var keyboard;
 
+var removeAnimation = function(e) {
+    removeKey(0);
+};
+
 window.onload = function () {
     startGame();
 };
@@ -54,24 +58,15 @@ $(document).keydown(function (e) {
 
 $(document).keypress(function (e) {
     var code = e.keyCode;
-
-    console.log("Key pressed", code);
     
     if (keysOnScreen.length > 0) {
         
         if (code === keysOnScreen[0].key) {
-            removeKey(keysOnScreen[0], 1);
-            if (paused) {
-                resume();
-            }
-
-            var textIndicator = document.getElementById("text-span");
-            textIndicator.innerHTML = textIndicator.innerHTML.slice(1, textIndicator.innerHTML.length);
+            removeKey(1);
 
             correctHits++;
         } else {
             if (code !== 16) {
-                pause();
                 wrongHits++;
             }
         }
@@ -111,7 +106,7 @@ function startGame() {
         var textIndicator = document.getElementById("text-span");
         textIndicator.innerHTML = currentText;
 
-        generatorTimer = setInterval(generateNext, 600);
+        generatorTimer = setTimeout(generateNext, 1000);
     });
 
     correctHits = 0;
@@ -123,55 +118,55 @@ function updateStats() {
     document.getElementById("wrong-hits").innerText = wrongHits;
 }
 
-function removeKey(key, reason) {
-    keysOnScreen.splice(keysOnScreen.findIndex(x => x === key), 1);
-
+function removeKey(reason) {
     if (reason === 1) {
-        key.element.style["animation"] = "correct-key 1s 1";
-        if (key.letter === ' ') {
-            key.element.style["background-image"] = "url(images/space_green.png)";
+        keysOnScreen[0].element.style["animation"] = "correct-key 1s 1";
+        if (keysOnScreen.letter === ' ') {
+            keysOnScreen[0].element.style["background-image"] = "url(images/space_green.png)";
         } else {
-            key.element.style["background-image"] = "url(images/key_green.png)";
+            keysOnScreen[0].element.style["background-image"] = "url(images/key_green.png)";
         }
 
     } else {
-        key.element.style["animation"] = "missed-key 1s 1";
-        if (key.letter === ' ') {
-            key.element.style["background-image"] = "url(images/space_red.png)";
+        keysOnScreen[0].element.style["animation"] = "missed-key 1s 1";
+        if (keysOnScreen[0].letter === ' ') {
+            keysOnScreen[0].element.style["background-image"] = "url(images/space_red.png)";
         } else {
-            key.element.style["background-image"] = "url(images/key_red.png)";
+            keysOnScreen[0].element.style["background-image"] = "url(images/key_red.png)";
         }
     }
 
-    scheduleForRemove(key);
+    scheduleForRemove(keysOnScreen[0].container);
+    keysOnScreen[0].container.removeEventListener("animationend", removeAnimation);
+    keysOnScreen.shift();
     currentLetterCounter++;
-
-    if (currentLetterCounter === currentText.length) {
-        endGame();
-    }
 
     if (keysOnScreen.length > 0) {
         keysOnScreen[0].element.style["animation"] = "currentkey-mark 1s infinite";
     }
 
-    if (paused) {
-        resume();
+    if (currentLetterCounter >= currentText.length) {
+        endGame();
     }
+    else {
+        generateNext();
+    }
+
+    var textIndicator = document.getElementById("text-span");
+    textIndicator.innerHTML = textIndicator.innerHTML.slice(1, textIndicator.innerHTML.length);
 }
 
-function scheduleForRemove(key) {
+function scheduleForRemove(keyElement) {
     setTimeout(function () {
-        var element = document.getElementById("gameboard");
-        if (element !== null && element.contains(key.container)) {
-            document.getElementById("gameboard").removeChild(key.container);
+        var gameboard = document.getElementById("gameboard");
+        if (gameboard !== null && gameboard.contains(keyElement)) {
+            document.getElementById("gameboard").removeChild(keyElement);
         }
     }, 1000);
 }
 
 function setAnimationEnd(key) {
-    key.container.addEventListener("animationend", function (e) {
-        removeKey(key, 0);
-    }, false);
+    key.container.addEventListener("animationend", removeAnimation, false);
 }
 
 function generateNext() {
@@ -195,27 +190,9 @@ function generateNext() {
     }
 }
 
-function pause() {
-    for (var i = 0; i < keysOnScreen.length; i++) {
-        keysOnScreen[i].container.style["-webkit-animation-play-state"] = "paused";
-        keysOnScreen[i].container.style["-moz-animation-play-state"] = "paused";
-        keysOnScreen[i].container.style["-o-animation-play-state"] = "paused";
-        keysOnScreen[i].container.style["animation-play-state"] = "paused";
-    }
-    paused = true;
-}
-
-function resume() {
-    for (var i = 0; i < keysOnScreen.length; i++) {
-        keysOnScreen[i].container.style["-webkit-animation-play-state"] = "running";
-        keysOnScreen[i].container.style["-moz-animation-play-state"] = "running";
-        keysOnScreen[i].container.style["-o-animation-play-state"] = "running";
-        keysOnScreen[i].container.style["animation-play-state"] = "running";
-    }
-    paused = false;
-}
-
 function endGame() {
+    var percents = correctHits / currentText.length * 100;
+
     var panel = document.createElement("div");
     panel.className = "panel";
     panel.id = "stat-panel";
@@ -227,7 +204,7 @@ function endGame() {
     panel.appendChild(endtext);
 
     var percentage = document.createElement("span");
-    percentage.innerHTML = "50%";
+    percentage.innerHTML = percents + '%';
     percentage.setAttribute("id", "percentage");
     panel.appendChild(percentage);
 
