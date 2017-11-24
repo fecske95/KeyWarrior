@@ -11,7 +11,7 @@
     <script type="text/javascript" src="JS/jquery.js"></script>
     <script type="text/javascript" src="JS/dropdownlist.js"></script>
     <script type="text/javascript" src="JS/menuanimation.js"></script>
-    <script type="text/javascript" src="JS/slider.js"></script>
+    <script type="text/javascript" src="JS/settings.js"></script>
 </head>
 
 <body>
@@ -22,7 +22,7 @@
 
         <div id="top-menu">
 
-            <button id="start" onclick="location.href='game.html';">Start Game</button>
+            <button id="start" onclick="window.localStorage.setItem('indicator', document.getElementById('checkbox-textindicator').checked); location.href='game.html';">Start Game</button>
 
             <div class="panel" id="panel-choosetext">
                 <div class="dropdown" id="text-dropdown">
@@ -34,30 +34,38 @@
                     </div>
                 </div>
             </div>
-
         </div>
 
         <div class="panel" id="panel-options">
             <div id="difficulty">
-                <button id="easy" class="difficulty-button">Easy</button>
-                <button id="medium" class="difficulty-button">Medium</button>
-                <button id="hard" class="difficulty-button">Hard</button>
+                <div class="radio-container" id="container-easy">
+                    <input type="radio" name="difficulty" id="easy" class="difficulty-button" onclick="setDifficulty(this)" checked/>
+                    <label class="difficulty-label" for="easy">Easy</label>
+                </div>
+                <div class="radio-container" id="container-medium">
+                    <input type="radio" name="difficulty" id="medium" class="difficulty-button" onclick="setDifficulty(this)" />
+                    <label class="difficulty-label" for="medium">Medium</label>
+                </div>
+                <div class="radio-container" id="container-hard">
+                    <input type="radio" name="difficulty" id="hard" class="difficulty-button" onclick="setDifficulty(this)" />
+                    <label class="difficulty-label" for="hard">Hard</label>
+                </div>
+                <div class="radio-container" id="container-custom">
+                    <input type="radio" name="difficulty" id="custom" class="difficulty-button" onclick="setDifficulty(this)" />
+                    <label class="difficulty-label" for="custom">Custom</label>
+                </div>
             </div>
 
             <div id="game-settings">
-                <span>Character speed:</span>
-                <div id="scrollbar-keyspeed" class="slider">
-                    <div class="pointer"></div>
+                <span id="charspeed-span" class="disabled">Character speed:</span>
+                <div id="scrollbar-keyspeed" class="slider disabled">
+                    <div class="pointer" style="left: 1px;"></div>
                 </div>
-
-                <span>Character spawn speed:</span>
-                <div id="scrollbar-generatorspeed" class="slider">
-                    <div class="pointer"></div>
-                </div>
+                <span class="pointer-value disabled">0.1</span>
 
                 <div>
                     <span>Text indicator:</span>
-                    <input type="checkbox" id="checkbox-textindicator"/>
+                    <input type="checkbox" id="checkbox-textindicator" checked/>
                 </div>
             </div>
         </div>

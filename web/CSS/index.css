@@ -55,11 +55,16 @@ span {
     margin-top: 60px;
 }
 
-#game-menu #panel-options #difficulty button {
+#game-menu #panel-options #difficulty .radio-container {
     display: inline-block;
-    width: calc(33% - 15px);
+    width: calc(25% - 20px);
     margin: 5px;
     box-sizing: border-box;
+}
+
+#game-menu #panel-options #difficulty .radio-container input {
+    margin: 0px;
+    width: 100%;
 }
 
 #game-menu #panel-options #game-settings {
@@ -80,6 +85,14 @@ span {
 
 #hard {
     background-color: red;
+}
+
+#custom {
+    background-color: gray;
+}
+
+.disabled {
+    display: none;
 }
 
 .floating-key {

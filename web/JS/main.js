@@ -28,6 +28,8 @@ var keyboard;
 
 var countMiss = true;
 
+var indicator = false;
+
 var score = 0;
 var multiplier = 1;
 var maxMultiplier = 6;
@@ -41,10 +43,10 @@ var maxStars = 5;
 var Difficulties = {
     EASY: 0,
     MEDIUM: 1,
-    HARD: 2
+    HARD: 2,
 };
 
-var difficulty = Difficulties.MEDIUM;
+var difficulty = Difficulties.EASY;
 
 var removeAnimation = function (e) {
     removeKey(0);
@@ -52,72 +54,96 @@ var removeAnimation = function (e) {
 
 window.onload = function () {
     startGame();
+    keyAnimationTime = parseFloat(window.localStorage.getItem("charSpeed"));
+    indicator = window.localStorage.getItem("indicator") === 'checked';
+
+    if (!indicator) {
+        document.getElementById("game-container").removeChild(document.getElementById("text-div"));
+    }
+
+    difficulty = window.localStorage.getItem("difficulty");
+
+    if (difficulty === "CUSTOM") {
+        if (keyAnimationTime >= 6) {
+            difficulty = Difficulties.EASY;
+        } else if (keyAnimationTime >= 3) {
+            difficulty = Difficulties.MEDIUM;
+        } else {
+            difficulty = Difficulties.HARD;
+        }
+    } else {
+        difficulty = Difficulties[difficulty];
+    }
 };
 
 $(document).keydown(function (e) {
+    if (!paused) {
+        //handling SHIFT key
+        var code = e.keyCode;
+        if (code === 16) {
+            shiftHeld = true;
+        }
 
-    //handling SHIFT key
-    var code = e.keyCode;
-    if (code === 16) {
-        shiftHeld = true;
-    }
+        // adding highlight style
+        var id = keyboard.getIdForKeyCode(code);
+        var backgroundImage = "url(images/key_pressed.png)";
 
-    // adding highlight style
-    var id = keyboard.getIdForKeyCode(code);
-    var backgroundImage = "url(images/key_pressed.png)";
+        if (id === "keyboardkey-space") {
+            backgroundImage = "url(images/space_pressed.png)";
+        }
 
-    if (id === "keyboardkey-space") {
-        backgroundImage = "url(images/space_pressed.png)";
-    }
-
-    var element = document.getElementById(id);
-    if (element !== null) {
-        element.style["background-image"] = backgroundImage;
+        var element = document.getElementById(id);
+        if (element !== null) {
+            element.style["background-image"] = backgroundImage;
+        }
     }
 });
 
 $(document).keypress(function (e) {
-    var code = e.keyCode;
+    if (!paused) {
+        var code = e.keyCode;
 
-    if (keysOnScreen.length > 0) {
+        if (keysOnScreen.length > 0) {
 
-        if (code === keysOnScreen[0].key) {
-            score += getScoreForChar(keysOnScreen[0].letter) * (difficulty + multiplier);
-            removeKey(1);
+            if (code === keysOnScreen[0].key) {
+                score += getScoreForChar(keysOnScreen[0].letter) * (difficulty + multiplier);
+                removeKey(1);
 
-            correctHits++;
-            streak++;
-        } else {
-            if (countMiss && code !== 16) {
-                wrongHits++;
-                countMiss = false;
-                streak = 0;
+                correctHits++;
+                streak++;
+            } else {
+                if (countMiss && code !== 16) {
+                    wrongHits++;
+                    countMiss = false;
+                    streak = 0;
+                }
             }
+            multiplier = DetermineMultiplier();
+            updateStats();
         }
-        multiplier = DetermineMultiplier();
-        updateStats();
     }
 });
 
 $(document).keyup(function (e) {
+    if (!paused) {
+        // handling SHIFT key
+        var code = e.keyCode;
+        if (code === 16) {
+            shiftHeld = false;
+        }
 
-    // handling SHIFT key
-    var code = e.keyCode;
-    if (code === 16) {
-        shiftHeld = false;
-    }
+        // removing highlight style
+        var id = keyboard.getIdForKeyCode(e.keyCode);
+        var backgroundImage = "url(images/key.png)";
 
-    // removing highlight style
-    var id = keyboard.getIdForKeyCode(e.keyCode);
-    var backgroundImage = "url(images/key.png)";
+        if (id === "keyboardkey-space") {
+            backgroundImage = "url(images/space.png)";
+        }
 
-    if (id === "keyboardkey-space") {
-        backgroundImage = "url(images/space.png)";
-    }
-
-    var element = document.getElementById(id);
-    if (element !== null) {
-        element.style["background-image"] = backgroundImage;
+        var element = document.getElementById(id);
+        if (element !== null) {
+            element.style["background-image"] = backgroundImage;
+        }
     }
 });
 
@@ -129,7 +155,9 @@ function startGame() {
         currentText = "text";
 
         var textIndicator = document.getElementById("text-span");
-        textIndicator.innerHTML = currentText;
+        if (textIndicator !== null) {
+            textIndicator.innerHTML = currentText;
+        }
 
         generatorTimer = setTimeout(generateNext, 1000);
     });
@@ -181,7 +209,9 @@ function removeKey(reason) {
     }
 
     var textIndicator = document.getElementById("text-span");
-    textIndicator.innerHTML = textIndicator.innerHTML.slice(1, textIndicator.innerHTML.length);
+    if (textIndicator !== null) {
+        textIndicator.innerHTML = textIndicator.innerHTML.slice(1, textIndicator.innerHTML.length);
+    }
 
     countMiss = true;
 }
@@ -222,7 +252,7 @@ function generateNext() {
 
 function DetermineMultiplier() {
     var mul = Math.ceil(streak / (15 + streak * 0.1));
-    if(mul > maxMultiplier) {
+    if (mul > maxMultiplier) {
         mul = maxMultiplier;
     }
 
@@ -232,12 +262,12 @@ function DetermineMultiplier() {
 function endGame() {
     var percents = (currentText.length - wrongHits) / currentText.length * 100;
     var maxScore = 0;
-    for(var i = 0; i < currentText.length; i++) {
+    for (var i = 0; i < currentText.length; i++) {
         maxScore += getScoreForChar(currentText[i]);
     }
 
     var stars = Math.floor((score / maxScore * 100) / 20);
-    if(stars > maxStars) {
+    if (stars > maxStars) {
         stars = maxStars;
     }
 
@@ -261,11 +291,11 @@ function endGame() {
     panel.appendChild(stardiv);
 
     var starCounter = 1;
-    for(var i = 0; i < maxStars; i++) {
+    for (var i = 0; i < maxStars; i++) {
         var starElement = document.createElement("div");
         starElement.classList.add("star");
 
-        if(starCounter <= stars) {
+        if (starCounter <= stars) {
             starElement.classList.add("star-full");
             starCounter++;
         }
@@ -285,6 +315,53 @@ function endGame() {
     panel.appendChild(exitbutton);
 
     document.getElementById("game-container").style["filter"] = "blur(5px)";
+
+    paused = true;
+}
+
+function showMenu() {
+    var panel = document.createElement("div");
+    panel.className = "panel";
+    panel.setAttribute("id", "menu-panel");
+    document.body.appendChild(panel);
+
+    var pauseText = document.createElement("span");
+    pauseText.setAttribute("id", "pause-text");
+    pauseText.innerText = "Paused";
+    panel.appendChild(pauseText);
+
+    var closeButton = document.createElement("button");
+    closeButton.setAttribute("id", "close-button");
+    closeButton.addEventListener("click", hideMenu);
+    closeButton.innerText = "Resume";
+    panel.appendChild(closeButton);
+
+    var exitButton = document.createElement("button");
+    exitButton.setAttribute("id", "exit-button");
+    exitButton.addEventListener("click", function(e) {
+        location.href = "index.html";
+    });
+    exitButton.innerText = "Exit";
+    panel.appendChild(exitButton);
+
+    document.getElementById("game-container").style["filter"] = "blur(5px)";
+
+    for(var i = 0; i < keysOnScreen.length; i++) {
+        keysOnScreen[i].container.classList.add("paused");
+    }
+
+    paused = true;
+}
+
+function hideMenu() {
+    document.body.removeChild(document.getElementById("menu-panel"));
+    document.getElementById("game-container").style["filter"] = "none";
+
+    for(var i = 0; i < keysOnScreen.length; i++) {
+        keysOnScreen[i].container.classList.remove("paused");
+    }
+
+    paused = false;
 }
 
 function getScoreForChar(char) {
@@ -292,7 +369,7 @@ function getScoreForChar(char) {
     switch (char) {
         // fallthrough
         case '-':
-        case ',': 
+        case ',':
         case '.':
             score = scorePerSpecialCharacter;
             break;

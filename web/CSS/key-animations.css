@@ -47,3 +47,10 @@
         opacity: 0.0;
     }
 }
+
+.paused {
+    -webkit-animation-play-state: paused !important; 
+    -moz-animation-play-state: paused !important; 
+    -o-animation-play-state: paused !important;
+    animation-play-state: paused !important;
+}

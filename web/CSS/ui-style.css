@@ -27,7 +27,10 @@
     border-radius: 10px;
 }
 
-button {
+button, input[type="radio"] {
+    -webkit-appearance: none;
+    -ms-progress-appearance: none;
+    -moz-appearance: none; 
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
     cursor: pointer;
@@ -39,9 +42,25 @@ button {
     border-radius: 10px;
 }
 
-button:hover {
+button:hover, input[type="radio"]:hover, input[type="radio"]:checked {
     background-color: black !important;
     color: white;
+}
+
+input[type="radio"]:hover + label, input[type="radio"]:checked + label {
+    color: white;
+}
+
+.radio-container {
+    position: relative;
+}
+
+.radio-container input[type="radio"] + label {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
 }
 
 input[type="checkbox"] {

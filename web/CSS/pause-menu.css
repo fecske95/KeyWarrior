@@ -1,0 +1,37 @@
+#menu-panel {
+    position: absolute;
+    width: 600px;
+    height: 500px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#menu-panel * {
+    position: absolute;
+    font-family: "Nova Square", cursive;
+    font-size: 64px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#menu-panel #pause-text {
+    top: 50px;
+    font-size: 74px;
+    color: white;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;  
+}
+
+#menu-panel #close-button {
+    font-size: 48px;
+    top: 200px;
+}
+
+#menu-panel #exit-button {
+    font-size: 48px;
+    top: 350px;
+}

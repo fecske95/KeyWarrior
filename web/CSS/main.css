@@ -155,7 +155,7 @@
 
 #score-panel {
     position: absolute;
-    top: calc(100% - 400px);
+    top: calc(100% - 300px);
     margin: 10px;
     width: 250px;
     height: 200px;
@@ -172,5 +172,13 @@
 #mul-span {
     top: 50%;
     color: lime;
+}
+
+#pause-button {
+    position: absolute;
+    font-family: 'Nova Square', cursive;
+    font-size: 48px;
+    left: calc(100% - 320px);
+    top: calc(100% - 120px);
 }
 
