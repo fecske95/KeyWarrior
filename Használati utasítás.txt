@@ -1,0 +1,25 @@
+Elérés:keywarrior.herokuapp.com	
+	
+-------------------------
+Használati Útmutató:
+	-Menü: 
+		*Start Game gomb: Bal egér gombbal klikkelve a gombra betölt az alkalmazás és egybõl
+elérhetõvé válik a program használata.
+		*Options gomb: Klikkelve a gomra(bal egérgomb) a beállítási lehetõségek érhetõk el. 	
+	-Alkalmazás:
+		*Billentyûzet: 
+			-Az alkalmazás indulásakor egy billentyûzet látható ,ami visszajelzésre szolgál. Billentyûk 
+lenyomásakor a virtuális klaviatúrán a citrom színnel jelzett billentyû jelenti azt ,hogy a felhasználó melyik 
+karaktert ütötte le.
+		*találatszámláló:
+			-Az ablak bal felsõ sarkában található számláló jelzi a helyes találatot és megmondja hány leütés volt eddig 
+helyes valamint a jobb felsõ sarokban lévõ számláló mutatja mennyi  helytelen leütés történt.
+		*Beúszó karakterek: 
+			-A beúszó karakterek jelennek meg az ablak felsõ részében amik jelzik ,hogy mely billentyût üssük le a 
+helyes eredmény érdekében, amennyiben rossz karakter kerül leütésre a beúszó karakter piros, helyes esetben 
+zöld színre vált és eltûnik.Amennyiben idõhatáron belül nem történik leütés a karakter beúszik a klaviatúra megfelelõ karaktere 
+fölé és piros színre vált ami helytelen eredményt ad.
+		*Játék vége: 
+			-Amennyiben elfogynak a leütni kívánt karakterek megjelenik egy menü ablak amelyben százalékos formában
+kiértékelõdik felhasználó által elért teljesítmény. Ebben a menüben lehetõségünk van visszatérni a fõmenübe melyet a program 
+elején láthatunk, és lehetõségünk van új játékot kezdeni.

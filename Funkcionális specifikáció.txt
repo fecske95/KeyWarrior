@@ -1,67 +1,21 @@
 ﻿Funkcionális Specifikáció
--------------------------
-Elérés:keywarrior.herokuapp.com	
-	
--------------------------
-Használati Útmutató:
-	-Menü: 
-		*Start Game gomb: Bal egér gombbal klikkelve a gombra betölt az alkalmazás és egyből
-elérhetővé válik a program használata.
-		*Options gomb: Klikkelve a gomra(bal egérgomb) a beállítási lehetőségek érhetők el. 	
-	-Alkalmazás:
-		*Billentyűzet: 
-			-Az alkalmazás indulásakor egy billentyűzet látható ,ami visszajelzésre szolgál. Billentyűk 
-lenyomásakor a virtuális klaviatúrán a citrom színnel jelzett billentyű jelenti azt ,hogy a felhasználó melyik 
-karaktert ütötte le.
-		*találatszámláló:
-			-Az ablak bal felső sarkában található számláló jelzi a helyes találatot és megmondja hány leütés volt eddig 
-helyes valamint a jobb felső sarokban lévő számláló mutatja mennyi  helytelen leütés történt.
-		*Beúszó karakterek: 
-			-A beúszó karakterek jelennek meg az ablak felső részében amik jelzik ,hogy mely billentyűt üssük le a 
-helyes eredmény érdekében, amennyiben rossz karakter kerül leütésre a beúszó karakter piros, helyes esetben 
-zöld színre vált és eltűnik.Amennyiben időhatáron belül nem történik leütés a karakter beúszik a klaviatúra megfelelő karaktere 
-fölé és piros színre vált ami helytelen eredményt ad.
-		*Játék vége: 
-			-Amennyiben elfogynak a leütni kívánt karakterek megjelenik egy menü ablak amelyben százalékos formában
-kiértékelődik felhasználó által elért teljesítmény. Ebben a menüben lehetőségünk van visszatérni a főmenübe melyet a program 
-elején láthatunk, és lehetőségünk van új játékot kezdeni.
 -----------------------------
-
-A rendszer céljai és nem céljai:
-	-
-Jelenlegi helyzet leírása:
-	-
-Vágyálom rendszer leírása:
-	-A rendszer képes legyen egy adott szöveg beolvasására az alkalmazáson belül
-	-A beolvasott szöveget időzítve, helyes sorrendben képes legyen visszaadni
-	-Helyes találat után legyen jól látható mi a soron következő karakter amit le kell ütni
-	-Legyen jól látható mely billentyű került lenyomásra
-	-Kapjon a felhasználó egyértelmű visszajelzést a helyes és helytelen találatokról
-	-Százalékos formában értékelődjön ki az elért teljesítmény
-	-Egyszerű és áttekinthető menüt kapjon a felhasználó
-	-Legyen az alkalmazás életkortól függetlenül használható
-A rendszerre vonatkozó külső megszorítások: pályázat, törvények, rendeletek, szabványok és ajánlások felsorolása:
-	-
-Jelenlegi üzleti folyamatok modellje:
-	-
-Igényelt üzleti folyamatok modellje:
-	-
-Követelménylista:
-	-Bármely korosztály számára elérhető legyen
-	-Korszerű design
-	-Könnyű elsajátítás
-	-Multiplatform támogatás
-	-Alacsony gépigény
-	-Hibamentes futás
-Használati esetek [Use cases]:
-	-Tanulási lehetőség megvalósítása
-Megfeleltetés, hogyan fedik le a használati esetek a követelményeket:
-	-
-Képernyő tervek:
-	-
-Forgatókönyvek:
-	-
-Funkció – követelmény megfeleltetés:
-	-
-Fogalomszótár:
-	-
+	A rendszer célja hogy megtanítsa a felhasználót a gyors- és gépírásra, ezen felül lehetőséget nyújtson szövegek könnyebb tanulására játékos körülmények közt,így lehetővé téve 
+a fiatalabb generáció számíára a könnyed tanulási folyamatokat.
+	Jelenleg a program alfa változatát láthatjuk, körülbelül 80%-os a program. Előfordulhatnak nem várt buguk az alkalmazással kapcsolatban.
+	A feljelsztés végkimenetele, hogy képes legyen egy adott szöveg beolvasására az alkalmazáson belül amit felhasználó maga bemásol vagy beilleszt különböző portálokból vagy egyéb más 
+forrásokbó. Fontos,hogy a beolvasott szöveget időzítve, helyes sorrendben képes legyen visszaadni, ezáltal visszajelzést adva a felhasználónak van-e szöksége még fejlődnie. Helyes találat 
+után legyen jól látható mi a soron következő karakter amit le kell ütnie. Legyen jól látható mely billentyű került lenyomásra, hogy lássák valóban a helyes karatert nyomta meg. Kapjon a 
+felhasználó egyértelmű visszajelzést a helyes és helytelen találatokról, amennyiben ez nem így történne a felhasználó programhibának is észlelhetné. Százalékos formában értékelődjön ki 
+az elért teljesítmény, ezzel látványossá téve az eredményt. Egyszerű és áttekinthető menüt kapjon a felhasználó, ezzel segítve a felhasználót és növelve a felhasználói élményt. Legyen 
+az alkalmazás életkortól függetlenül használható.
+	Igyekezzen a tervező saját forrásokat használni, melyekre nem vonatkoznak megszorítások és nem kötődnek licese-hez. 
+	A követelményeink közé soroljuk ,hogy bármely korosztály számára elérhető legyen, kapjon korszerű designt, legyen könnyű az alkalmazás használatának elsajátítása, bármely böngészőn
+hibamentesen lehessen használni (kapjon multiplatform támogatás), legyen alacsony erőforrás igényes valamint a futása közel hibamentes legyen.
+	
+	Fogalomszótár: 
+ 	-[alfa]: az első tesztelési folyamatban lévő verzió.
+	-[bug]: fejlesztési hiba
+	-[portálok]: webhebhelyek melyeket megtalál a keresőprogramja segítségével
+	-[karakter]: a billyentűzet egy gombja
+	-[multiplatform]: több hasonló működésű ugyanazon célra használható szoftver
