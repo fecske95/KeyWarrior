@@ -311,10 +311,10 @@ function endGame() {
     exitbutton.className = "keybutton";
     exitbutton.innerHTML = "Finish";
     exitbutton.setAttribute("id", "exitbutton");
-    exitbutton.setAttribute("onclick", "location.href='index.html';");
+    exitbutton.addEventListener("click", function() {
+        location.href='index.html'; 
+    }, true);
     panel.appendChild(exitbutton);
-
-    document.getElementById("game-container").style["filter"] = "blur(5px)";
 
     paused = true;
 }
@@ -344,8 +344,6 @@ function showMenu() {
     exitButton.innerText = "Exit";
     panel.appendChild(exitButton);
 
-    document.getElementById("game-container").style["filter"] = "blur(5px)";
-
     for(var i = 0; i < keysOnScreen.length; i++) {
         keysOnScreen[i].container.classList.add("paused");
     }
@@ -355,7 +353,7 @@ function showMenu() {
 
 function hideMenu() {
     document.body.removeChild(document.getElementById("menu-panel"));
-    document.getElementById("game-container").style["filter"] = "none";
+    document.getElementById("game-container").classList.remove("blur");
 
     for(var i = 0; i < keysOnScreen.length; i++) {
         keysOnScreen[i].container.classList.remove("paused");
