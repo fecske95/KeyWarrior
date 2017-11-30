@@ -55,7 +55,7 @@ var removeAnimation = function (e) {
 window.onload = function () {
     startGame();
     keyAnimationTime = parseFloat(window.localStorage.getItem("charSpeed"));
-    indicator = window.localStorage.getItem("indicator") === 'checked';
+    indicator = window.localStorage.getItem("indicator");
 
     if (!indicator) {
         document.getElementById("game-container").removeChild(document.getElementById("text-div"));
@@ -101,7 +101,7 @@ $(document).keydown(function (e) {
 
 $(document).keypress(function (e) {
     if (!paused) {
-        var code = e.keyCode;
+        var code = e.charCode || e.keyCode;
 
         if (keysOnScreen.length > 0) {
 
@@ -260,7 +260,7 @@ function DetermineMultiplier() {
 }
 
 function endGame() {
-    var percents = (currentText.length - wrongHits) / currentText.length * 100;
+    var percents = Math.abs(currentText.length - wrongHits) / currentText.length * 100;
     var maxScore = 0;
     for (var i = 0; i < currentText.length; i++) {
         maxScore += getScoreForChar(currentText[i]);
