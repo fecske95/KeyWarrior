@@ -8,12 +8,22 @@ var minCharSpeed = 1;
 
 var difficultyCap = 10;
 
-addListeners();
+window.addEventListener("load", addListeners, true);
+window.addEventListener("click", hideDropdownList, true);
 
 function addListeners() {
     window.addEventListener("mouseup", mouseUp, true);
     window.addEventListener("mousedown", mouseDown, true);
     window.addEventListener("mousemove", mouseMove, true);
+
+    document.getElementById("start").addEventListener("click", startGame, true);
+
+    var difficultyButtons = document.querySelectorAll(".difficulty-button");
+    for(var i = 0; i < difficultyButtons.length; i++) {
+        difficultyButtons[i].addEventListener("click", setDifficulty, true);
+    }
+
+    document.getElementById("textlist-button").addEventListener("click", showList, true);
 }
 
 function mouseUp(e) {
@@ -41,8 +51,8 @@ function mouseMove(e) {
     }
 }
 
-function setDifficulty(element) {
-    var diff = element.id.toUpperCase();
+function setDifficulty() {
+    var diff = this.id.toUpperCase();
     window.localStorage.setItem('difficulty', diff);
 
     var diffValue;
@@ -74,7 +84,33 @@ function setDifficulty(element) {
     setCharSpeed(speed);
 }
 
+function startGame() {
+    window.localStorage.setItem('indicator', document.getElementById('checkbox-textindicator').checked); 
+    location.href='game.html';
+}
+
 function setCharSpeed(value) {
     charSpeed = value;
     window.localStorage.setItem("charSpeed", value);
+}
+
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function showList() {
+    document.getElementById("text-list").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+function hideDropdownList(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
 }

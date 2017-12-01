@@ -11,22 +11,22 @@
     <script type="text/javascript" src="JS/jquery.js"></script>
     <script type="text/javascript" src="JS/dropdownlist.js"></script>
     <script type="text/javascript" src="JS/menuanimation.js"></script>
-    <script type="text/javascript" src="JS/settings.js"></script>
+    <script type="text/javascript" src="JS/menu.js"></script>
 </head>
 
 <body>
     <div id="key-container"></div>
 
-    <section id="game-menu" onmouseup="mouseUp(event)" onmousedown="mouseDown(event)" onmousemove="mouseMove(event)">
+    <section id="game-menu">
         <img id="logo" src="images/logo.png" />
 
         <div id="top-menu">
 
-            <button id="start" onclick="window.localStorage.setItem('indicator', document.getElementById('checkbox-textindicator').checked); location.href='game.html';">Start Game</button>
+            <button id="start">Start Game</button>
 
             <div class="panel" id="panel-choosetext">
                 <div class="dropdown" id="text-dropdown">
-                    <button onclick="showList()" class="dropbtn">Choose Text!</button>
+                    <button id="textlist-button" class="dropbtn">Choose Text!</button>
                     <div id="text-list" class="dropdown-content">
                         <a href="#" class="list-option">Link 1</a>
                         <a href="#" class="list-option">Link 2</a>
@@ -39,19 +39,19 @@
         <div class="panel" id="panel-options">
             <div id="difficulty">
                 <div class="radio-container" id="container-easy">
-                    <input type="radio" name="difficulty" id="easy" class="difficulty-button" onclick="setDifficulty(this)" checked/>
+                    <input type="radio" name="difficulty" id="easy" class="difficulty-button" checked/>
                     <label class="difficulty-label" for="easy">Easy</label>
                 </div>
                 <div class="radio-container" id="container-medium">
-                    <input type="radio" name="difficulty" id="medium" class="difficulty-button" onclick="setDifficulty(this)" />
+                    <input type="radio" name="difficulty" id="medium" class="difficulty-button" />
                     <label class="difficulty-label" for="medium">Medium</label>
                 </div>
                 <div class="radio-container" id="container-hard">
-                    <input type="radio" name="difficulty" id="hard" class="difficulty-button" onclick="setDifficulty(this)" />
+                    <input type="radio" name="difficulty" id="hard" class="difficulty-button" />
                     <label class="difficulty-label" for="hard">Hard</label>
                 </div>
                 <div class="radio-container" id="container-custom">
-                    <input type="radio" name="difficulty" id="custom" class="difficulty-button" onclick="setDifficulty(this)" />
+                    <input type="radio" name="difficulty" id="custom" class="difficulty-button" />
                     <label class="difficulty-label" for="custom">Custom</label>
                 </div>
             </div>

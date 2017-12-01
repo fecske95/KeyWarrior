@@ -10,7 +10,9 @@ var windowHeight = window.innerHeight
 || document.documentElement.clientHeight
 || document.body.clientHeight;
 
-window.onload = function () {
+window.addEventListener("load", initializeAnimation, true);
+
+function initializeAnimation() {
     generateFloatingKeys();
     startAnimations();
 };

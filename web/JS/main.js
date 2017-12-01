@@ -52,7 +52,9 @@ var removeAnimation = function (e) {
     removeKey(0);
 };
 
-window.onload = function () {
+window.addEventListener("load", initializeGame, true);
+
+function initializeGame() {
     startGame();
     keyAnimationTime = parseFloat(window.localStorage.getItem("charSpeed"));
     indicator = window.localStorage.getItem("indicator");
@@ -74,6 +76,8 @@ window.onload = function () {
     } else {
         difficulty = Difficulties[difficulty];
     }
+
+    document.getElementById("pause-button").addEventListener("click", showMenu, true);
 };
 
 $(document).keydown(function (e) {
