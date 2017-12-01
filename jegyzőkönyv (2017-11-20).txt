@@ -1,0 +1,75 @@
+﻿===========
+MEGBESZÉLÉS
+===========
+
+A KeyWarrior projekt csapata megbeszélést tartott Egerben, az Eszterházy Károly Egyetem C épületében 2017. November 20-án.
+
+===========
+RÉSZTVEVŐK
+===========
+
+A csapat összes tagja jelen volt a megbeszélésen, név szerint Bettenbuk Dániel, Makovinyi Krisztina és Balog Balázs.
+
+============
+MEGBESZÉLTEK
+============
+
+A 2017-12-03-as határidejű sprint részletei tisztázva:
+1.) A menü beállításait be kell fejezni, a funkcionalitásokat megírni:
+	- A négy, nehézséget szabályozó gomb legyen rádió gomb, csak egy legyen kiválasztható
+	- A kijelölt rádió gomb legyen mindig fekete
+	- Ezek a gombok megfelelően állítsák át a nehézségi értéket, amit a böngésző helyi tárolójába mentsünk
+	- A slider egy körülbelül 1-7-ig terjedő skálán állítsa a nehézséget
+	- A slider csak a "Custom" nehézségi gomb megnyomása után lehessen látható
+	- A text indicator checkbox-szával lehessen állítani, hogy játék közben megjelenjen-e a textbox, vagy sem, ezt szintén a helyi tárolóban mentjük.
+
+2.) A játék közbeni pontok, szorzók megjelenítésének, beállításának részleteit befejezni
+	- Speciális karakterekért 8 pontot kapjon a felhasználó
+	- Sima karakterekért (nem alfa-numerikus) 5-öt
+	- Szóközért 2 pont jár
+	- Vezessük be a "streak"-et, aminek függvényében meghatározzuk a játékos szorzóját
+	- A streak elrontott billentyű esetén reset-elődjön
+	- A szorzót a következő függvény adja meg: streak / (15 + streak * 0.1)
+	- Ezt minden leütésnél számoljuk
+
+3.) A karakterek beúszását újra kell tervezni, a terv:
+	- Helyes billentyű lenyomáskor egyből jöjjön létre a következő karakter
+	- Ha a karakter leér a helyére, akkor szintén jöjjön létre a következő
+
+4.) A játék oldal tetején lévő szövegdoboz dizájn-ját fejleszteni kell:
+	- Enyhén lekerekített oldalú téglalap legyen
+	- Monokróm színek, a háttere fekete, a szöveg szürke, a kiemelés és a border fehér legyen.
+	- Az első, kiemelt betű mindig legyen nagyobb
+
+Az első zártkörű teszt részletei megbeszélve:
+	- A teszt célja a böngészőkkel kompatibilitás tesztelése
+	- A tesztet a fejlesztők, valamint harmadik személyek végzik, mivel az alkalmazást nem módosítjuk a teszt során
+	- A teszt 5 napot fog igénybe venni
+	- Kezdete: 2017-12-01
+	- Vége: 2017-12-05
+	- A kezdeti és a vég dátum még az időtartamba beletartozik
+
+=============================
+KORÁBBI, FENNMARADT FELADATOK
+=============================
+
+a.) A textloader ellenőrzése, észrevett hiba esetén a szűrés javítása
+b.) HTML elemek optimalizálása a kevesebb memória használatért
+c.) JS kód további rendszerezése a standard-nek megfelelően
+
+========
+BEOSZTÁS
+========
+
+A fentebb leírt pontok-ban tárgyalt feladatok a következő beosztást kapták (a határidővel feltűntetve):
+1 - 2: 	Balog Balázs - 2017/12/03
+2: 	Makovinyi Krisztina - 2017/12/03
+3: 	Bettenbuk Dániel - 2017/12/03
+
+Az a, b, c pontokban feltűntetett feladatok szintén Bettenbuk Dániel-t illetik.
+
+A beosztásról a csapat összes tagja tudomást vett és elfogadta.
+
+-------------------------------
+Bettenbuk Dániel
+2017. November 20.
