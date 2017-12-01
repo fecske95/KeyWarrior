@@ -159,7 +159,7 @@ function startGame() {
             textIndicator.innerHTML = currentText;
         }
 
-        generatorTimer = setTimeout(generateNext, 1000);
+        generatorTimer = setInterval(generateNext, 1000);
     });
 
     correctHits = 0;
@@ -246,6 +246,10 @@ function generateNext() {
         if (letterCounter >= currentText.length) {
             clearInterval(generatorTimer);
             letterCounter = 0;
+        }
+
+        if(generatorTimer !== null) {
+            clearInterval(generatorTimer);
         }
     }
 }
