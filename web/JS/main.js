@@ -156,7 +156,7 @@ function startGame() {
     var textLoader = new window.KeyWarrior.TextLoader();
     keyboard = new window.KeyWarrior.Keyboard();
     textLoader.getRandomText(function (text) {
-        currentText = "text";
+        currentText = text;
 
         var textIndicator = document.getElementById("text-span");
         if (textIndicator !== null) {
@@ -268,7 +268,7 @@ function DetermineMultiplier() {
 }
 
 function endGame() {
-    var percents = Math.abs(currentText.length - wrongHits) / currentText.length * 100;
+    var percents = Math.floor(Math.abs(currentText.length - wrongHits) / currentText.length * 100);
     var maxScore = 0;
     for (var i = 0; i < currentText.length; i++) {
         maxScore += getScoreForChar(currentText[i]);

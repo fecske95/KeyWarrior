@@ -5,7 +5,7 @@ class TextLoader {
   constructor() {}
 
   getRandomText(cb) {
-    var wikiApi = "https://en.wikipedia.org/w/api.php?action=query&titles=Grand_Theft_Auto_V&prop=revisions&rvprop=content&format=json&callback=?";
+    var wikiApi = "https://en.wikipedia.org/w/api.php?action=query&titles=Geoffrey_Lewis_(actor)&prop=revisions&rvprop=content&format=json&callback=?";
     $.getJSON(wikiApi, {
         format: "json"
       })
