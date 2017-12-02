@@ -1,18 +1,66 @@
 ﻿Funkcionális Specifikáció
------------------------------
-	A rendszer célja hogy megtanítsa a felhasználót a gyors- és gépírásra, ezen felül lehetőséget nyújtson szövegek könnyebb tanulására játékos körülmények közt,így lehetővé téve 
-a fiatalabb generáció számíára a könnyed tanulási folyamatokat.
-	Jelenleg a program alfa változatát láthatjuk, körülbelül 80%-os a program. Előfordulhatnak nem várt buguk az alkalmazással kapcsolatban.
-	A feljelsztés végkimenetele, hogy képes legyen egy adott szöveg beolvasására az alkalmazáson belül amit felhasználó maga bemásol vagy beilleszt különböző portálokból vagy egyéb más 
-forrásokbó. Fontos,hogy a beolvasott szöveget időzítve, helyes sorrendben képes legyen visszaadni, ezáltal visszajelzést adva a felhasználónak van-e szöksége még fejlődnie. Helyes találat 
-után legyen jól látható mi a soron következő karakter amit le kell ütnie. Legyen jól látható mely billentyű került lenyomásra, hogy lássák valóban a helyes karatert nyomta meg. Kapjon a 
-felhasználó egyértelmű visszajelzést a helyes és helytelen találatokról, amennyiben ez nem így történne a felhasználó programhibának is észlelhetné. Százalékos formában értékelődjön ki 
-az elért teljesítmény, ezzel látványossá téve az eredményt. Egyszerű és áttekinthető menüt kapjon a felhasználó, ezzel segítve a felhasználót és növelve a felhasználói élményt. Legyen 
-az alkalmazás életkortól függetlenül használható.
-	Igyekezzen a tervező saját forrásokat használni, melyekre nem vonatkoznak megszorítások és nem kötődnek licese-hez. 
-	A követelményeink közé soroljuk ,hogy bármely korosztály számára elérhető legyen, kapjon korszerű designt, legyen könnyű az alkalmazás használatának elsajátítása, bármely böngészőn
-hibamentesen lehessen használni (kapjon multiplatform támogatás), legyen alacsony erőforrás igényes valamint a futása közel hibamentes legyen.
+--------------------------
+KÖVETELMÉNYELEMZÉS:
+-------------------
+
+	A rendszer célja hogy megtanítsa a felhasználót a gyors- és gépírásra, ezen felül
+lehetőséget nyújtson szövegek könnyebb tanulására játékos körülmények közt,így lehetővé 
+téve a fiatalabb generáció számára a könnyed tanulási folyamatokat.
+
+
+	A megrendelő általi rendelés értelmében az alkalmazást 3 fő részre kell bontani.
+Ezen fő részek a főmenü(main menu), a játékablak(gameboard) és egy elemző menüablak 
+(final menu).
+	A főmenünek rendelkezni kell egy a programozó által fejlesztett ,animált háttérnek,
+valamint egyedi logót kell kapjon az alkalmazás. A főmenüben helyet kell kapjon egy, az
+az alkalmazás indítására szolgáló gombnak(Start Button[UIButton]), lenyíló menüpontnak, mely 
+a szöveg kiválasztására szolgál(Choose Text), valamint egy nehézség állítására szolgáló
+felületnek. Az elemek stílusát megbeszélés szerint a tervezőkük ízlés szerint választják meg,
+amennyiben a garantálni tudják,hogy a beviteli elemek stílusa saját, erre a célra kifejlesztett
+új és egyedi megjelenést kap.
+	A játékablaknak tartalmaznia kell egy, a szöveget megjelenítő sávot, kettő számlálót
+melyeken a helyes és helytelen találatok aránya legyen feltüntetve, ezen elemek jól 
+látható helyen a lépernyő tetején foglaljanak helyet. Ezen elemek dizájnja szintén legyen
+egyedi. Tartalmazzon a gameboard egy angol kiosztással rendelkező billentyűzetet mely 
+jelzi a leütött karaktert. A megrendelő igényt tart vertikálisan beúszó karakterekre
+amik a soron következő lenyomásra váró karaktert jelenítik meg szolid animáció keretében.
+Ezen lapon helyet kell kapjon egy olyan lenyomandó gomb amivel a főmenü visszatölthető,
+stílusában passzoljon az oldalon elhelyezett elemekhez.
+	Az elemző menüablak (final menu) a funkcionalitását tekintve szolgáljon az elért
+eredmény kiértékelésére, pontszám és százalék legyen feltüntetve, ezen kívül adjon 
+lehetőséget visszalépni a főmenübe. A menü stílusát a megrendelő a fejlesztőkre bízza, 
+kiegyedi stílus kikötéssel.
+
+-----------------
+HASZNÁLATI ESETEK
+-----------------
 	
+
+	
+	
+	
+	
+	A feljelsztés végkimenetele, hogy képes legyen egy adott szöveg beolvasására 
+az alkalmazáson belül amit felhasználó maga bemásol vagy beilleszt különböző portálokból 
+vagy egyéb más forrásokbó. Fontos,hogy a beolvasott szöveget időzítve, helyes sorrendben
+képes legyen visszaadni, ezáltal visszajelzést adva a felhasználónak van-e szöksége még 
+fejlődnie. Helyes találat után legyen jól látható mi a soron következő karakter amit le 
+kell ütnie. Legyen jól látható mely billentyű került lenyomásra, hogy lássák valóban a 
+helyes karatert nyomta meg. Kapjon a felhasználó egyértelmű visszajelzést a helyes és 
+helytelen találatokról, amennyiben ez nem így történne a felhasználó programhibának is 
+észlelhetné. Százalékos formában értékelődjön ki az elért teljesítmény, ezzel 
+látványossá téve az eredményt. Egyszerű és áttekinthető menüt kapjon a felhasználó, 
+ezzel segítve a felhasználót és növelve a felhasználói élményt. Legyen az alkalmazás 
+életkortól függetlenül használható.
+	
+	A követelményeink közé soroljuk ,hogy bármely korosztály számára elérhető legyen,
+kapjon korszerű designt, legyen könnyű az alkalmazás használatának elsajátítása, bármely 
+böngészőn hibamentesen lehessen használni (kapjon multiplatform támogatás), legyen 
+alacsony erőforrás igényes valamint a futása közel hibamentes legyen.
+	
+	*Jelenleg a program alfa változatát láthatjuk, körülbelül 80%-os a program.
+ Előfordulhatnak nem várt buguk az alkalmazással kapcsolatban (Tesztelésre vár).
+
 	Fogalomszótár: 
  	-[alfa]: az első tesztelési folyamatban lévő verzió.
 	-[bug]: fejlesztési hiba
