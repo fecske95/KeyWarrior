@@ -74,3 +74,6 @@ ezzel segítve a felhasználót és növelve a felhasználói élményt. Legyen 
 	-[portálok]: webhebhelyek melyeket megtalál a keresőprogramja segítségével
 	-[karakter]: a billyentűzet egy gombja
 	-[multiplatform]: több hasonló működésű ugyanazon célra használható szoftver
+
+------------------------------
+Balog Balázs
