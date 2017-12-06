@@ -35,16 +35,26 @@ kiegyedi stílus kikötéssel.
 HASZNÁLATI ESETEK
 -----------------
 	
+Rendszerhatár:
+--------------
+	stílusrész: Lásd "KÖVETELMÉNYELEMZÉS".
+
+	A program fejlesztése közben figyelembe véve a megrendelő által igényelt platformok
+támogatást, szoftvernek hibamentesen futnia kell GoogleChrome "62.0.3202.94"-es vagy újabb verzión,
+MozzilaFirefox "57.0.1"-es vagy újabb verzión , valamint Opera "10.63"-as vagy újabb verzión.
+További böngészők támogatását a megrendelő nem igényelte,így a fejlesztőknek nem kötelességük 
+az alkalmazás optimalizálása ezektől különböző platformokra.   		
 
 	
+	Futási időben két "actor" vagy más szóval szereplő figyelhető meg. Egyik közülük 
+közvetett szereplő míg a másik közvetlen actor. A közvetett szereplő egy backend szerver
+felület ami GitHub-ról tölti be az alkalmazást és futtatja egy publikus URL-en ezzel kiszolgálva
+a felhasználó igényét.
+	A másik közvetlen szereplő maga a felhasználó aki játssza az alkalmazást. 
 	
-	
-	
-	A feljelsztés végkimenetele, hogy képes legyen egy adott szöveg beolvasására 
-az alkalmazáson belül amit felhasználó maga bemásol vagy beilleszt különböző portálokból 
-vagy egyéb más forrásokbó. Fontos,hogy a beolvasott szöveget időzítve, helyes sorrendben
-képes legyen visszaadni, ezáltal visszajelzést adva a felhasználónak van-e szöksége még 
-fejlődnie. Helyes találat után legyen jól látható mi a soron következő karakter amit le 
+	Az alkalmazás funkcionalitását tekintetbe véve fontos,hogy a választott szöveget időzítve,
+ helyes sorrendben képes legyen visszaadni, ezáltal visszajelzést adva a felhasználónak van-e szüksége 
+még fejlődnie. Helyes találat után legyen jól látható mi a soron következő karakter amit le 
 kell ütnie. Legyen jól látható mely billentyű került lenyomásra, hogy lássák valóban a 
 helyes karatert nyomta meg. Kapjon a felhasználó egyértelmű visszajelzést a helyes és 
 helytelen találatokról, amennyiben ez nem így történne a felhasználó programhibának is 
@@ -52,12 +62,9 @@ helytelen találatokról, amennyiben ez nem így történne a felhasználó prog
 látványossá téve az eredményt. Egyszerű és áttekinthető menüt kapjon a felhasználó, 
 ezzel segítve a felhasználót és növelve a felhasználói élményt. Legyen az alkalmazás 
 életkortól függetlenül használható.
+
 	
-	A követelményeink közé soroljuk ,hogy bármely korosztály számára elérhető legyen,
-kapjon korszerű designt, legyen könnyű az alkalmazás használatának elsajátítása, bármely 
-böngészőn hibamentesen lehessen használni (kapjon multiplatform támogatás), legyen 
-alacsony erőforrás igényes valamint a futása közel hibamentes legyen.
-	
+	 	
 	*Jelenleg a program alfa változatát láthatjuk, körülbelül 80%-os a program.
  Előfordulhatnak nem várt buguk az alkalmazással kapcsolatban (Tesztelésre vár).
 
