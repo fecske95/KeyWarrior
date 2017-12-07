@@ -1,6 +1,6 @@
 ﻿Funkcionális Specifikáció
 --------------------------
-KÖVETELMÉNYELEMZÉS:
+KÖVETELMÉNYEK:
 -------------------
 
 	A rendszer célja hogy megtanítsa a felhasználót a gyors- és gépírásra, ezen felül
@@ -29,7 +29,7 @@ stílusában passzoljon az oldalon elhelyezett elemekhez.
 	Az elemző menüablak (final menu) a funkcionalitását tekintve szolgáljon az elért
 eredmény kiértékelésére, pontszám és százalék legyen feltüntetve, ezen kívül adjon 
 lehetőséget visszalépni a főmenübe. A menü stílusát a megrendelő a fejlesztőkre bízza, 
-kiegyedi stílus kikötéssel.
+egyedi stílus kikötéssel.
 
 -----------------
 HASZNÁLATI ESETEK
@@ -40,22 +40,22 @@ Rendszerhatár:
 	stílusrész: Lásd "KÖVETELMÉNYELEMZÉS".
 
 	A program fejlesztése közben figyelembe véve a megrendelő által igényelt platformok
-támogatást, szoftvernek hibamentesen futnia kell Google Chrome "62.0.3202.94"-es vagy újabb verzión,
-Mozzila Firefox "57.0.1"-es vagy újabb verzión , valamint Opera "49.0.2725.47"-as vagy újabb verzión,
-Microsoft Edge "41.16299.15.0 "-es vagy újabb verzió.
-További böngészők támogatását a megrendelő nem igényelte,így a fejlesztőknek nem kötelességük 
-az alkalmazás optimalizálása ezektől különböző platformokra.   		
+támogatást, szoftver támogatja a  Google Chrome "62.0.3202.94"-es vagy újabb verzióját,
+Mozzila Firefox "57.0.1"-es vagy újabb verzióját , valamint Opera "49.0.2725.47"-as vagy újabb 
+verzióját. Ezen böngészők támogatását igényelte a megrendelő.   		
 
 Actor/Actorok:
 --------------
 	
-	Futási időben három "actor" vagy más szóval szereplő figyelhető meg. Kettő közülük 
+	("Futási időben három "actor" vagy más szóval szereplő figyelhető meg. Kettő közülük 
 közvetett szereplő míg a harmadik közvetlen. A közvetett szereplő egy backend szerver
 felület ami GitHub-ról tölti be az alkalmazást és futtatja egy publikus URL-en ezzel kiszolgálva
-a felhasználó igényét.
+a felhasználó igényét.")
 	A másik közvetlen szereplő maga a felhasználó aki játssza az alkalmazást. 
-	A harmadik szereplő a textloader, ami a Wikipedia-ról kéri le egy cikk tartalmát, majd azt
-nyers szöveggé konvertálva átküldi a játéknak.
+	("A harmadik szereplő a textloader, ami a Wikipedia-ról kéri le egy cikk tartalmát, majd azt
+nyers szöveggé konvertálva átküldi a játéknak.")
+
+[()---> Zárójelezett mondatok figyelmen kívül hagyhatók.]
 
 	Az alkalmazás funkcionalitását tekintetbe véve fontos,hogy a választott szöveget időzítve,
  helyes sorrendben képes legyen visszaadni, ezáltal visszajelzést adva a felhasználónak, hogy van-e szüksége 
@@ -72,11 +72,14 @@ ezzel segítve a felhasználót és fokozva a felhasználói élményt. Legyen a
 Jelenlegi helyzet leírása:
 -------------------
 	 	
-	*Jelenleg a program béta változatát láthatjuk, körülbelül 90%-os a program.
- Előfordulhatnak nem várt működési rendellenességek az alkalmazással kapcsolatban 
-(Ezek már le vannak tesztelve, javításra várnak).
+	*A szoftver segítségnyújtásra szolgál azon emberek számára amik igénylik a gyors és gépírás tanulását.
+Jelenleg más hasnonló szoftver nem érhető el a weben ami ilyen játékos körülményeket biztosít a tanulásra.
 
-	Fogalomszótár: 
+
+
+Fogalomszótár:
+--------------
+
  	-[alfa]: az első tesztelési folyamatban lévő verzió.
 	-[bug]: fejlesztési hiba
 	-[portálok]: webhebhelyek melyeket megtalál a keresőprogramja segítségével
