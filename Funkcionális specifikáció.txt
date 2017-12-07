@@ -41,7 +41,8 @@ Rendszerhatár:
 
 	A program fejlesztése közben figyelembe véve a megrendelő által igényelt platformok
 támogatást, szoftvernek hibamentesen futnia kell Google Chrome "62.0.3202.94"-es vagy újabb verzión,
-Mozzila Firefox "57.0.1"-es vagy újabb verzión , valamint Opera "10.63"-as vagy újabb verzión.
+Mozzila Firefox "57.0.1"-es vagy újabb verzión , valamint Opera "49.0.2725.47"-as vagy újabb verzión,
+Microsoft Edge "41.16299.15.0 "-es vagy újabb verzió.
 További böngészők támogatását a megrendelő nem igényelte,így a fejlesztőknek nem kötelességük 
 az alkalmazás optimalizálása ezektől különböző platformokra.   		
 
