@@ -5,7 +5,7 @@ KÖVETELMÉNYELEMZÉS:
 
 	A rendszer célja hogy megtanítsa a felhasználót a gyors- és gépírásra, ezen felül
 lehetőséget nyújtson szövegek könnyebb tanulására játékos körülmények közt,így lehetővé 
-téve a fiatalabb generáció számára a könnyed tanulási folyamatokat.
+téve bármely generáció számára a könnyed tanulási folyamatokat.
 
 
 	A megrendelő általi rendelés értelmében az alkalmazást 3 fő részre kell bontani.
@@ -40,40 +40,50 @@ Rendszerhatár:
 	stílusrész: Lásd "KÖVETELMÉNYELEMZÉS".
 
 	A program fejlesztése közben figyelembe véve a megrendelő által igényelt platformok
-támogatást, szoftvernek hibamentesen futnia kell GoogleChrome "62.0.3202.94"-es vagy újabb verzión,
-MozzilaFirefox "57.0.1"-es vagy újabb verzión , valamint Opera "10.63"-as vagy újabb verzión.
+támogatást, szoftvernek hibamentesen futnia kell Google Chrome "62.0.3202.94"-es vagy újabb verzión,
+Mozzila Firefox "57.0.1"-es vagy újabb verzión , valamint Opera "10.63"-as vagy újabb verzión.
 További böngészők támogatását a megrendelő nem igényelte,így a fejlesztőknek nem kötelességük 
 az alkalmazás optimalizálása ezektől különböző platformokra.   		
 
+Actor/Actorok:
+--------------
 	
-	Futási időben két "actor" vagy más szóval szereplő figyelhető meg. Egyik közülük 
-közvetett szereplő míg a másik közvetlen actor. A közvetett szereplő egy backend szerver
+	Futási időben három "actor" vagy más szóval szereplő figyelhető meg. Kettő közülük 
+közvetett szereplő míg a harmadik közvetlen. A közvetett szereplő egy backend szerver
 felület ami GitHub-ról tölti be az alkalmazást és futtatja egy publikus URL-en ezzel kiszolgálva
 a felhasználó igényét.
 	A másik közvetlen szereplő maga a felhasználó aki játssza az alkalmazást. 
-	
+	A harmadik szereplő a textloader, ami a Wikipedia-ról kéri le egy cikk tartalmát, majd azt
+nyers szöveggé konvertálva átküldi a játéknak.
+
 	Az alkalmazás funkcionalitását tekintetbe véve fontos,hogy a választott szöveget időzítve,
- helyes sorrendben képes legyen visszaadni, ezáltal visszajelzést adva a felhasználónak van-e szüksége 
+ helyes sorrendben képes legyen visszaadni, ezáltal visszajelzést adva a felhasználónak, hogy van-e szüksége 
 még fejlődnie. Helyes találat után legyen jól látható mi a soron következő karakter amit le 
-kell ütnie. Legyen jól látható mely billentyű került lenyomásra, hogy lássák valóban a 
+kell ütnie. Legyen jól látható mely billentyű került lenyomásra, hogy láthassa, hogy valóban a 
 helyes karatert nyomta meg. Kapjon a felhasználó egyértelmű visszajelzést a helyes és 
-helytelen találatokról, amennyiben ez nem így történne a felhasználó programhibának is 
-észlelhetné. Százalékos formában értékelődjön ki az elért teljesítmény, ezzel 
+helytelen találatokról, amennyiben ez nem így történik, program hibának tekintjük.
+Százalékos formában értékelődjön ki az elért teljesítmény, ezzel 
 látványossá téve az eredményt. Egyszerű és áttekinthető menüt kapjon a felhasználó, 
-ezzel segítve a felhasználót és növelve a felhasználói élményt. Legyen az alkalmazás 
+ezzel segítve a felhasználót és fokozva a felhasználói élményt. Legyen az alkalmazás 
 életkortól függetlenül használható.
 
-	
+
+Jelenlegi helyzet leírása:
+-------------------
 	 	
-	*Jelenleg a program alfa változatát láthatjuk, körülbelül 80%-os a program.
- Előfordulhatnak nem várt buguk az alkalmazással kapcsolatban (Tesztelésre vár).
+	*Jelenleg a program béta változatát láthatjuk, körülbelül 90%-os a program.
+ Előfordulhatnak nem várt működési rendellenességek az alkalmazással kapcsolatban 
+(Ezek már le vannak tesztelve, javításra várnak).
 
 	Fogalomszótár: 
  	-[alfa]: az első tesztelési folyamatban lévő verzió.
 	-[bug]: fejlesztési hiba
 	-[portálok]: webhebhelyek melyeket megtalál a keresőprogramja segítségével
 	-[karakter]: a billyentűzet egy gombja
-	-[multiplatform]: több hasonló működésű ugyanazon célra használható szoftver
-
+	-[multiplatform]: több környezetben futtatható alkalmazás
+	-[main menu]: A fő menü, amely a weboldal indulásakor megjelenik
+	-[final menu]: A játék végén megjelenő panel, amely a statisztikát mutatja
+	-[gameboard]: Játék közben, a különböző elemeket tartalmazó felület
+	-[backend]: A kiszolgáló, ahonnan az alkalmazást el lehet érni	
 ------------------------------
 Balog Balázs
