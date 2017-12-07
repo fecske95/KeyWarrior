@@ -2,203 +2,242 @@
 
 .key-1 {
     left: 330px;
-    animation-name: key-line-0;
+    -webkit-animation-name: key-line-0;
+            animation-name: key-line-0;
 }
 
 .key-2 {
     left: 400px;
-    animation-name: key-line-0;
+    -webkit-animation-name: key-line-0;
+            animation-name: key-line-0;
 }
 
 .key-3 {
     left: 470px;
-    animation-name: key-line-0;
+    -webkit-animation-name: key-line-0;
+            animation-name: key-line-0;
 }
 
 .key-4 {
     left: 540px;
-    animation-name: key-line-0;
+    -webkit-animation-name: key-line-0;
+            animation-name: key-line-0;
 }
 
 .key-5 {
     left: 610px;
-    animation-name: key-line-0;
+    -webkit-animation-name: key-line-0;
+            animation-name: key-line-0;
 }
 
 .key-6 {
     left: 680px;
-    animation-name: key-line-0;
+    -webkit-animation-name: key-line-0;
+            animation-name: key-line-0;
 }
 
 .key-7 {
     left: 750px;
-    animation-name: key-line-0;
+    -webkit-animation-name: key-line-0;
+            animation-name: key-line-0;
 }
 
 .key-8 {
     left: 820px;
-    animation-name: key-line-0;
+    -webkit-animation-name: key-line-0;
+            animation-name: key-line-0;
 }
 
 .key-9 {
     left: 890px;
-    animation-name: key-line-0;
+    -webkit-animation-name: key-line-0;
+            animation-name: key-line-0;
 }
 
 .key-0 {
     left: 960px;
-    animation-name: key-line-0;
+    -webkit-animation-name: key-line-0;
+            animation-name: key-line-0;
 }
 
 .key-minus {
     left: 1030px;
-    animation-name: key-line-0;
+    -webkit-animation-name: key-line-0;
+            animation-name: key-line-0;
 }
 
 /* line 1 */
 
 .key-q {
     left: 350px; 
-    animation-name: key-line-1;
+    -webkit-animation-name: key-line-1; 
+            animation-name: key-line-1;
 }
 
 .key-w {
     left: 420px; 
-    animation-name: key-line-1;
+    -webkit-animation-name: key-line-1; 
+            animation-name: key-line-1;
 }
 
 .key-e {
     left: 490px; 
-    animation-name: key-line-1;
+    -webkit-animation-name: key-line-1; 
+            animation-name: key-line-1;
 }
 
 .key-r {
     left: 560px;
-    animation-name: key-line-1;
+    -webkit-animation-name: key-line-1;
+            animation-name: key-line-1;
 }
 
 .key-t {
     left: 630px;
-    animation-name: key-line-1;
+    -webkit-animation-name: key-line-1;
+            animation-name: key-line-1;
 }
 
 .key-y {
     left: 700px; 
-    animation-name: key-line-1;
+    -webkit-animation-name: key-line-1; 
+            animation-name: key-line-1;
 }
 
 .key-u {
     left: 770px;
-    animation-name: key-line-1;
+    -webkit-animation-name: key-line-1;
+            animation-name: key-line-1;
 }
 
 .key-i {
     left: 840px;
-    animation-name: key-line-1;
+    -webkit-animation-name: key-line-1;
+            animation-name: key-line-1;
 }
 
 .key-o {
     left: 910px;
-    animation-name: key-line-1;
+    -webkit-animation-name: key-line-1;
+            animation-name: key-line-1;
 }
 
 .key-p {
     left: 980px;
-    animation-name: key-line-1;
+    -webkit-animation-name: key-line-1;
+            animation-name: key-line-1;
 }
 
 /* line 2 */
 
 .key-a {
     left: 370px;
-    animation-name: key-line-2;
+    -webkit-animation-name: key-line-2;
+            animation-name: key-line-2;
 }
 
 .key-s {
     left: 440px;
-    animation-name: key-line-2;
+    -webkit-animation-name: key-line-2;
+            animation-name: key-line-2;
 }
 
 .key-d {
     left: 510px;
-    animation-name: key-line-2;
+    -webkit-animation-name: key-line-2;
+            animation-name: key-line-2;
 }
 
 .key-f {
     left: 580px;
-    animation-name: key-line-2;
+    -webkit-animation-name: key-line-2;
+            animation-name: key-line-2;
 }
 
 .key-g {
     left: 650px;
-    animation-name: key-line-2;
+    -webkit-animation-name: key-line-2;
+            animation-name: key-line-2;
 }
 
 .key-h {
     left: 720px;
-    animation-name: key-line-2;
+    -webkit-animation-name: key-line-2;
+            animation-name: key-line-2;
 }
 
 .key-j {
     left: 790px;
-    animation-name: key-line-2;
+    -webkit-animation-name: key-line-2;
+            animation-name: key-line-2;
 }
 
 .key-k {
     left: 860px;
-    animation-name: key-line-2;
+    -webkit-animation-name: key-line-2;
+            animation-name: key-line-2;
 }
 
 .key-l {
     left: 930px;
-    animation-name: key-line-2;
+    -webkit-animation-name: key-line-2;
+            animation-name: key-line-2;
 }
 
 /* line 3 */
 
 .key-z {
     left: 390px;
-    animation-name: key-line-3;
+    -webkit-animation-name: key-line-3;
+            animation-name: key-line-3;
 }
 
 .key-x {
     left: 460px;
-    animation-name: key-line-3;
+    -webkit-animation-name: key-line-3;
+            animation-name: key-line-3;
 }
 
 .key-c {
     left: 530px;
-    animation-name: key-line-3;
+    -webkit-animation-name: key-line-3;
+            animation-name: key-line-3;
 }
 
 .key-v {
     left: 600px;
-    animation-name: key-line-3;
+    -webkit-animation-name: key-line-3;
+            animation-name: key-line-3;
 }
 
 .key-b {
     left: 670px;
-    animation-name: key-line-3;
+    -webkit-animation-name: key-line-3;
+            animation-name: key-line-3;
 }
 
 .key-n {
     left: 740px;
-    animation-name: key-line-3;
+    -webkit-animation-name: key-line-3;
+            animation-name: key-line-3;
 }
 
 .key-m {
     left: 810px;
-    animation-name: key-line-3;
+    -webkit-animation-name: key-line-3;
+            animation-name: key-line-3;
 }
 
 .key-comma {
     left: 880px;
-    animation-name: key-line-3;
+    -webkit-animation-name: key-line-3;
+            animation-name: key-line-3;
 }
 
 .key-period {
     left: 950px;
-    animation-name: key-line-3;
+    -webkit-animation-name: key-line-3;
+            animation-name: key-line-3;
 }
 
 /* line 4 */
@@ -206,5 +245,6 @@
 .key-space {
     width: 310px;
     left: 540px;
-    animation-name: key-space;
+    -webkit-animation-name: key-space;
+            animation-name: key-space;
 }

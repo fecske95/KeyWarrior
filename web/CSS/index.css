@@ -9,12 +9,13 @@
 
 body {
     overflow: hidden;
+    background: -webkit-linear-gradient(315deg, #000000, #aaaaaa, #000000);
+    background: -o-linear-gradient(315deg, #000000, #aaaaaa, #000000);
     background: linear-gradient(135deg, #000000, #aaaaaa, #000000);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 400% 400%;
     -webkit-animation: background-animation 15s ease infinite;
-    -moz-animation: background-animation 15s ease infinite;
     animation: background-animation 15s ease infinite;
 }
 
@@ -30,7 +31,9 @@ span {
     width: 700px;
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
 }
 
 #game-menu #top-menu {
@@ -62,7 +65,8 @@ span {
     display: inline-block;
     width: calc(25% - 20px);
     margin: 5px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 #game-menu #panel-options #difficulty .radio-container input {
@@ -105,15 +109,11 @@ span {
 
 #key-container {
     position: absolute;
-    filter: blur(5px);
+    -webkit-filter: blur(5px);
+            filter: blur(5px);
 }
 
 @-webkit-keyframes background-animation {
-    0%{background-position:0% 4%}
-    50%{background-position:100% 97%}
-    100%{background-position:0% 4%}
-}
-@-moz-keyframes background-animation {
     0%{background-position:0% 4%}
     50%{background-position:100% 97%}
     100%{background-position:0% 4%}

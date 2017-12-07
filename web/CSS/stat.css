@@ -12,13 +12,17 @@
     top: 100px;
     width: 900px;
     height: 700px;
-    transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+            transform: translate(-50%);
 }
 
 #stat-panel * {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
     font-family: 'Nova Square', cursive;
 }
 
@@ -57,10 +61,13 @@
     width: 80px;
     height: 80px;
     margin: 5px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     background-image: url(../images/star.png);
     background-size: 80px;
-    transform: none !important;
+    -webkit-transform: none !important;
+        -ms-transform: none !important;
+            transform: none !important;
 }
 
 .star-full {

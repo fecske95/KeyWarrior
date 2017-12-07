@@ -4,7 +4,9 @@
     height: 500px;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 }
 
 #menu-panel * {
@@ -12,7 +14,9 @@
     font-family: "Nova Square", cursive;
     font-size: 64px;
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
 }
 
 #menu-panel #pause-text {

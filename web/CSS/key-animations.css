@@ -1,6 +1,18 @@
+@-webkit-keyframes key-space {
+    to {
+        top: calc(100% - 70px);
+    }
+}
+
 @keyframes key-space {
     to {
         top: calc(100% - 70px);
+    }
+}
+
+@-webkit-keyframes key-line-0 {
+    to {
+        top: calc(100% - 350px);
     }
 }
 
@@ -10,9 +22,21 @@
     }
 }
 
+@-webkit-keyframes key-line-1 {
+    to {
+        top: calc(100% - 280px);
+    }
+}
+
 @keyframes key-line-1 {
     to {
         top: calc(100% - 280px);
+    }
+}
+
+@-webkit-keyframes key-line-2 {
+    to {
+        top: calc(100% - 210px);
     }
 }
 
@@ -22,35 +46,65 @@
     }
 }
 
+@-webkit-keyframes key-line-3 {
+    to {
+        top: calc(100% - 140px);
+    }
+}
+
 @keyframes key-line-3 {
     to {
         top: calc(100% - 140px);
     }
 }
 
+@-webkit-keyframes currentkey-mark {
+    to {
+        -webkit-box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+                box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+    }
+}
+
 @keyframes currentkey-mark {
     to {
-        box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+        -webkit-box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+                box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+    }
+}
+
+@-webkit-keyframes correct-key {
+    to {
+        -webkit-transform: scale(1.5, 1.5);
+                transform: scale(1.5, 1.5);
+        opacity: 0.0;
     }
 }
 
 @keyframes correct-key {
     to {
-        transform: scale(1.5, 1.5);
+        -webkit-transform: scale(1.5, 1.5);
+                transform: scale(1.5, 1.5);
+        opacity: 0.0;
+    }
+}
+
+@-webkit-keyframes missed-key {
+    to {
+        -webkit-transform: scale(1.5, 1.5);
+                transform: scale(1.5, 1.5);
         opacity: 0.0;
     }
 }
 
 @keyframes missed-key {
     to {
-        transform: scale(1.5, 1.5);
+        -webkit-transform: scale(1.5, 1.5);
+                transform: scale(1.5, 1.5);
         opacity: 0.0;
     }
 }
 
 .paused {
-    -webkit-animation-play-state: paused !important; 
-    -moz-animation-play-state: paused !important; 
-    -o-animation-play-state: paused !important;
+    -webkit-animation-play-state: paused !important;
     animation-play-state: paused !important;
 }
