@@ -37,6 +37,8 @@ var minCharSpeed = 1;
 
 var difficultyCap = 10;
 
+checkBrowser();
+
 window.addEventListener("load", addListeners, true);
 
 function addListeners() {
@@ -47,22 +49,28 @@ function addListeners() {
     document.getElementById("start").addEventListener("click", startNewGame, true);
 
     var difficultyButtons = document.querySelectorAll(".difficulty-button");
-    for(var i = 0; i < difficultyButtons.length; i++) {
+    for (var i = 0; i < difficultyButtons.length; i++) {
         difficultyButtons[i].addEventListener("click", setDifficulty, true);
     }
 
-    document.getElementById("textlist-button").addEventListener("click", 
-    function() {
-        var textMenu = document.getElementById("textmenu-div");
-        if(textMenu.classList.contains("disabled")) {
-            textMenu.classList.remove("disabled");
-        }
-    }, true);
+    document.getElementById("textlist-button").addEventListener("click",
+        function () {
+            var textMenu = document.getElementById("textmenu-div");
+            if (textMenu.classList.contains("disabled")) {
+                textMenu.classList.remove("disabled");
+            }
+        }, true);
 
     document.getElementById("button-choose").addEventListener("click", closeTextList, true);
 
-    for(var i = 0; i < preAddedTexts.length; i++) {
+    for (var i = 0; i < preAddedTexts.length; i++) {
         addTextChoice(preAddedTexts[i]);
+    }
+}
+
+function checkBrowser() {
+    if(bowser.msie || bowser.msedge) {
+        alert("You're running a browser that may not be compatible with our application.\nPlease consider using Firefox, Chrome, or Opera.");
     }
 }
 
@@ -130,8 +138,8 @@ function closeTextList() {
 }
 
 function startNewGame() {
-    window.localStorage.setItem("indicator", document.getElementById("checkbox-textindicator").checked); 
-    location.href='game.html';
+    window.localStorage.setItem("indicator", document.getElementById("checkbox-textindicator").checked);
+    location.href = 'game.html';
 }
 
 function setCharSpeed(value) {
@@ -149,11 +157,11 @@ function addTextChoice(article) {
     radioButton.setAttribute("type", "radio");
     radioButton.setAttribute("name", "text");
     radioButton.setAttribute("id", article);
-    radioButton.addEventListener("click", 
-    function() {
-        choosenText = this.id;
-        window.localStorage.setItem('choosenText', choosenText);
-    }, true);
+    radioButton.addEventListener("click",
+        function () {
+            choosenText = this.id;
+            window.localStorage.setItem('choosenText', choosenText);
+        }, true);
 
     var radioLabel = document.createElement("label");
     radioLabel.setAttribute("for", article);
@@ -161,6 +169,6 @@ function addTextChoice(article) {
 
     container.appendChild(radioButton);
     container.appendChild(radioLabel);
-    
+
     textList.appendChild(container);
 }
