@@ -69,8 +69,8 @@ function addListeners() {
 }
 
 function checkBrowser() {
-    if(bowser.msie || bowser.msedge) {
-        alert("You're running a browser that may not be compatible with our application.\nPlease consider using Firefox, Chrome, or Opera.");
+    if(!bowser.chrome && !bowser.firefox && !bowser.safari && !bowser.opera) {
+        alert("You're running a browser that may not be compatible with our application.\nIf you encounter any issues, please consider using Firefox, Chrome, Opera or Safari.");
     }
 }
 
