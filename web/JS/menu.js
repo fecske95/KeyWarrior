@@ -2,6 +2,7 @@ var clickedThumb = null;
 
 var charSpeed = 7;
 window.localStorage.setItem('charSpeed', charSpeed);
+window.localStorage.setItem('difficulty', 0);
 
 var maxCharSpeed = 10;
 var minCharSpeed = 1;

@@ -63,7 +63,7 @@ function initializeGame() {
         document.getElementById("game-container").removeChild(document.getElementById("text-div"));
     }
 
-    difficulty = window.localStorage.getItem("difficulty");
+    difficulty = window.localStorage.getItem('difficulty');
 
     if (difficulty === "CUSTOM") {
         if (keyAnimationTime >= 6) {
@@ -73,9 +73,9 @@ function initializeGame() {
         } else {
             difficulty = Difficulties.HARD;
         }
-    } else {
-        difficulty = Difficulties[difficulty];
     }
+
+    console.log(difficulty);
 
     document.getElementById("pause-button").addEventListener("click", showMenu, true);
 };
@@ -371,7 +371,6 @@ function hideMenu() {
 }
 
 function getScoreForChar(char) {
-    var score;
     switch (char) {
         // fallthrough
         case '-':
