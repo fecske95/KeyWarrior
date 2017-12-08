@@ -5,16 +5,17 @@ class Key {
         this.letter = char;
 
         this.element = document.createElement("div");
-        this.element.className = "key";
+        this.element.classList.add("key");
         this.element.innerHTML = "<span>" + char + "</span>";
 
         this.container = document.createElement("div");
 
-        this.container.className = "key-container";
-
         if(char === ' ') {
-            this.element.className = "keyclass-space";
-            this.container.className = "space-container";
+            this.element.classList.add("keyclass-space");
+            this.container.classList.add("space-container");
+        }
+        else {
+            this.container.classList.add("key-container");
         }
 
         this.container.classList.add(Key.getClassForCharacter(char));
