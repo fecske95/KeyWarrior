@@ -42,12 +42,12 @@ function setAnimation(keyId) {
     }
 
     if(seed < 0.5) {
-        $('#' + id).animate({ top: Math.floor((Math.random() * windowHeight - 100) + 100) + "px", opacity: targetOpacity }, Math.floor((Math.random() * 10000) + 5000), function() {
+        $('#' + id).animate({ top: Math.floor((Math.random() * windowHeight - 200) + 100) + "px", opacity: targetOpacity }, Math.floor((Math.random() * 10000) + 5000), function() {
             setAnimation(keyId);
         });
     }
     else {
-        $('#' + id).animate({ left: Math.floor((Math.random() * windowWidth - 100) + 100) + "px", opacity: targetOpacity }, Math.floor((Math.random() * 10000) + 5000), function() {
+        $('#' + id).animate({ left: Math.floor((Math.random() * windowWidth - 200) + 100) + "px", opacity: targetOpacity }, Math.floor((Math.random() * 10000) + 5000), function() {
             setAnimation(keyId);
         });
     }
@@ -57,8 +57,8 @@ function generateRandomKey() {
     var key = document.createElement("div");
     key.className = "floating-key";
     key.style["opacity"] = Math.random();
-    key.style["left"] = Math.floor((Math.random() * windowWidth - 100) + 100) + "px";
-    key.style["top"] = Math.floor((Math.random() * windowHeight - 100) + 100)  + "px";
+    key.style["left"] = Math.floor((Math.random() * windowWidth - 200) + 100) + "px";
+    key.style["top"] = Math.floor((Math.random() * windowHeight - 200) + 100)  + "px";
 
     var keySize = Math.floor((Math.random() * 70) + 20);
 

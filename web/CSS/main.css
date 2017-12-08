@@ -155,10 +155,10 @@
 
 #score-panel {
     position: absolute;
-    top: calc(100% - 300px);
-    margin: 10px;
-    width: 250px;
-    height: 200px;
+    left: calc(100% - 220px);
+    top: calc(100% - 250px);
+    width: 200px;
+    height: 150px;
 }
 
 #score-panel * {
@@ -178,7 +178,9 @@
     position: absolute;
     font-family: 'Nova Square', cursive;
     font-size: 48px;
-    left: calc(100% - 320px);
-    top: calc(100% - 120px);
+    left: 10px;
+    width: 150px;
+    height: 80px;
+    top: calc(100% - 100px);
 }
 

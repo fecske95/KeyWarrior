@@ -8,7 +8,6 @@
 }
 
 body {
-    overflow: hidden;
     background: -webkit-linear-gradient(315deg, #000000, #aaaaaa, #000000);
     background: -o-linear-gradient(315deg, #000000, #aaaaaa, #000000);
     background: linear-gradient(135deg, #000000, #aaaaaa, #000000);
@@ -17,6 +16,8 @@ body {
     background-size: 400% 400%;
     -webkit-animation: background-animation 15s ease infinite;
     animation: background-animation 15s ease infinite;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 span {
@@ -29,6 +30,7 @@ span {
 
 #game-menu {
     width: 700px;
+    height: 900px;
     position: absolute;
     left: 50%;
     -webkit-transform: translateX(-50%);
