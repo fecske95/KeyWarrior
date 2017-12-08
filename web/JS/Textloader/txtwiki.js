@@ -27,6 +27,8 @@ var txtwiki = (function(){
 		//parsed = parsed.replace(/({([^>]+)})/ig, "");
 		parsed = parsed.replace(/(.*})/ig, "");
 		parsed = parsed.replace(/Category:.*/ig, "");
+		parsed = parsed.replace(/\#/ig, " ");
+		parsed = parsed.replace(/\;/ig, "");
 		parsed = parsed.replace(/(==([^>]+)==)/ig, "");
 		parsed = parsed.replace(/(\n)/ig, "");
 		parsed = parsed.replace(/\[.*\]/ig, "");

@@ -4,8 +4,8 @@ window.KeyWarrior = window.KeyWarrior || {};
 class TextLoader {
   constructor() {}
 
-  getRandomText(cb) {
-    var wikiApi = "https://en.wikipedia.org/w/api.php?action=query&titles=Geoffrey_Lewis_(actor)&prop=revisions&rvprop=content&format=json&callback=?";
+  getRandomText(article, cb) {
+    var wikiApi = "https://en.wikipedia.org/w/api.php?action=query&titles=" + article + "&prop=revisions&rvprop=content&format=json&callback=?";
     $.getJSON(wikiApi, {
         format: "json"
       })
@@ -29,3 +29,8 @@ class TextLoader {
 }
 
 window.KeyWarrior.TextLoader = TextLoader;
+
+/*
+random article query:
+https://en.wikipedia.org/w/api.php?action=query&generator=random&grnnamespace=0&ppprop!%3Ddisambiguation&prop=revisions&rvprop=content&format=json&callback=?
+*/

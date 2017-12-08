@@ -155,7 +155,7 @@ $(document).keyup(function (e) {
 function startGame() {
     var textLoader = new window.KeyWarrior.TextLoader();
     keyboard = new window.KeyWarrior.Keyboard();
-    textLoader.getRandomText(function (text) {
+    textLoader.getRandomText(window.localStorage.getItem("choosenText"), function (text) {
         currentText = text;
 
         var textIndicator = document.getElementById("text-span");
@@ -361,7 +361,6 @@ function showMenu() {
 
 function hideMenu() {
     document.body.removeChild(document.getElementById("menu-panel"));
-    document.getElementById("game-container").classList.remove("blur");
 
     for(var i = 0; i < keysOnScreen.length; i++) {
         keysOnScreen[i].container.classList.remove("paused");
@@ -376,17 +375,12 @@ function getScoreForChar(char) {
         case '-':
         case ',':
         case '.':
-            score = scorePerSpecialCharacter;
-            break;
+            return scorePerSpecialCharacter;
 
         case ' ':
-            score = 2;
-            break;
+            return 2;
 
         default:
-            score = scorePerKey;
-            break;
+            return scorePerKey;
     }
-
-    return score;
 }

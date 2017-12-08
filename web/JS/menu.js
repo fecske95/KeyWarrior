@@ -1,8 +1,15 @@
+var preAddedTexts = [
+    "Grand_Theft_Auto_V",
+    "Geoffrey_Lewis_(actor)"
+];
+
 var clickedThumb = null;
 
 var charSpeed = 7;
+var choosenText = preAddedTexts[0];
 window.localStorage.setItem('charSpeed', charSpeed);
 window.localStorage.setItem('difficulty', 0);
+window.localStorage.setItem('choosenText', choosenText);
 
 var maxCharSpeed = 10;
 var minCharSpeed = 1;
@@ -10,7 +17,6 @@ var minCharSpeed = 1;
 var difficultyCap = 10;
 
 window.addEventListener("load", addListeners, true);
-window.addEventListener("click", hideDropdownList, true);
 
 function addListeners() {
     window.addEventListener("mouseup", mouseUp, true);
@@ -24,7 +30,19 @@ function addListeners() {
         difficultyButtons[i].addEventListener("click", setDifficulty, true);
     }
 
-    document.getElementById("textlist-button").addEventListener("click", showList, true);
+    document.getElementById("textlist-button").addEventListener("click", 
+    function() {
+        var textMenu = document.getElementById("textmenu-div");
+        if(textMenu.classList.contains("disabled")) {
+            textMenu.classList.remove("disabled");
+        }
+    }, true);
+
+    document.getElementById("button-choose").addEventListener("click", closeTextList, true);
+
+    for(var i = 0; i < preAddedTexts.length; i++) {
+        addTextChoice(preAddedTexts[i]);
+    }
 }
 
 function mouseUp(e) {
@@ -85,6 +103,11 @@ function setDifficulty() {
     setCharSpeed(speed);
 }
 
+function closeTextList() {
+    document.getElementById("textmenu-div").classList.add("disabled");
+    document.getElementById("textlist-button").innerHTML = choosenText.replace(/\_/ig, ' ');
+}
+
 function startGame() {
     window.localStorage.setItem('indicator', document.getElementById('checkbox-textindicator').checked); 
     location.href='game.html';
@@ -95,23 +118,28 @@ function setCharSpeed(value) {
     window.localStorage.setItem("charSpeed", value);
 }
 
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-function showList() {
-    document.getElementById("text-list").classList.toggle("show");
-}
+function addTextChoice(article) {
+    var textList = document.getElementById("textlist");
 
-// Close the dropdown menu if the user clicks outside of it
-function hideDropdownList(event) {
-  if (!event.target.matches('.dropbtn')) {
+    var container = document.createElement("div");
+    container.classList.add("textradio-container");
 
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
+    var radioButton = document.createElement("input");
+    radioButton.setAttribute("type", "radio");
+    radioButton.setAttribute("name", "text");
+    radioButton.setAttribute("id", article);
+    radioButton.addEventListener("click", 
+    function() {
+        choosenText = this.id;
+        window.localStorage.setItem('choosenText', choosenText);
+    }, true);
+
+    var radioLabel = document.createElement("label");
+    radioLabel.setAttribute("for", article);
+    radioLabel.innerText = article.replace(/\_/ig, ' ');
+
+    container.appendChild(radioButton);
+    container.appendChild(radioLabel);
+    
+    textList.appendChild(container);
 }

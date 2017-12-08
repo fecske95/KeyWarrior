@@ -45,16 +45,11 @@ span {
     display: inline-block;
 }
 
-#game-menu #top-menu #panel-choosetext {
-    display: inline-block;
-    padding: 20px;
-    position: absolute;
-    right: 0;
-}
-
-#game-menu #top-menu #panel-choosetext button {
-    width: 260px;
-    height: 60px;
+#game-menu #top-menu #textlist-button {
+    background-color: greenyellow;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    float: right;
 }
 
 #game-menu #panel-options {
@@ -99,7 +94,7 @@ span {
 }
 
 .disabled {
-    display: none;
+    display: none !important;
 }
 
 .floating-key {

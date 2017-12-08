@@ -29,7 +29,7 @@
     border-radius: 10px;
 }
 
-button, input[type="radio"] {
+button, input[type="radio"][name="difficulty"] {
     -webkit-appearance: none;
     -ms-progress-appearance: none;
     -moz-appearance: none; 
@@ -45,12 +45,12 @@ button, input[type="radio"] {
     border-radius: 10px;
 }
 
-button:hover, input[type="radio"]:hover, input[type="radio"]:checked {
+button:hover, input[type="radio"][name="difficulty"]:hover, input[type="radio"][name="difficulty"]:checked {
     background-color: black !important;
     color: white;
 }
 
-input[type="radio"]:hover + label, input[type="radio"]:checked + label {
+input[type="radio"][name="difficulty"]:hover + label, input[type="radio"][name="difficulty"]:checked + label {
     color: white;
 }
 
@@ -58,7 +58,7 @@ input[type="radio"]:hover + label, input[type="radio"]:checked + label {
     position: relative;
 }
 
-.radio-container input[type="radio"] + label {
+.radio-container input[type="radio"][name="difficulty"] + label {
     position: absolute;
     left: 50%;
     top: 50%;

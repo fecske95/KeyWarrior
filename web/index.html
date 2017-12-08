@@ -6,10 +6,10 @@
     <link href="https://fonts.googleapis.com/css?family=Nova+Square|Ubuntu" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="CSS/dropdown-list.css">
     <link rel="stylesheet" type="text/css" href="CSS/ui-style.css">
+    <link rel="stylesheet" type="text/css" href="CSS/textmenu.css">
     <link rel="stylesheet" type="text/css" href="CSS/index.css">
 
     <script type="text/javascript" src="JS/jquery.js"></script>
-    <script type="text/javascript" src="JS/dropdownlist.js"></script>
     <script type="text/javascript" src="JS/menuanimation.js"></script>
     <script type="text/javascript" src="JS/menu.js"></script>
 </head>
@@ -21,19 +21,8 @@
         <img id="logo" src="images/logo.png" />
 
         <div id="top-menu">
-
             <button id="start">Start Game</button>
-
-            <div class="panel" id="panel-choosetext">
-                <div class="dropdown" id="text-dropdown">
-                    <button id="textlist-button" class="dropbtn">Choose Text!</button>
-                    <div id="text-list" class="dropdown-content">
-                        <a href="#" class="list-option">Link 1</a>
-                        <a href="#" class="list-option">Link 2</a>
-                        <a href="#" class="list-option">Link 3</a>
-                    </div>
-                </div>
-            </div>
+            <button id="textlist-button">Choose Text!</button>
         </div>
 
         <div class="panel" id="panel-options">
@@ -69,6 +58,16 @@
                 </div>
             </div>
         </div>
+
+        <div class="panel disabled" id="textmenu-div">
+            <div id="textmenu-header">Choose Text!</div>
+            <div id="textlist">
+            </div>
+            <div id="textmenu-footer">
+                <button id="button-choose">Ok</button>
+            </div>
+        </div>
+
     </section>
 
 </body>
