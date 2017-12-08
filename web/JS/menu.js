@@ -1,6 +1,27 @@
 var preAddedTexts = [
+    "Google",
+    "Intel",
+    "Advanced_Micro_Devices",
+    "Nvidia",
+    "GeForce",
+    "ATI_Technologies",
+    "Radeon",
+    "Apple_Inc.",
+    "Microsoft",
+    "Microsoft_Windows",
+    "Virtual_reality",
     "Grand_Theft_Auto_V",
-    "Geoffrey_Lewis_(actor)"
+    "Saints_Row_IV",
+    "GitHub",
+    "Android_(operating_system)",
+    "Geoffrey_Lewis_(actor)",
+    "Game_of_Thrones",
+    "The_Walking_Dead_(TV_series)",
+    "Black_hole",
+    "Sun",
+    "Space",
+    "PinkNews",
+    "View_from_the_House"
 ];
 
 var clickedThumb = null;

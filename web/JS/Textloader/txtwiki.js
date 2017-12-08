@@ -25,15 +25,22 @@ var txtwiki = (function(){
 		parsed = stripWhitespace(parsed);
 
 		//parsed = parsed.replace(/({([^>]+)})/ig, "");
-		parsed = parsed.replace(/(.*})/ig, "");
+		parsed = parsed.replace(/{.*}/ig, "");
 		parsed = parsed.replace(/Category:.*/ig, "");
-		parsed = parsed.replace(/\#/ig, " ");
-		parsed = parsed.replace(/\;/ig, "");
-		parsed = parsed.replace(/(==([^>]+)==)/ig, "");
-		parsed = parsed.replace(/(\n)/ig, "");
 		parsed = parsed.replace(/\[.*\]/ig, "");
 		parsed = parsed.replace(/\(.*\)/ig, "-");
+		parsed = parsed.replace(/\#/ig, " ");
+		parsed = parsed.replace(/\;/ig, "");
+		parsed = parsed.replace(/\"/ig, "");
+		parsed = parsed.replace(/\'/ig, "");
+		parsed = parsed.replace(/\!/ig, ".");
+		parsed = parsed.replace(/\?/ig, ".");
+		parsed = parsed.replace(/\%/ig, " percents");
+		parsed = parsed.replace(/(==([^>]+)==)/ig, "");
+		parsed = parsed.replace(/(\n)/ig, "");
 		parsed = parsed.replace(/\*/ig, "");
+		parsed = parsed.replace(/\&/ig, "");
+		parsed = parsed.replace(/\°/ig, " degrees");
 
 		return parsed;
 	}
