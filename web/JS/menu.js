@@ -23,7 +23,7 @@ function addListeners() {
     window.addEventListener("mousedown", mouseDown, true);
     window.addEventListener("mousemove", mouseMove, true);
 
-    document.getElementById("start").addEventListener("click", startGame, true);
+    document.getElementById("start").addEventListener("click", startNewGame, true);
 
     var difficultyButtons = document.querySelectorAll(".difficulty-button");
     for(var i = 0; i < difficultyButtons.length; i++) {
@@ -108,8 +108,8 @@ function closeTextList() {
     document.getElementById("textlist-button").innerHTML = choosenText.replace(/\_/ig, ' ');
 }
 
-function startGame() {
-    window.localStorage.setItem('indicator', document.getElementById('checkbox-textindicator').checked); 
+function startNewGame() {
+    window.localStorage.setItem("indicator", document.getElementById("checkbox-textindicator").checked); 
     location.href='game.html';
 }
 

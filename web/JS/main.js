@@ -28,8 +28,6 @@ var keyboard;
 
 var countMiss = true;
 
-var indicator = false;
-
 var score = 0;
 var multiplier = 1;
 var maxMultiplier = 6;
@@ -55,11 +53,9 @@ var removeAnimation = function (e) {
 window.addEventListener("load", initializeGame, true);
 
 function initializeGame() {
-    startGame();
     keyAnimationTime = parseFloat(window.localStorage.getItem("charSpeed"));
-    indicator = window.localStorage.getItem("indicator");
 
-    if (!indicator) {
+    if (window.localStorage.getItem("indicator") === "false") {
         document.getElementById("game-container").removeChild(document.getElementById("text-div"));
     }
 
@@ -78,6 +74,7 @@ function initializeGame() {
     console.log(difficulty);
 
     document.getElementById("pause-button").addEventListener("click", showMenu, true);
+    startGame();
 };
 
 $(document).keydown(function (e) {
