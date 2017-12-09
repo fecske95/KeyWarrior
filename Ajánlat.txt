@@ -1,0 +1,31 @@
+﻿AJÁNLAT:
+================
+	Funkció:
+----------------
+	A rendszert három részre bontjuk, main menu, gameboard valamint final menu.
+A main menu-ben helyet kap egy játék indítására szolgáló gomb, egy legördülő lista
+amiben a szövegeket ki lehet választani. Ezeken felül nehézség állítására szolgáló 
+beviteli elemek helyezkednek még el. 
+	A játék menüben helyet kap egy amerikai/angol kiosztású billentyűzet,
+a billentyűzeten kap a játékos visszajelzést a leütésekről, Egy szövegdoboz amiben
+a szöveg helyezkedik el és folyamatosan frissül a helyes leütések függvényében,
+találatokat számláló szövegdoboz. Ezen kívül megjelennek karakterek amik a soron
+következő karakter leütését jelzik. Valamint itt lehetőséget kínálunk visszalépésre
+a main menu-be, egy gomb segítségével. 
+	A final menu egy ablak ahol kiértékelődik az elért eredmény, és ugyan csak 
+lehetőséget kap a felhasználó visszamenni a main menu-be.
+
+	Stílus:
+---------------
+	A három ablakon elhelyezkedő gombok egyeséges dizájnt kapnak, színük
+kurzor ráhelyezéskor változik.
+	A main menu háttere animált, a gamebord háttere átmenetes animálatlan
+[kizárólag parktikus okokból]. A final menu háttere kissé átlátszó és áttűnik 
+a gameboard.
+	A gameboard billentyűzete leütésre változik, és a a megjelenő karakterek
+beúszó animációt valamint helyes és helytelen leütére külön színt kap. 
+	A gameboardon elhelyezkedő textbox ami a szöveget jeleníti meg egyszerű 
+letisztult lesz a jobb láthatóság érdekében. 
+	A final menu-ben kiértékelődő eredményt több formában jelenítjük meg. 
+Százalékos formában, csillagozással (5/valamennyi a százaléktól függően),valamint 
+nyers pontok formájában.
