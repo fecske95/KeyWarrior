@@ -158,11 +158,7 @@ A game menu-t felosztjuk egy top menu-re és egy alsó panelre.
 A top menu a játék elindító gombját tartalmazza, ami hivatkozással vezet át a game oldalára. Ezen kívül a szöveg választó gomb is ide kerül.
 A szöveg választó gomb megnyomására egy újabb panel jelenik meg. Ez a játszható szöveget listáját fogja tartalmazni.
 
-Az alsó panel a nehézségi beállításokat fogja tartalmazni. Ezek rádió gombok lesznek, azaz csak egy jelölhető ki egyszerre:
-- Könnyű, zöld színnel
-- Közepes, sárga színnel
-- Nehéz, piros színnel
-- Egyedi, szürke színnel
+Az alsó panel a nehézségi beállításokat fogja tartalmazni. Ezek rádió gombok lesznek, azaz csak egy jelölhető ki egyszerre.
 
 Az egyedi gomb lenyit egy további beállítást, amivel a user testreszabhatja a beúszó billentyűk sebességét. Ha ezt a lehetőséget választja,
 akkor az alkalmazás ehhez hangolja a belső nehézségi beállításokat. Ez egy slider lesz, ami 0-tól egy tetszőleges számig terjedő értéket állít.
