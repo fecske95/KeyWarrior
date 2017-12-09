@@ -67,15 +67,15 @@ Melléklet: Funkcionális specifikáció.txt, Ütemterv.txt
   - 3 ember
   - 1 főre jutó órabér: 1500 Ft/óra 
     - Napi 8 óra munka mellett ez 12000 Ft.-os napidíjat jelent.
-  - 53 munkanap
-  - Csomagár: 1908000 Ft.
-  - Átadás határideje: 2017.12.04
+  - 63 munkanap
+  - Csomagár: 2268000 Ft.
+  - Átadás határideje: 2017.12.14
 3.Maximum
   - 2 ember
-  - 1 főre jutó órabér: 1900 Ft/óra 
-    - Napi 8 óra munka mellett ez 15200 Ft.-os napidíjat jelent.
+  - 1 főre jutó órabér: 2100 Ft/óra 
+    - Napi 8 óra munka mellett ez 16800 Ft.-os napidíjat jelent.
   - 71 munkanap
-  - Csomagár: 2158400 Ft.
+  - Csomagár: 2385600 Ft.
   - Átadás határideje: 2017.12.50
 
 A fizetési ütemterv mellékletben található az „Ár, Fizetési ütemterv.txt” – ben.
