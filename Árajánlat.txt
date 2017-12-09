@@ -43,6 +43,8 @@ Projektütemezés
   - F2, a játék felület elkészítése 14 embernap.
   - F3, a főmenü elkészítése 14 embernap.
   - F4, a beállítások elkészítése 14 embernap.
+  - F5, a felület konfigurálása 14 embernap
+  - F6, a játék opciók optimalizálása 14 embernap
 
 Függőségi gráf
   Mellékelve: Gráf.png
