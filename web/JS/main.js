@@ -38,17 +38,11 @@ var streak = 0;
 
 var maxStars = 5;
 
-var Difficulties = {
-    EASY: 0,
-    MEDIUM: 1,
-    HARD: 2,
-};
-
-var difficulty = Difficulties.EASY;
-
 var removeAnimation = function (e) {
     removeKey(0);
 };
+
+var difficulty;
 
 window.addEventListener("load", initializeGame, true);
 
@@ -59,15 +53,15 @@ function initializeGame() {
         document.getElementById("game-container").removeChild(document.getElementById("text-div"));
     }
 
-    difficulty = window.localStorage.getItem('difficulty');
+    difficulty = parseInt(window.localStorage.getItem('difficulty'));
 
-    if (difficulty === "CUSTOM") {
+    if (difficulty === 0) {
         if (keyAnimationTime >= 6) {
-            difficulty = Difficulties.EASY;
+            difficulty = 1;
         } else if (keyAnimationTime >= 3) {
-            difficulty = Difficulties.MEDIUM;
+            difficulty = 2;
         } else {
-            difficulty = Difficulties.HARD;
+            difficulty = 3;
         }
     }
 

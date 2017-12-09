@@ -29,7 +29,7 @@ var clickedThumb = null;
 var charSpeed = 7;
 var choosenText = preAddedTexts[0];
 window.localStorage.setItem('charSpeed', charSpeed);
-window.localStorage.setItem('difficulty', 0);
+window.localStorage.setItem('difficulty', 1);
 window.localStorage.setItem('choosenText', choosenText);
 
 var maxCharSpeed = 10;
@@ -101,7 +101,6 @@ function mouseMove(e) {
 
 function setDifficulty() {
     var diff = this.id.toUpperCase();
-    window.localStorage.setItem('difficulty', diff);
 
     var diffValue;
 
@@ -130,6 +129,8 @@ function setDifficulty() {
     }
     var speed = (difficultyCap - diffValue * 3);
     setCharSpeed(speed);
+
+    window.localStorage.setItem("difficulty", diffValue);
 }
 
 function closeTextList() {
