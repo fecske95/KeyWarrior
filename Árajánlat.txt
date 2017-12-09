@@ -1,0 +1,206 @@
+﻿Árajánlat
+---------
+
+Tartalomjegyzék
+---------------
+1.Bevezetés
+2.Vezetői összefoglaló
+3.Cégbemutató referenciák
+4.Felhasználni kívánt technikák bemutatása
+5.A feladat bemutatása
+6.Projektterv
+7.Funkcionális specifikáció és ütemterv
+8.Csomagok árral, átadási határidővel
+9.Megtérülési, gazdasági előnyök (megvalósíthatósági tanulmány elkészítése)
+10.Árajánlat érvényessége, szerződési feltételek
+
+1.Bevezetés
+-----------
+A jelen fejlesztési projekt célja egy gépírás tanulásra alkalmas játékot létrehozni.
+
+2.Vezetői összefoglaló
+----------------------
+A projekt tagjai megerősítik, hogy a jelen szerződésben szereplő Funkcionális Specifikáció elegendő (kellő és pontos) információt tartalmaz. A projektben résztvevő tagok nem jogosultak semmilyen további fizetségre, sem pedig nem mentesülnek a jelen Szerződésnek megfelelő semmilyen felelősség alól amiatt, ha bármilyen módon félreértelmezés történik a Funkcionális Specifikációt illetően.
+Az együttműködés szellemében, hogy ha bármelyik fél bármilyen feladattal vagy véleményeltéréssel kerül szembe a projekt során, akkor mindegyikük megkísérli azt biztosítani, hogy a véleményeltérés kölcsönösen elfogadható megoldást nyerjen, gyorsan, ésszerűen és szükségtelen fennakadás nélkül.
+
+3.Cég bemutató referenciák
+--------------------------
+-
+
+4.Felhasználni kívánt technikák bemutatása
+-------------------------------------------
+Az internetes felületen való megvalósítása JavaScript-el, HTML 5-tel és CSS3-mal történik. E során a jelenleg elérhető legújabb verziókkal szeretnék a felhasználó számára leginkább kényelmes használatot biztosítani.
+HTML5-tel és CSS3–mal az animációkat valósítjuk meg, a JavaScript-el pedig az alapvető játék funkciókat dolgozzuk. Megválasztásuk során figyelembe vettük, hogy az elkészítendő funkciókat a lehető leghatékonyabban tudjuk megvalósítani.
+
+5.A feladat bemutatása
+----------------------
+A játékos gépírását egy egyszerű rendszer fogja pontozni. A pontozás a helyesen begépelt karakterek függvényében történik. A pontozást szorzók módosítják, amely a több, egymás után helyesen megadott karakterektől fog függeni. A játékosnak legyen lehetősége nehézségi szinteket kiválasztani, amely ezt a szorzót tovább emeli. Magasabb nehézségi fokozatokon egyéb írásjeleket is be kell gépelnie a játékosnak. A pontosság toleranciájára egy beállítási lehetőséget fogunk biztosítani, valamint a nehézséget is az alap fokozatokon kívül testre lehet szabni. Lesz egy top lista, amely először a játékos gépén fogja követni a pontokat. Opcionálisan, egy későbbi verzióban ez a lista globális lesz.
+
+6.Projektterv
+--------------
+Projektütemezés
+  - F1, az alapmodell elkészítése 14 embernap.
+  - F2, a játék felület elkészítése 14 embernap.
+  - F3, a főmenü elkészítése 14 embernap.
+  - F4, a beállítások elkészítése 14 embernap.
+
+Függőségi gráf
+  Mellékelve: Gráf.png
+
+A projekt fő fázisai „A projekt fő fázisai.txt”-ben van mellékelve.
+
+7.Funkcionális specifikáció és ütemterv
+---------------------------------------
+Melléklet: Funkcionális specifikáció.txt, Ütemterv.txt
+
+8.Csomagok árral, átadási határidővel
+-------------------------------------
+1.Minimál
+  - 5 ember
+  - 1 főre jutó órabér: 1100 Ft/óra 
+    - Napi 8 óra munka mellett ez 8800 Ft.-os napidíjat jelent.
+  - 35 munkanap
+  - Csomagár: 1540000 Ft.
+  - Átadás határideje: 2017.11.08
+
+2.Optimál
+  - 3 ember
+  - 1 főre jutó órabér: 1500 Ft/óra 
+    - Napi 8 óra munka mellett ez 12000 Ft.-os napidíjat jelent.
+  - 53 munkanap
+  - Csomagár: 1908000 Ft.
+  - Átadás határideje: 2017.12.04
+3.Maximum
+  - 2 ember
+  - 1 főre jutó órabér: 1900 Ft/óra 
+    - Napi 8 óra munka mellett ez 15200 Ft.-os napidíjat jelent.
+  - 71 munkanap
+  - Csomagár: 2158400 Ft.
+  - Átadás határideje: 2017.12.50
+
+A fizetési ütemterv mellékletben található az „Ár, Fizetési ütemterv.txt” – ben.
+
+9.Megtérülési, gazdasági előnyök (megvalósíthatósági tanulmány elkészítése)
+---------------------------------
+-
+
+10.Árajánlat érvényessége, szerződési feltételek
+------------------------------------------------
+Érvényes: 2017.10.31
+
+Szerződési feltételek:
+
+1.Átvételi eljárás és kritériumok
+  I.Az átvétel célja a következők igazolása:
+    a)A csomag megfelel az Átvételi Alapfeltételeknek (azaz a Részletes Funkcionális Specifikációnak, a Rendszertervezési Dokumentumnak, a Tesztelés Tervének és a felek által a Rendszertervezési Dokumentum átvétele után elfogadott egyéb dokumentumoknak).
+    b)A hozzá kapcsolódó dokumentáció átadása teljes körű és megfelelő. A Tesztelés sikeres végrehajtása vezet el a Végátvételhez.
+  II.A dokumentumok átvétele
+     A Dokumentum átadását követő 5 munkanapos időszakon belül az Átvevő félnek azt át kell néznie. A kézhez vételt követő 5 munkanapon belül írásban kell értesíteni a Dokumentummal kapcsolatban felmerült megjegyzéseket mindazon észrevételről, amelyben úgy tekinti, hogy a Dokumentum nem elégíti ki a jelen Szerződésben részletezett követelményeket, és a vonatkozó dokumentumokat elkészítik és jóváhagyják a Felek. 
+     A fent említett értesítést kézhez vételtől számított 5 munkanapon belül módosítania kell a Dokumentumot, és azt újra be kell nyújtania. Amennyiben további tisztázásra lenne szükség, a feleknek a fent említett módosításban, még a dokumentum újra benyújtását megelőzően kell megegyezniük. A dokumentum ismételt benyújtását követően 5 munkanapon belül értesítést kell küldenie minden, esetleg még fennálló nem megfelelésről. A jelen cikkelyben szereplő eljárást kétszer kell ismételni ahhoz, hogy a Dokumentum meg nem feleltetésektől mentes állapotát elérjék. A Dokumentum harmadszori sikertelen újra-benyújtását követően a felek jogosultak a szerződés megszüntetésére minden további következmény nélkül.
+     Ha a Dokumentum mentes a nem megfelelőségektől, (olyan nyelvtani, helyesírásbeli illetve hasonló hiányosságok kivételével, amelyek nincsenek kihatással a rendszer üzemszerű működésére), azt írásban kell igazolni.
+     Az átvétel akkor történik meg, ha az átvevő fél úgy ítéli meg, hogy a Dokumentum teljesíti a jelen Szerződésnek, valamint azon további dokumentumoknak megfelelő követelményeit, amelyekben a két fél kifejezetten megegyezett.
+     Úgy kell tekinteni, hogy a Dokumentum elfogadásra került, ha 10 munkanapos időszak elteltével ennek ellenkezőjéről nem értesítenek.
+     A fenti eljárás alapján felülvizsgálandó és jóváhagyandó dokumentumok az alábbiak:
+       - Projektterv,
+       - Rendszertervezési Dokumentum,
+       - Tesztelési Terv,
+       - Verzió Leírások,
+       - Frissített Rendszer Dokumentumok.
+  III.Szállítás
+    a)Az átadást megelőzően legalább egy (1) héttel értesíteni kell az Átvevő felet arról, hogy a Csomag készen áll a leszállításra.
+    b)A leszállítás tárgyában a következő leszállítandókat kell biztosítania:
+      - Telepítési Útmutató
+      - Verzió Leírások
+  IV.Átvételi előkészület
+     Kellő információt és dokumentációt kell biztosítani az egységes tesztelési környezet előkészítéséhez.
+     Amennyiben a teszt-infrastruktúra kielégíti a követelményeket, közösen beüzemeli az Útmutatónak megfelelőnek. A kész eredményt mindkét félnek ellenőriznie kell, és el kell fogadnia.
+     Ésszerű mértékű helyszíni támogatást kell biztosítani a tesztkörnyezet sikeres előkészítéséhez.
+  V.Átvételi eljárás
+    a)A felhasználói tesztelés csak akkor indítható, ha
+      - a tesztkörnyezet sikeresen felépült,
+      - a Tesztelési Terv jóváhagyása megtörtént.
+    b)A KeyWarrior és a kapcsolódó dokumentumok átadását követő 10 munkanapos időszak során végre kell hajtani a felhasználói tesztelést.
+    c)Az Átvevő félnek joga van végrehajtani a kölcsönösen elfogadott Tesztelési Tervet, illetve minden olyan egyéb tesztelést, melyet szükségesnek ítél a vonatkozó specifikációnak való megfeleltetés igazolásához. Amennyiben a KeyWarrior szükségesség teszi adatbázis konverzióját/migrációját, akkor a fenti eljárások és az eredmények (az adatok mennyisége és minősége) ellenőrzése a felhasználói tesztelés részét képezi.
+    d)A felhasználói tesztelés teljes időszakában telefonos segítség lehetősége fenn áll. Helyszíni támogatást kell nyújtani az Átvevő fél számára 5 munkanapos időszakra azért, hogy segítse a hatékony felhasználói tesztelést, és közvetlenül kezelje a problémákat. E helyszíni jelenlét időzítésének a felek kölcsönös megegyezésén kell alapulnia.
+    e)Amennyiben a tesztelés során hibát vagy az Átvételi Alapfeltételekhez való eltérést tapasztalnak, azt azonnal jelenteni kell, hogy lehetőség legyen az elemzésre, és a Hibajelentő Űrlap felhasználásával írásban kell megküldeni.
+    f)A hibák 4 szintje definiált:
+      - A „kritikus hiba” lehetetlenné teszi a Módosított Rendszer jelentős részének üzemszerű használatát.
+      - A „komoly hiba” jelentősen akadályozza a Módosított Rendszer jelentős részének használatát, de a fent említett  használat lehetséges üzemszerű feltételek mellett, megkerülő megoldások alkalmazásával. Valamely komoly hiba nem feltétlenül jelenti az átvétel visszautasítását. Mindazonáltal az összes hiba összegzett hatását figyelembe véve az átvétel elutasítható.
+      - A „kisebb hiba”, mely nem akadályozza jelentős mértékben a Módosított Rendszer egyetlen részének használatát sem.
+      - „Pontatlanság”: A felek tudatában vannak, hogy bonyolult szoftverben előfordulhat pontatlanság. E pontatlanságok csak nagyon csekély a hatása szoftverrel végzett munkára. E pontatlanságokat az egyéb feltárt hibékkal együtt kell javítani, és sem az átvételi tesztelést, sem az átvételt nem akadályozhatják. Abban az esetben, ha a „pontatlanság” javítását a soron következő frissítés folyamán kell megoldani.
+      A hibáknak a fent említett valamely szintre besorolását közösen indokolt megegyezéssel kell végrehajtani.
+      A minőségi kritériumok vonatkozásában a hibát csak akkor lehet figyelembe venni, amennyiben a fent említett hibát a frissítés hozta be, azaz a hiba nem fordult még elő a befagyasztott referencia verzióban.
+      Azokat a hibákat, amelyek már szerepeltek a befagyasztott referencia-rendszerben a karbantartási szolgáltatás keretében kell megoldani.
+    g)A lehetséges – ésszerűen – legkorábbi időpontban el kell kezdenie a fenti hibák kijavítását, és az eredményül kapott javításokat a lehetséges – ésszerűen – legrövidebb időtávon belül át kell adnia.
+    h)Az összes Hibabejelentést naplóznia kell, és nyomon kell követnie mind a két félnek és azokat az Tesztelési időszak során naponta kell felülvizsgálni, és szinkronba hozni.
+    i)Amennyiben a Tesztelési időszak során az Átvételi Alapfeltételekhez képest mutatkozó ellentmondás, vagy bármilyen mulasztás miatt fel kell függeszteni, mert az akadályozza a Tesztelés folytatását, akkor a Tesztelési időszak annyi nappal kell meghosszabbítani, amennyit a fent említett hibák javításával eltelt, valamint hozzáadva ehhez azt az időt, melyre olyan Tesztelési feltételek/környezet helyreállításához van szükség, mintha a fent említett hiba vagy mulasztás nem fordult volna elő. Amennyiben a Tesztelés száz százalékkal (100%) vagy ennél nagyobb mértékben csúszik a fenti Tesztelési időszakhoz képest, akkor az Átvevő fél a jelen Szerződés szerint rendelkezésre álló minden egyéb orvoslaton kívül kizárólagosan saját belátása szerint olyan döntést is hozhat, hogy elutasítja a KeyWarrior átvételét.
+    j)Az átvevő fél jogosult felfüggeszteni a Tesztelést és azonnali hatállyal visszautasítani a KeyWarrior átvételét, amennyiben a Tesztelés a Módosított Rendszerben a következőket fedi fel:
+      - 3 vagy több kritikus hiba, VAGY
+      - 10 vagy több komoly hiba, VAGY
+      - 30 vagy több kisebb hiba
+      a specifikált hibakategóriák (üzemzavarok szintje) és hiba-definíciók szerint.
+      Az említett elutasítás esetén az Átvevő fél jogosult megkapni a teljes fejlesztési díj 4,0 %-át mint a hibás teljesítési kötbért.
+      Ez a kötbérfizetés nem mentesít azon kötelezettség alól, hogy biztosítsa a teljes megrendelt fejlesztés átvételét, illetve a jelen Szerződés alapján felmerült bármely egyéb kötelezettsége vagy feladata alól.
+    k)Mindkét félnek ésszerű erőfeszítést kell tennie annak biztosítására, hogy a Tesztelés folyamatosan mehessen végbe, és minimálissá kell tenniük bármely olyan körülmény hatását, amely az előzőekben említettek szerint bármilyen felfüggesztést okozhat, beleértve ebbe a kerülő megoldásokat, alrendszerek vagy külön modulok tesztelését, - ha lehetséges – miközben a hibák és tévesztések korrekciója éppen folyik.
+    l)Abban az esetben, ha a Tesztelés egyik fél hatáskörébe sem tartozó bármely harmadik fél által előidézett problémák, hibák vagy lépések miatt ellehetetlenül vagy elakad,a feleknek jóhiszeműen meg kell tárgyalniuk a fenti események megoldási módját, különösen azért, hogy csökkentsék mindkét félnek a Tesztelésben bekövetkezett késedelem miatti költségeit.
+    m)A 10 munkanapos időszak végén az Átvevő félnek írásban kell értesítenie a következőkről:
+      - átvétel, vagy
+      - átvétel úgy, hogy a fennmaradó hiányosságokat még meg kell oldani, vagy
+      - az átvétel visszautasítása.
+    n)Amennyiben indokolt, igazolt okból utasítják vissza az átvételt (a jóváhagyott átvételi kritériumok alapján), újra kell szállítani, és az átvételi eljárást a KeyWarrior javított változatának átadása után kell indítani.
+    o)Az átvétel igazolására a következő kritériumokat kell alkalmazni:
+      - Sikeres adatbázis-konverzió/migráció, amennyiben ilyen munka szükségessé válik a jelen Szerződés szerinti KeyWarrior-al kapcsolatban, ÉS
+      - A dokumentációban mutatkozó hibák, amelyek nem olyanok, hogy indokoltan akadályoznák a rendszer üzemszerű használatát,ÉS
+      - 0 darab kritikus hiba, VAGY
+      - Maximum 3 komoly hiba, VAGY
+      - 15-nél kevesebb kisebb hiba, amelyek együttesen sem akadályozzák indokolt módon a rendszer üzemszerű használatát, VAGY
+      - A komoly és a kisebb hibák együttesen nem olyanok, hogy indokoltan megakadályoznák a rendszer üzemszerű használatát.
+    p)A végátvétel általános feltételei a következők
+      - A kapcsolódó Dokumentáció frissített verziójának szállítása a kikötések szerint;
+      - A Tesztelés végrehajtása, mellyel az Átvevő fél kiadja az átvételi igazolást.
+      - Az esetleges jelentős problémák kiküszöbölése, melyek:
+          * a Tesztelés befejezését megelőzően következtek be; és/vagy
+          * Ezt követően úgy azonosították, hogy azokat a fenti bekezdésekben hivatkozott problémák kiküszöbölésnek céljából telepített valamely javítás okozta.
+      - A Tesztelés azon részének megismétlése, mely szükségesnek bizonyul a problémák kiküszöbölésének ellenőrzéséhez.
+    q)Az átvevő részéről átvettnek kell tekinteni az átadott KeyWarrior, ha 20 munkanapos időszak elteltével az Átvevő fél ennek ellenkezőjéről nem küld értesítést indoklással együtt.
+    r)Megoldandó hiányosságok mellett történő átvétel esetén ki kell javítani az összes hibát ésszerű időn belül, figyelembe véve a hiányosság fajtáját és súlyosságát, úgyhogy az Átvevő fél ezzel kellőképpen elégedett legyen. Az Átvevő félnek ekkor újra kell futtatnia a megfelelő Tesztelést teljes egészében vagy részben, ahogyan az a fenti javítások igazolásához szükségesnek tűnik. 
+  VI.Végátvételi Igazolás kiadása
+    a)A sikeres Tesztekést követően 2 héten belül az Átvevő félnek üzembe kell helyeznie a Módosított Rendszert és ki kell adnia a Végátvételi Igazolást. Az esetben, hogy ha az Átvevő fél nem helyezi üzembe a Módosított Rendszert olyan oknál fogva, amelyért felelősség nem vállalható, úgy kell tekinteni, hogy az Átvevő fél kiállította a Végátvételi Igazolást.
+  VII.A projekt befejezése
+      Az Átvevő fél Projekt Zárási Igazolást ad ki a Tesztelés során felfedezett valamennyi hiba javítását követően.
+      A hibajavításokat legfeljebb kettő frissítő csomagban kell szolgáltatnia a vonatkozó szoftvermodul mindegyikére, ésszerű és kölcsönösen elfogadott időn belül, amely nem lépheti túl a Végátvételi igazolás kibocsátását követő 6 hetet komoly hiba esetén, 8 hetet kisebb hiba esetén. Az Átvevő félnek átadás után 10 munkanapon belül kell tesztelnie ezeket a hibajavításokat, és a Tesztelés eredményéről írásban kell értesítést küldenie. Úgy kell tekinteni, hogy az Átvevő fél elfogadta a hibajavításokat, amennyiben 10 munkanap elteltével az Átvevő fél ennek ellenkezőjéről nem küld értesítést.
+
+2.Változások kezelése
+  I.Változtatások csak mindkét fél kifejezett írásos jóváhagyásával történhetnek.
+  II.Változtatást mindkét fél kérhet. Egyetlen fél sem jogosult elutasítani az ésszerű indokokra támaszkodó Változtatás Kérelmet.
+  III.Amennyiben az Átvevő fél funkcionális követelményeket kíván változtatni, vagy pedig a Rendszertervezési Dokumentum átvétele után az Átvevő fél már jóváhagyott műszaki specifikációkat kíván megváltoztatni, akkor az Átvevő félnek részletes, írásos Változtatás Kérelmet kell benyújtania a fent említett változtatásokról értékelés céljából.
+  IV.Indokolt időn belül – figyelembe véve az igényelt változtatás fajtáját és súlyosságát – értékelni kell a kért változtatásokat. Amennyiben az értékelés, mint olyan KeyWarrior fejlesztésére nézve esetleges késedelemmel jár, a feleknek először meg kell állapodniuk abban, hogy e tény ellenére mindenképpen szükséges-e az értékelés.
+  V.Amennyiben az Átvevő fél által igényelt változtatás nincs hatással az árra, az ütemtervre, vagy a Szolgáltatások teljesítésére, illetve csak igen korlátozott hatással van mindezekre, akkor a változtatást azonnal be lehet vezetni az Átvevő fél írásos visszaigazolása után. Ellenkező esetben külön kereskedelmi ajánlatot kell tenni az igényelt változtatások szállítására, figyelembe véve annak megvalósíthatóságát, a műszaki kérdéseket, az árkérdéseket, az ütemtervet és a fennmaradó projektre gyakorolt következményeit, például az ütemterv lehetséges változtatásait, a megrendelő együttműködési kötelezettségeit és a projekt fennmaradó részének átvételét.
+  VI.Az átvevő félnek értesítést kell küldenie mind arról, hogy a változtatás megtörténjen vagy nem kívánja. Amennyiben az Átvevő fél elfogadja az ajánlatát, az új megrendelést
+    a)vagy úgy kell tekinteni, mint a fennmaradó projekttől teljesen független szerződést, ebben az esetben a jelen Szerződés változatlan marad. Vagy pedig
+    b)amennyiben műszaki okok miatt az új megrendelést és a fennmaradó projekt szétválasztása lehetetlen, a feleknek meg kell egyezniük a jelen Szerződés változtatásában, árak, ütemterv és egyéb kérdések vonatkozásában.
+  VII.Amennyiben a KeyWarrior fejlesztői változtatási igényt határoznak meg, akkor az Átvevő félt Változtatás Kérelem útján kell tájékoztatnia, amelynek utalnia kell minden egyes velejáró változtatásra. Amikor az Átvevő fél megkapta a Változtatás Kérelmet, döntenie kell, megbízza-e őket azzal, hogy készítsék el a Hatástanulmányt.
+  VIII.Az Átvevő fél nem köteles a Hatástanulmány elkészítése során felmerült semmilyen költséget megfizetnie, hacsak a felek másként nem állapodnak meg.
+  IX.El kell fogadni az Átvevő fél által engedélyezett vagy igényelt minden egy Változtatást – csak azzal a feltétellel, hogy kölcsönösen, írásban megegyeznek a felek minden ebből eredő költségmódosításban, fizetési feltétel és ütemterv módosításban – kivéve azt az esetet, amikor bizonyítani lehet az Átvevő félnek, hogy a javasolt változtatás nem megfelelő.
+  X.A Változtatás Kérelmet az igénylő fél a folytatásra vonatkozó felhatalmazás kiadását megfelelően bármikor visszavonhatja.
+
+3.Garancia
+  I.A KeyWarrior Végátvétele után az átadott KeyWarrior-ra vonatkozóan garanciális időszaknak meg kell kezdődnie.
+  II.Szavatolni köteles a KeyWarrior-ban szállított módosítások hibamentes működését, a KeyWarrior Végátvételének napját követő tizenkettő (12) hónapra.
+  III.A garanciális időszak alatt köteles orvosolni ésszerű időn belül a KeyWarrior minden egyes hibáját, figyelembe véve a hiba fajtáját és súlyosságát, saját költségén, amennyiben az a szoftver rendeltetésszerű használata során következett be. A javítást a Szoftver javított verziójának átadásával, vagy megfelelő kerülő megoldás biztosításával kell teljesíteni.
+  IV.Az Átvevő félnek a saját telephelyén rendelkezésre kell bocsátani minden olyan segédeszközt, melyet indokoltan igényelhető, és amelyről írásban megfelelő értesítés lett küldve az Átvevő félnek, annak érdekében, hogy eleget lehessen tenni ennek a kötelezettségnek.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+﻿Ár, Fizetési ütemterv
+---------------------
+
+1.Díjak és Fizetési Ütemterv
+----------------------------
+A rögzített díj az alábbi 2. pontban szereplő Fizetési Ütemtervezéssel összhangban számlázandó. Mindazon szolgáltatást, melyet a KeyWarrior a jelen Szerződésben leírt Szolgáltatások körén kívül biztosít, a specifikált napidíjakon kerül kiszámlázásra.
+
+2.Fizetési Ütemezés
+-------------------
+A fejlesztési tételek számlázása a következő ütemezés alapján történik:
+  - A teljes díj 40 %-a a Rendszertervezési Dokumentum elfogadása után
+  - A teljes díj 50%-a a KeyWarrior Tesztelésének sikeres befejezésekor
+  - A teljes díj 10 %-a a Végátvételkor. A garanciális időszak kezdete.
+
+Az összes kifizetése 15 munkanapon belül számla ellenében esedékes, a vonatkozó átvétel vagy szolgáltatás teljesítése után.
