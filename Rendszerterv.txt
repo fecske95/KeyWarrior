@@ -1,0 +1,254 @@
+﻿=========
+BEVEZETÉS
+=========
+
+A dokumentum Bettenbuk Dániel, Balog Balázs, Makovinyi Krisztina közös projektje keretein belül létrejött szoftvert specifikálja.
+
+================
+A RENDSZER CÉLJA
+================
+
+A szoftver célja és egyben fő funkcionalitása egy gépírás tanulásra alkalmas játékot létrehozni. A szoftver egy weben elérhető felülettel rendelkezik, melyen keresztül megadott, illetve saját szöveg feltöltésével van lehetőség a gépírás gyakorlására.
+Fontos szempont, hogy bármilyen operációs rendszeren elérhető legyen, ezért az alkalmazás böngészőben fut.
+
+============
+PROJEKT TERV
+============
+
+Projekt szerepkörök, felelősségek:
+
+--------
+Szerepek
+--------
+
+- Admin: Teljeskörű adminisztrátor, mindent lát, mindent tud állítani. A projekthez tartozó összes részt.
+- Leader: Egy adott Cég/Csoport vezetője, a céghez/csoporthoz tartozó összes projektet látja, kezeli.
+- Read Only: Csak olvasási joga van a projektben.
+- User: A webes szoftvert használó egyén.
+
+-------
+Entitás
+-------
+
+Company (Cég) / Group (Csoport)
+Azon entitások, akik riportolásra használják a webes felületet, ebben a kontextusban ilyen a Bettenbuk Dániel, Balog Balázs, Makovinyi Krisztina alkotta csoport.
+Hozzájuk tartozik a Leader szinttől lefele a webes felhasználók köre.
+
+Project (Projekt)
+Tipikusan egy ügyfél felé intézett mérési folyamat egésze, lehetnek szakaszai, mint a következő sor is mutatja.
+A Projekt mindig projekt szakaszokat csoportosít egy adott ügyfél felé.
+természetesen egy fizikai ügyfélre nyitható több projekt is.
+
+Project section (Projekt szakasz)
+Projekten belül egy szakasz tipikusan egy konfigurációs állapotot jelent.
+Új szakaszt akkor kezdünk, ha például az alapadatok (lásd lenn az alapadat definíciót) változnak.
+Szakasznak kezdeti dátuma és állapota van.
+Egy projekten belül egy időben csak egy aktív szakasz van, egymást fedő szakaszok nincsenek
+
+User (Felhasználó):
+- A webes szoftvert használó egyén.
+
+Dimension (Dimenzió):
+- Ez tipikusan egy általánosítás mind az alapadatokra, mind a webes felületre nézve.
+A példa során az jött ki, hogy a modell szempontjából kettő statikus képernyő van
+Az index (főmenü)
+A játék oldala (gameboard)
+Az összes többi dolog felfogható olyan dimenzióként, ami kapcsolja közvetetten vagy közvetlenül ezt a két statikus elemet vagy logikailag leszűri a tevékenységeket a felhasználó felé.
+Így igazából nem különböztetünk meg külön csoportokat, vagy területeket.
+A különböző dimenziók közötti átmeneteket, lehet gyakorlatilag mind a szűrésekkel, mind a logikai csoportokkal definiálni.
+Ebből majd közvetlenül lehet megadni, milyen képernyőket szeretnénk sorban látni egy tevékenység indításakor.
+Dimenzió tehát lehet:
+- Felhasználói csoport
+- Terület
+
+---------------------------------
+Projekt munkások és felelősségeik
+---------------------------------
+
+Projekt munkások:
+	Bettenbuk Dániel (Admin)
+	Balog Balázs (Leader)
+	Makovinyi Krisztina (Leader)
+
+A projekt szervezését, igazítását Bettenbuk Dániel végzi. Az elvégezendő feladatokat közös megbeszélés alapján osszuk ki és látjuk el.
+
+========
+ÜTEMTERV
+========
+
+Mellékelve: Ütemterv.txt
+Az ügyféllel való konzultációk időpontjai:
+•	M1 – 2017/10/22
+•	M2 – 2017/11/20
+•	M3 – 2017/12/14
+
+============
+MÉRFÖLDKÖVEK
+============
+
+Melléklet: Követelmény specifikáció.txt, 3-as pont
+
+=====================================
+AZ ALKALMAZÁS ÁLTALÁNOS KÖVETELMÉNYEI
+=====================================
+
+------------------------------
+Nem funkcionális követelmények
+------------------------------
+
+- Egyszerű, minimalista téma/design
+- Akadálymentes felület biztosítása
+- Minimum 1280x720-as felbontás támogatása
+- HTML és CSS alapú felület
+
+--------------------
+Támogatott böngészők
+--------------------
+
+Az alkalmazás a következő böngészőket célozza meg (a verziószámok a minimálisat jelölik):
+- Google Chrome 62
+- Mozilla Firefox 57
+- Opera 49
+- Safari 5.1.10
+
+-----------
+Hibakezelés
+-----------
+
+A Web felületen előfordulható hibák csoportjai:
+1. nem támogatott böngésző hibája
+	- A felhasználó értesül róla, az üzenet felsorolja a hivatalosan támogatott böngészőket
+
+2. nem kezelt belső program hiba
+	- A felhasználónak lehetősége van a verziókezelő rendszerben tájékoztatni a fejlesztőket a hibáról
+
+3. begépelendő szöveg szemantikai hibái
+	- A Wikipedia cikkek szűréséből következik
+	- A felhasználót nem akadályozza az alkalmazás használatában
+	- Csak olyan szövegeket viszünk be az alkalmazásba, amelyek begépelhetők
+
+=================
+FUNKCIONÁLIS TERV
+=================
+
+Melléklet: Funkcionális specifikáció.txt
+A funkcionális specifikációban leírtakra válaszoló tervek a következők:
+
+A tervekhez szükséges fogalmak:
+- panel: Áttetsző, alapból szürke hátterű, fekete körvonallal rendelkező, más elemeket tartalmazó felület
+- checkbox: Be és ki kapcsolható gomb.
+- slider: Egérrel állítható csúszka.
+
+-------------------------------------
+Az alkalmazás három fő részre bontása
+-------------------------------------
+
+A weboldalt 2 HTML dokumentumra bontjuk:
+- index, ami a main menu-t fogja tartalmazni, innen egy gomb fog átvezetni hiperhivatkozással a játék oldalára
+- game, ami a játék oldala és a gameboardot tartalmazza
+
+A final menu-t szintén a game oldalra tesszük, részletek a "final menu terve" szekcióban.
+
+-----------------
+A main menu terve
+-----------------
+
+A menü funkcionális részét egy section HTML elem foglalja magába, ami megszabja a menü méreteit. Ennek a neve game menu.
+A game menu-t felosztjuk egy top menu-re és egy alsó panelre.
+A top menu a játék elindító gombját tartalmazza, ami hivatkozással vezet át a game oldalára. Ezen kívül a szöveg választó gomb is ide kerül.
+A szöveg választó gomb megnyomására egy újabb panel jelenik meg. Ez a játszható szöveget listáját fogja tartalmazni.
+
+Az alsó panel a nehézségi beállításokat fogja tartalmazni. Ezek rádió gombok lesznek, azaz csak egy jelölhető ki egyszerre.
+
+Az egyedi gomb lenyit egy további beállítást, amivel a user testreszabhatja a beúszó billentyűk sebességét. Ha ezt a lehetőséget választja,
+akkor az alkalmazás ehhez hangolja a belső nehézségi beállításokat. Ez egy slider lesz, ami 0-tól egy tetszőleges számig terjedő értéket állít.
+
+A panel aljára felkerül egy checkbox, amivel ki és be lehet kapcsolni a szövegdobozt.
+
+Az index hátterében a játékban látható billentyűk fognak mozogni, véletlenszerűen generált helyeken, véletlen méretekkel.
+A menu mögött minden egy blur (homályosítás) effektet kap.
+
+-------------------
+A játék oldal terve
+-------------------
+
+Az oldal tetejére egy szövegdoboz kerül, középre igazítva. Ez fogja kiírni a begépelendő szöveget. A user segítésének érdekében az éppen begépelendő karaktert kiemeli (mindig a szöveg eleje)
+A szövegdoboz csak akkor jelenjen meg, ha a main menu-ben a checkbox be van pipálva.
+
+A képernyő jobb és bal oldalán fog szerepelni a hibák és az eddig begépelt karakterek száma.
+Jobb alulra a scoreboard kerül. Ez egy panel, amely a user pontjait és a szorzóját írja ki.
+
+A main menu-be visszavezető gombot a képernyő bal alsó sarkába tesszük.
+
+Az oldal közepén a gameboard lesz található. Ez fogja tartalmazni a billentyűzetet, és a tetején fognak beúszni a lenyomandó billentyűk.
+Ez az elem egy tilt effektet kap, ami 3D-s hatást eredményez.
+Egyszerre csak egy billentyű úszhat be, a következő akkor jön, ha azt a user sikeresen lenyomta, vagy leért a billentyűzeten a helyére.
+
+------------------
+A final menu terve
+------------------
+
+Mikor a user befejezte a szöveget, ez a menu jelenik meg.
+Ez egy panel lesz, amelyen egy pontszám, egy 1-5 csillagos értékelés, valamint egy százalékos eredmény jelenik meg, ebben a sorrendben, mind középre igazítva.
+Ezek alá egy gomb kerül, ami visszavezet a main menu-be (hivatkozással).
+
+--------------------
+Egyéb rendszerelemek
+--------------------
+
+Az alkalmazásban az összes gomb egy (általunk) előre definiált CSS osztályt fog használni az egységes dizájn érdekében.
+A panelekre és a checkbox-okra ugyan ez vonatkozik.
+
+A beúszó billentyűk mozgatását CSS animációkkal kivitelezzük, amelyeket Javascript-ből alkalmazunk az éppen létrejött elemre.
+
+A bemenet érzékelését és a menu hátterében lévő elemek dinamikus animálását a jQuery fogja végezni.
+A böngésző érzékelésre a bowser API-t fogjuk használni, ami szólni fog, ha a user egy inkompatibilis böngészőben nyitja meg az alkalmazást.
+
+=================
+FIZIKAI KÖRNYEZET
+=================
+
+Az alkalmazás háttere (backend) egy node.js szerveren fut, amit a Heroku.com felhő platformja futtat.
+A játék a szerver által kiszolgált weboldal, ami a fentebb leírt böngészők értelmezőiben fut.
+Ebből következően az alkalmazás nem operációs rendszer függő.
+A rendszernek nem célja a mobil eszközökön való futás.
+
+=========
+TESZTTERV
+=========
+
+Melléklet: Tesztterv.txt
+
+===============
+TELEPÍTÉSI TERV
+===============
+
+Az alkalmazás webes részeit egy önálló csomagba kell foglalni és hozzáadni egy Javascript állományt, amely a szervert futtatja Node.js környezetben.
+Ezt a csomagot fel kell tenni a verziókövető rendszerbe, ahonnan a Heroku felhője automatikusan betölti és elindítja az alkalmazást.
+
+==================
+KARBANTARTÁSI TERV
+==================
+
+Az alkalmazás minimális karbantartást igényel, amely a következőkre bontható:
+- Ellenőrizni, hogy a jövőben kiadott böngésző verziókban hogyan fut az alkalmazás, ha probléma lép fel, javítani
+- Meggyőződés arról, hogy a kiszolgáló szerver éppen fut, ha nem, akkor újraindítani
+- Idő elteltével új szövegeket kell bevinni az alkalmazásba
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

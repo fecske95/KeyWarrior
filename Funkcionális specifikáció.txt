@@ -15,12 +15,12 @@ Ezen fő részek a főmenü(main menu), a játékablak(gameboard) és egy elemz�
 valamint egyedi logót kell kapjon az alkalmazás. A főmenüben helyet kell kapjon egy, az
 az alkalmazás indítására szolgáló gombnak(Start Button[UIButton]), lenyíló menüpontnak, mely 
 a szöveg kiválasztására szolgál(Choose Text), valamint egy nehézség állítására szolgáló
-felületnek. Az elemek stílusát megbeszélés szerint a tervezőkük ízlés szerint választják meg,
-amennyiben a garantálni tudják,hogy a beviteli elemek stílusa saját, erre a célra kifejlesztett
+felületnek. Az elemek stílusát megbeszélés szerint a tervezők ízlés szerint választják meg,
+amennyiben garantálni tudják, hogy a beviteli elemek stílusa saját, erre a célra kifejlesztett
 új és egyedi megjelenést kap.
 	A játékablaknak tartalmaznia kell egy, a szöveget megjelenítő sávot, kettő számlálót
 melyeken a helyes és helytelen találatok aránya legyen feltüntetve, ezen elemek jól 
-látható helyen a lépernyő tetején foglaljanak helyet. Ezen elemek dizájnja szintén legyen
+látható helyen a képernyő tetején foglaljanak helyet. Ezen elemek dizájnja szintén legyen
 egyedi. Tartalmazzon a gameboard egy angol kiosztással rendelkező billentyűzetet mely 
 jelzi a leütött karaktert. A megrendelő igényt tart vertikálisan beúszó karakterekre
 amik a soron következő lenyomásra váró karaktert jelenítik meg szolid animáció keretében.
