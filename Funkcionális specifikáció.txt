@@ -42,7 +42,8 @@ Rendszerhatár:
 	A program fejlesztése közben figyelembe véve a megrendelő által igényelt platformok
 támogatást, szoftver támogatja a  Google Chrome "62.0.3202.94"-es vagy újabb verzióját,
 Mozzila Firefox "57.0.1"-es vagy újabb verzióját , valamint Opera "49.0.2725.47"-as vagy újabb 
-verzióját. Ezen böngészők támogatását igényelte a megrendelő.   		
+verzióját, Safari "5.1.10"-es vagy újabb verióját. Ezen böngészők támogatását 
+igényelte a megrendelő.   		
 
 Actor/Actorok:
 --------------
