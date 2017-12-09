@@ -1,0 +1,15 @@
+﻿Tesztelő;Észrevétel helye (hol?);Dátum;Prioritás (1-10);Leírás;Melléklet (opcionális);Böngésző
+Makovinyi Krisztina;Játék közben;2017.12.01 13:28;10;Nem esnek le a betűk;;Microsoft Edge 40.15063.674.0
+Balog Balázs;Játék után;2017.12.01 13:30;5;Nem jelennek meg a csillagok;(pontozás);Microsoft Edge 40.15063.674.0
+Balog Balázs;Játék után;2017.12.01 13:31;5;Nem jelennek meg a csillagok;(pontozás);Mozilla Firefox Quantum
+Makovinyi Krisztina;Játék után;2017.12.01 13:31;5;Nem jelenik meg az elért pontszám;;Microsoft Edge 40.15063.674.0
+Bettenbuk Dániel;Játék után;2017.12.01 13:31;5;Nem jelenik meg az elért pontszám;;Mozilla Firefox Quantum
+Bettenbuk Dániel;Menü;2017.12.01 13:35;2;A text indicator egy checkbox lett slider helyett;;Microsoft Edge 40.15063.674.0
+Makovinyi Krisztina;Játék közben;2017.12.03 17:56;10;Nem esnek le a betűk;;Microsoft Edge 41.16299.15.0
+Balog Balázs;Menü;2017.12.03 17:59;2;A text indicator egy checkbox lett slider helyett;;Microsoft Edge 41.16299.15.0
+Bettenbuk Dániel;Menü;2017.12.03 18:01;3;Choose Text lenyitásánál a Link3-at kitakarja a Hard button textje;;Microsoft Edge 41.16299.15.0
+Bettenbuk Dániel;Menü;2017.12.03 18:04;3;Choose Text lenyitásánál a Link3-at kitakarja a Hard button textje;;Google Chrome 62.0.3202.94
+Balog Balázs;Menü;2017.12.03 18:17;3;Choose Text lenyitásánál a Link3-at kitakarja a Hard button textje;;Opera 49.0.2725.47
+Balog Balázs;Játék elindításánál;2017.12.03 18:26;10;Nem indul el a játék;;Internet Explorer 11.726.15063.0
+Balog Balázs;Játék közben;2017.12.03 18:42;5;Amikor megvártam hogy leessen a betű nem adott be új leeső betűt, de ez csak egyszer fordult elő;;Mozilla Firefox Quantum
+;;;;;;
