@@ -1,0 +1,46 @@
+Tesztterv
+---------
+
+Funkcionális teszt
+------------------
+
+Bevezetés
+---------
+A Rendszer Funkcionális Teszt (RFT) a rendszer egészének – beleértve a környezeti eljárásokat is – alapos tesztelés elõre definiált tesztadatokkal, ahol lehetséges tesztelõ eszközökkel kell végezni.
+A tesztelések célja a rendszer és komponensei funkcionalitásának teljes körû vizsgálata, ellenõrzése, a rendszer által megvalósított üzleti szolgáltatások verifikálása.
+
+Tesztelési eljárások
+--------------------
+Teszteset azonosító: 001 – Alfa teszt
+  - Idõtartam: 5 nap
+  - Teszt kezdete: 2017/12/01
+  - Teszt befejezése: 2017/12/05
+  - A teszt elsõdleges célja: az eddig meglévõ funkcióknak a különbözõ böngészõkkel való kompatibilitásának tesztelése. A tesztet a fejlesztõk végzik.
+  - Az eljárás sikeres, ha különbözõ böngészõkben is megfelelõen mûködnek a különbözõ funkciók.
+
+Tesztelés azonosító: 002 – Béta teszt
+  - Idõtartam: 4 nap
+  - Teszt kezdete: 2017/12/08
+  - Teszt befejezése: 2017/12/11
+  - A teszt elsõdleges célja: Minden meglévõ funkció megfelelõ mûködésének ellenõrzése. A tesztet harmadik személyek végzik.
+  - Az eljárás sikeres, ha minden funkció megfelelõen mûködik a harmadik személyek által tesztelve is.
+
+Tesztterv
+---------
+Jelen dokumentum célja a KeyWarrior megvalósítása projektben a rendszerek tesztelési elvárásait ismertesse.
+A projekt sikeres befejezésének eszköze a tesztelési terv és a tesztelési jegyzõkönyvek.
+Összefoglalásként kiemelhetõ, hogy akkor tekinthetõ egy adott részrendszer tesztelése sikeresnek, ha 
+  - a tesztelési jegyzõkönyvnek mezõi 98%-ban MEGFELELT minõsítésûek, azaz
+  - a specifikációban elfogadott funkciók mûködnek,
+  - a rendszerfunkciók specifikált paramétereinek mért értékei az elvárásoknak megfelelõ teljesítmény- határértékek között vannak.
+A rendszertesztelési terv általánosan ismerteti a tesztelés folyamatát, valamint a tesztjegyzõknek minimálisan szükséges, részrendszer-specifikus adattartalmát. Mellékletekként jelennek meg a tesztjegyzõkönyvek.
+
+Tesztelés menete
+----------------
+1.2017/12/11
+Az oldali tesztelésnek lezárása, az átadás-átvételi folyamat megkezdése.
+2.2017/12/14
+Az üzembe állításhoz szükséges dokumentációk Megrendelõnek történõ átadása, éles üzembe állítás.
+
+Tesztelési folyamat leírása
+---------------------------
