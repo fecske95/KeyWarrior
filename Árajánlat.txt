@@ -5,14 +5,12 @@ Tartalomjegyzék
 ---------------
 1.Bevezetés
 2.Vezetői összefoglaló
-3.Cégbemutató referenciák
-4.Felhasználni kívánt technikák bemutatása
-5.A feladat bemutatása
-6.Projektterv
-7.Funkcionális specifikáció és ütemterv
-8.Csomagok árral, átadási határidővel
-9.Megtérülési, gazdasági előnyök (megvalósíthatósági tanulmány elkészítése)
-10.Árajánlat érvényessége, szerződési feltételek
+3.Felhasználni kívánt technikák bemutatása
+4.A feladat bemutatása
+5.Projektterv
+6.Funkcionális specifikáció és ütemterv
+7.Csomagok árral, átadási határidővel
+8.Árajánlat érvényessége, szerződési feltételek
 
 1.Bevezetés
 -----------
@@ -23,20 +21,16 @@ A jelen fejlesztési projekt célja egy gépírás tanulásra alkalmas játékot
 A projekt tagjai megerősítik, hogy a jelen szerződésben szereplő Funkcionális Specifikáció elegendő (kellő és pontos) információt tartalmaz. A projektben résztvevő tagok nem jogosultak semmilyen további fizetségre, sem pedig nem mentesülnek a jelen Szerződésnek megfelelő semmilyen felelősség alól amiatt, ha bármilyen módon félreértelmezés történik a Funkcionális Specifikációt illetően.
 Az együttműködés szellemében, hogy ha bármelyik fél bármilyen feladattal vagy véleményeltéréssel kerül szembe a projekt során, akkor mindegyikük megkísérli azt biztosítani, hogy a véleményeltérés kölcsönösen elfogadható megoldást nyerjen, gyorsan, ésszerűen és szükségtelen fennakadás nélkül.
 
-3.Cég bemutató referenciák
---------------------------
--
-
-4.Felhasználni kívánt technikák bemutatása
+3.Felhasználni kívánt technikák bemutatása
 -------------------------------------------
 Az internetes felületen való megvalósítása JavaScript-el, HTML 5-tel és CSS3-mal történik. E során a jelenleg elérhető legújabb verziókkal szeretnék a felhasználó számára leginkább kényelmes használatot biztosítani.
 HTML5-tel és CSS3–mal az animációkat valósítjuk meg, a JavaScript-el pedig az alapvető játék funkciókat dolgozzuk. Megválasztásuk során figyelembe vettük, hogy az elkészítendő funkciókat a lehető leghatékonyabban tudjuk megvalósítani.
 
-5.A feladat bemutatása
+4.A feladat bemutatása
 ----------------------
 A játékos gépírását egy egyszerű rendszer fogja pontozni. A pontozás a helyesen begépelt karakterek függvényében történik. A pontozást szorzók módosítják, amely a több, egymás után helyesen megadott karakterektől fog függeni. A játékosnak legyen lehetősége nehézségi szinteket kiválasztani, amely ezt a szorzót tovább emeli. Magasabb nehézségi fokozatokon egyéb írásjeleket is be kell gépelnie a játékosnak. A pontosság toleranciájára egy beállítási lehetőséget fogunk biztosítani, valamint a nehézséget is az alap fokozatokon kívül testre lehet szabni. Lesz egy top lista, amely először a játékos gépén fogja követni a pontokat. Opcionálisan, egy későbbi verzióban ez a lista globális lesz.
 
-6.Projektterv
+5.Projektterv
 --------------
 Projektütemezés
   - F1, az alapmodell elkészítése 14 embernap.
@@ -49,13 +43,13 @@ Projektütemezés
 Függőségi gráf
   Mellékelve: Gráf.png
 
-A projekt fő fázisai „A projekt fő fázisai.txt”-ben van mellékelve.
+A projekt fő fázisai „Ütemterv.txt”-ben van mellékelve.
 
-7.Funkcionális specifikáció és ütemterv
+6.Funkcionális specifikáció és ütemterv
 ---------------------------------------
 Melléklet: Funkcionális specifikáció.txt, Ütemterv.txt
 
-8.Csomagok árral, átadási határidővel
+7.Csomagok árral, átadási határidővel
 -------------------------------------
 1.Minimál
   - 5 ember
@@ -82,11 +76,8 @@ Melléklet: Funkcionális specifikáció.txt, Ütemterv.txt
 
 A fizetési ütemterv mellékletben található az „Ár, Fizetési ütemterv.txt” – ben.
 
-9.Megtérülési, gazdasági előnyök (megvalósíthatósági tanulmány elkészítése)
----------------------------------
--
 
-10.Árajánlat érvényessége, szerződési feltételek
+8.Árajánlat érvényessége, szerződési feltételek
 ------------------------------------------------
 Érvényes: 2017.10.31
 

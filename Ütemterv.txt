@@ -43,3 +43,16 @@ Alfa teszt [2017/12/01 - 2017/12/05]
 Béta teszt [2017/12/08 - 2017/12/11]
 - A teszt elsődleges célja: Minden meglévő funkció megfelelő működésének ellenőrzése.
 - A tesztet harmadik személyek végzik.
+
+A projekt fő fázisai
+--------------------
+
+A Felek a következő szakaszokat veszik figyelembe a Projektterv elkészítéséhez:
+- Projekt terv átadása – 2017.09.13
+- Rendszerterv draft verziójának átadása – 2017.09.18
+- Rendszerterv végleges verzió átadása – 2017.09.25
+- Teszttervek átadása – 2017.11.6
+- A KeyWarrior átadása – 2017.11.13
+- Felhasználói tesztek vége – 2017.11.20
+- Éles működés előkészítése – 2017.11.27
+- Éles működés – 2017.12.04
