@@ -1,0 +1,7 @@
+﻿Tesztelő;Észrevétel helye (hol?);Dátum;Prioritás (1-10);Leírás;Melléklet(Opcionális);Böngésző
+Holló Márk;Főmenü;2017.12.08;5;Text Indikátor checkbox-ot nem rajzolja ki ;Kis kijelzőn a billentyűzet alsó gobjai nem látszanak, kilógnak a kijelző alján;Opera
+Horváth Krisztián;Játékablak;2017.12.08;4;Kis kijelzőn a billentyűzet alsó gobjai nem látszanak;kizárólag egy pipa látszódik és nem látja el a funkcióját;Böngészőtől független
+Tóth-Pál Márkó;Főmenü;2017.12.08;4;"""Choose text"" gomb nem működik és belelóg a ""Custom"",""Hard""-gonbokba";F11 használatával láthatóvá válik;Minden böngészőn észlelhető
+Sipos Dávid;Játék közben;2017.12.08.;2;Ha space a következő karakter, akkor azt is, meg az utána lévő betűt is kiemeli a textbox;;Google Chrome 62.0.3202.94
+Holló Márk;Főmenü;2017.12.08;1;A szövegválasztó menüben kiválasztunk egy szöveget akkor annak a sora fentebb csúszik;;Firefox Quantum
+Tóth-Pál Márkó;Játékablak;2017.12.09;5;Nem számolja a pontszámot Easy nehézségi fokozaton;;Google Chrome 62.0.3202.94
