@@ -1,25 +1,25 @@
-Elérés:keywarrior.herokuapp.com	
+ï»¿ElÃ©rÃ©s:keywarrior.herokuapp.com	
 	
 -------------------------
-Használati Útmutató:
-	-Menü: 
-		*Start Game gomb: Bal egér gombbal klikkelve a gombra betölt az alkalmazás és egybõl
-elérhetõvé válik a program használata.
-		*Options gomb: Klikkelve a gomra(bal egérgomb) a beállítási lehetõségek érhetõk el. 	
-	-Alkalmazás:
-		*Billentyûzet: 
-			-Az alkalmazás indulásakor egy billentyûzet látható ,ami visszajelzésre szolgál. Billentyûk 
-lenyomásakor a virtuális klaviatúrán a citrom színnel jelzett billentyû jelenti azt ,hogy a felhasználó melyik 
-karaktert ütötte le.
-		*találatszámláló:
-			-Az ablak bal felsõ sarkában található számláló jelzi a helyes találatot és megmondja hány leütés volt eddig 
-helyes valamint a jobb felsõ sarokban lévõ számláló mutatja mennyi  helytelen leütés történt.
-		*Beúszó karakterek: 
-			-A beúszó karakterek jelennek meg az ablak felsõ részében amik jelzik ,hogy mely billentyût üssük le a 
-helyes eredmény érdekében, amennyiben rossz karakter kerül leütésre a beúszó karakter piros, helyes esetben 
-zöld színre vált és eltûnik.Amennyiben idõhatáron belül nem történik leütés a karakter beúszik a klaviatúra megfelelõ karaktere 
-fölé és piros színre vált ami helytelen eredményt ad.
-		*Játék vége: 
-			-Amennyiben elfogynak a leütni kívánt karakterek megjelenik egy menü ablak amelyben százalékos formában
-kiértékelõdik felhasználó által elért teljesítmény. Ebben a menüben lehetõségünk van visszatérni a fõmenübe melyet a program 
-elején láthatunk, és lehetõségünk van új játékot kezdeni.
+HasznÃ¡lati ÃštmutatÃ³:
+	-MenÃ¼: 
+		*Start Game gomb: Bal egÃ©r gombbal klikkelve a gombra betÃ¶lt az alkalmazÃ¡s Ã©s egybÅ‘l
+elÃ©rhetÅ‘vÃ© vÃ¡lik a program hasznÃ¡lata.
+		*Options gomb: Klikkelve a gomra(bal egÃ©rgomb) a beÃ¡llÃ­tÃ¡si lehetÅ‘sÃ©gek Ã©rhetÅ‘k el. 	
+	-AlkalmazÃ¡s:
+		*BillentyÅ±zet: 
+			-Az alkalmazÃ¡s indulÃ¡sakor egy billentyÅ±zet lÃ¡thatÃ³ ,ami visszajelzÃ©sre szolgÃ¡l. BillentyÅ±k 
+lenyomÃ¡sakor a virtuÃ¡lis klaviatÃºrÃ¡n a citrom szÃ­nnel jelzett billentyÅ± jelenti azt ,hogy a felhasznÃ¡lÃ³ melyik 
+karaktert Ã¼tÃ¶tte le.
+		*talÃ¡latszÃ¡mlÃ¡lÃ³:
+			-Az ablak bal felsÅ‘ sarkÃ¡ban talÃ¡lhatÃ³ szÃ¡mlÃ¡lÃ³ jelzi a helyes talÃ¡latot Ã©s megmondja hÃ¡ny leÃ¼tÃ©s volt eddig 
+helyes valamint a jobb felsÅ‘ sarokban lÃ©vÅ‘ szÃ¡mlÃ¡lÃ³ mutatja mennyi  helytelen leÃ¼tÃ©s tÃ¶rtÃ©nt.
+		*BeÃºszÃ³ karakterek: 
+			-A beÃºszÃ³ karakterek jelennek meg az ablak felsÅ‘ rÃ©szÃ©ben amik jelzik ,hogy mely billentyÅ±t Ã¼ssÃ¼k le a 
+helyes eredmÃ©ny Ã©rdekÃ©ben, amennyiben rossz karakter kerÃ¼l leÃ¼tÃ©sre a beÃºszÃ³ karakter piros, helyes esetben 
+zÃ¶ld szÃ­nre vÃ¡lt Ã©s eltÅ±nik.Amennyiben idÅ‘hatÃ¡ron belÃ¼l nem tÃ¶rtÃ©nik leÃ¼tÃ©s a karakter beÃºszik a klaviatÃºra megfelelÅ‘ karaktere 
+fÃ¶lÃ© Ã©s piros szÃ­nre vÃ¡lt ami helytelen eredmÃ©nyt ad.
+		*JÃ¡tÃ©k vÃ©ge: 
+			-Amennyiben elfogynak a leÃ¼tni kÃ­vÃ¡nt karakterek megjelenik egy menÃ¼ ablak amelyben szÃ¡zalÃ©kos formÃ¡ban
+kiÃ©rtÃ©kelÅ‘dik felhasznÃ¡lÃ³ Ã¡ltal elÃ©rt teljesÃ­tmÃ©ny. Ebben a menÃ¼ben lehetÅ‘sÃ©gÃ¼nk van visszatÃ©rni a fÅ‘menÃ¼be melyet a program 
+elejÃ©n lÃ¡thatunk, Ã©s lehetÅ‘sÃ©gÃ¼nk van Ãºj jÃ¡tÃ©kot kezdeni.

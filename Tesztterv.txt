@@ -1,46 +1,58 @@
-Tesztterv
+ï»¿Tesztterv
 ---------
 
-Funkcionális teszt
+FunkcionÃ¡lis teszt
 ------------------
 
-Bevezetés
+BevezetÃ©s
 ---------
-A Rendszer Funkcionális Teszt (RFT) a rendszer egészének – beleértve a környezeti eljárásokat is – alapos tesztelés elõre definiált tesztadatokkal, ahol lehetséges tesztelõ eszközökkel kell végezni.
-A tesztelések célja a rendszer és komponensei funkcionalitásának teljes körû vizsgálata, ellenõrzése, a rendszer által megvalósított üzleti szolgáltatások verifikálása.
+A Rendszer FunkcionÃ¡lis Teszt (RFT) a rendszer egÃ©szÃ©nek â€“ beleÃ©rtve a kÃ¶rnyezeti eljÃ¡rÃ¡sokat is â€“ alapos tesztelÃ©s elÅ‘re definiÃ¡lt tesztadatokkal, ahol lehetsÃ©ges tesztelÅ‘ eszkÃ¶zÃ¶kkel kell vÃ©gezni.
+A tesztelÃ©sek cÃ©lja a rendszer Ã©s komponensei funkcionalitÃ¡sÃ¡nak teljes kÃ¶rÅ± vizsgÃ¡lata, ellenÅ‘rzÃ©se, a rendszer Ã¡ltal megvalÃ³sÃ­tott Ã¼zleti szolgÃ¡ltatÃ¡sok verifikÃ¡lÃ¡sa.
 
-Tesztelési eljárások
+TesztelÃ©si eljÃ¡rÃ¡sok
 --------------------
-Teszteset azonosító: 001 – Alfa teszt
-  - Idõtartam: 5 nap
+Teszteset azonosÃ­tÃ³: 001 â€“ Alfa teszt
+  - IdÅ‘tartam: 5 nap
   - Teszt kezdete: 2017/12/01
-  - Teszt befejezése: 2017/12/05
-  - A teszt elsõdleges célja: az eddig meglévõ funkcióknak a különbözõ böngészõkkel való kompatibilitásának tesztelése. A tesztet a fejlesztõk végzik.
-  - Az eljárás sikeres, ha különbözõ böngészõkben is megfelelõen mûködnek a különbözõ funkciók.
+  - Teszt befejezÃ©se: 2017/12/05
+  - A teszt elsÅ‘dleges cÃ©lja: az eddig meglÃ©vÅ‘ funkciÃ³knak a kÃ¼lÃ¶nbÃ¶zÅ‘ bÃ¶ngÃ©szÅ‘kkel valÃ³ kompatibilitÃ¡sÃ¡nak tesztelÃ©se. A tesztet a fejlesztÅ‘k vÃ©gzik.
+  - Az eljÃ¡rÃ¡s sikeres, ha kÃ¼lÃ¶nbÃ¶zÅ‘ bÃ¶ngÃ©szÅ‘kben is megfelelÅ‘en mÅ±kÃ¶dnek a kÃ¼lÃ¶nbÃ¶zÅ‘ funkciÃ³k.
 
-Tesztelés azonosító: 002 – Béta teszt
-  - Idõtartam: 4 nap
+TesztelÃ©s azonosÃ­tÃ³: 002 â€“ BÃ©ta teszt
+  - IdÅ‘tartam: 4 nap
   - Teszt kezdete: 2017/12/08
-  - Teszt befejezése: 2017/12/11
-  - A teszt elsõdleges célja: Minden meglévõ funkció megfelelõ mûködésének ellenõrzése. A tesztet harmadik személyek végzik.
-  - Az eljárás sikeres, ha minden funkció megfelelõen mûködik a harmadik személyek által tesztelve is.
+  - Teszt befejezÃ©se: 2017/12/11
+  - A teszt elsÅ‘dleges cÃ©lja: Minden meglÃ©vÅ‘ funkciÃ³ megfelelÅ‘ mÅ±kÃ¶dÃ©sÃ©nek ellenÅ‘rzÃ©se. A tesztet harmadik szemÃ©lyek vÃ©gzik.
+  - Az eljÃ¡rÃ¡s sikeres, ha minden funkciÃ³ megfelelÅ‘en mÅ±kÃ¶dik a harmadik szemÃ©lyek Ã¡ltal tesztelve is.
 
 Tesztterv
 ---------
-Jelen dokumentum célja a KeyWarrior megvalósítása projektben a rendszerek tesztelési elvárásait ismertesse.
-A projekt sikeres befejezésének eszköze a tesztelési terv és a tesztelési jegyzõkönyvek.
-Összefoglalásként kiemelhetõ, hogy akkor tekinthetõ egy adott részrendszer tesztelése sikeresnek, ha 
-  - a tesztelési jegyzõkönyvnek mezõi 98%-ban MEGFELELT minõsítésûek, azaz
-  - a specifikációban elfogadott funkciók mûködnek,
-  - a rendszerfunkciók specifikált paramétereinek mért értékei az elvárásoknak megfelelõ teljesítmény- határértékek között vannak.
-A rendszertesztelési terv általánosan ismerteti a tesztelés folyamatát, valamint a tesztjegyzõknek minimálisan szükséges, részrendszer-specifikus adattartalmát. Mellékletekként jelennek meg a tesztjegyzõkönyvek.
+Jelen dokumentum cÃ©lja a KeyWarrior megvalÃ³sÃ­tÃ¡sa projektben a rendszerek tesztelÃ©si elvÃ¡rÃ¡sait ismertesse.
+A projekt sikeres befejezÃ©sÃ©nek eszkÃ¶ze a tesztelÃ©si terv Ã©s a tesztelÃ©si jegyzÅ‘kÃ¶nyvek.
+Ã–sszefoglalÃ¡skÃ©nt kiemelhetÅ‘, hogy akkor tekinthetÅ‘ egy adott rÃ©szrendszer tesztelÃ©se sikeresnek, ha 
+  - a tesztelÃ©si jegyzÅ‘kÃ¶nyvnek mezÅ‘i 98%-ban MEGFELELT minÅ‘sÃ­tÃ©sÅ±ek, azaz
+  - a specifikÃ¡ciÃ³ban elfogadott funkciÃ³k mÅ±kÃ¶dnek,
+  - a rendszerfunkciÃ³k specifikÃ¡lt paramÃ©tereinek mÃ©rt Ã©rtÃ©kei az elvÃ¡rÃ¡soknak megfelelÅ‘ teljesÃ­tmÃ©ny- hatÃ¡rÃ©rtÃ©kek kÃ¶zÃ¶tt vannak.
+A rendszertesztelÃ©si terv Ã¡ltalÃ¡nosan ismerteti a tesztelÃ©s folyamatÃ¡t, valamint a tesztjegyzÅ‘knek minimÃ¡lisan szÃ¼ksÃ©ges, rÃ©szrendszer-specifikus adattartalmÃ¡t. MellÃ©kletekkÃ©nt jelennek meg a tesztjegyzÅ‘kÃ¶nyvek.
 
-Tesztelés menete
+TesztelÃ©s menete
 ----------------
 1.2017/12/11
-Az oldali tesztelésnek lezárása, az átadás-átvételi folyamat megkezdése.
+Az oldali tesztelÃ©snek lezÃ¡rÃ¡sa, az Ã¡tadÃ¡s-Ã¡tvÃ©teli folyamat megkezdÃ©se.
 2.2017/12/14
-Az üzembe állításhoz szükséges dokumentációk Megrendelõnek történõ átadása, éles üzembe állítás.
+Az Ã¼zembe Ã¡llÃ­tÃ¡shoz szÃ¼ksÃ©ges dokumentÃ¡ciÃ³k MegrendelÅ‘nek tÃ¶rtÃ©nÅ‘ Ã¡tadÃ¡sa, Ã©les Ã¼zembe Ã¡llÃ­tÃ¡s.
 
-Tesztelési folyamat leírása
+TesztelÃ©si folyamat leÃ­rÃ¡sa
 ---------------------------
+Az alfa Ã©s bÃ©ta teszt sorÃ¡n a fejlesztÅ‘k elkÃ©szÃ­tik a jegyzÅ‘kÃ¶nyv sablonjÃ¡t, majd felteszik egy online felÃ¼letre.
+A tesztelÅ‘k megnyitjÃ¡k az alkalmazÃ¡st a webes felÃ¼leten Ã©s elkezdik normÃ¡l user-kÃ©nt hasznÃ¡lni.
+A felmerÃ¼lÅ‘ hibÃ¡kat, esetleg nem vÃ¡rt viselkedÃ©st feljegyzik a jegyzÅ‘kÃ¶nyvbe. Ez a kÃ¶vetkezÅ‘ket tartalmazza:
+- TesztelÅ‘ neve
+- RÃ¶gzÃ­tÃ©s ideje
+- A hiba helye
+- A hiba leÃ­rÃ¡sa
+- OpcionÃ¡lis mellÃ©kletek
+- BÃ¶ngÃ©szÅ‘ neve, amelyben a hiba fellÃ©pett
+
+A tesztek utÃ¡n a jegyzÅ‘kÃ¶nyv vÃ©glegesÃ­tÃ©sre kerÃ¼l, felkerÃ¼l a verziÃ³kezelÅ‘ rendszerbe. A rÃ¶gzÃ­tett
+hibÃ¡kat a fejlesztÅ‘k ellenÅ‘rzik, reprodukÃ¡ljÃ¡k, majd lÃ©trehoznak hozzÃ¡ egy feladatot Ã©s javÃ­tjÃ¡k.
