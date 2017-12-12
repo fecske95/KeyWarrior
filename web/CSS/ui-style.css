@@ -32,7 +32,7 @@
 button, input[type="radio"][name="difficulty"] {
     -webkit-appearance: none;
     -ms-progress-appearance: none;
-    -moz-appearance: none; 
+    -moz-appearance: none;
     -webkit-transition-duration: 0.4s;
     -o-transition-duration: 0.4s;
        transition-duration: 0.4s;

@@ -38,6 +38,7 @@
 #textlist div input[type="radio"] {
     position: absolute;
     appearance: none;
+    -webkit-appearance: none;
     -moz-appearance: none;
     margin: 0px;
     width: 100%;
