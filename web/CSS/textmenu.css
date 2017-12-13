@@ -31,8 +31,6 @@
     padding: 2px 0px;
     width: 100%;
     height: 25px;
-    overflow: hidden;
-    white-space: nowrap;
 }
 
 #textlist div input[type="radio"] {
