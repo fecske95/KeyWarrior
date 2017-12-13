@@ -139,6 +139,13 @@ A tervekhez szükséges fogalmak:
 - checkbox: Be és ki kapcsolható gomb.
 - slider: Egérrel állítható csúszka.
 
+Ezekhez egy saját CSS lapot hozunk létre ui-style.css néven.
+
+Panel class (alapvetően egy div elem)
+A checkboxot az alap checkbox típusú HTML input elem stílusának felüldefiniálásával csináljuk.
+Slider class (div elemre)
+Pointer class: A slider gyerekeleme (szintén div), amely a csúszka feje.
+
 -------------------------------------
 Az alkalmazás három fő részre bontása
 -------------------------------------
@@ -156,7 +163,7 @@ A main menu terve
 A menü funkcionális részét egy section HTML elem foglalja magába, ami megszabja a menü méreteit. Ennek a neve game menu.
 A game menu-t felosztjuk egy top menu-re és egy alsó panelre.
 A top menu a játék elindító gombját tartalmazza, ami hivatkozással vezet át a game oldalára. Ezen kívül a szöveg választó gomb is ide kerül.
-A szöveg választó gomb megnyomására egy újabb panel jelenik meg. Ez a játszható szöveget listáját fogja tartalmazni.
+A szöveg választó gomb megnyomására egy újabb panel jelenik meg. Ez a játszható szövegek listáját fogja tartalmazni.
 
 Az alsó panel a nehézségi beállításokat fogja tartalmazni. Ezek rádió gombok lesznek, azaz csak egy jelölhető ki egyszerre.
 
@@ -203,6 +210,152 @@ A beúszó billentyűk mozgatását CSS animációkkal kivitelezzük, amelyeket 
 
 A bemenet érzékelését és a menu hátterében lévő elemek dinamikus animálását a jQuery fogja végezni.
 A böngésző érzékelésre a bowser API-t fogjuk használni, ami szólni fog, ha a user egy inkompatibilis böngészőben nyitja meg az alkalmazást.
+
+---------------------------------
+Az alkalmazás kliens oldali kódja
+---------------------------------
+
+Az esetlegesen kihagyott elemek/fájlok egy már előre megírt API tagjai.
+
+Fő elem: main.js
+----------------
+Ez a script jelenti a játék belépési pontját (játék közben). A hívások nagy része itt összpontosul.
+
+Tagok:
+keysOnScreen[]: A lista, amely a képernyőn lévő lenyomandó billentyűket tartalmazza
+
+initializeGame():
+- Beállítja az alapértékeket (nehézség, a text-indicator láthatósága)
+
+startGame():
+- Az initializeGame() hívja meg. Példányosítja a textLoader-t, létrehozza a billentyűzetet a képernyőn.
+A textLoader-től bekéri a begépelendő szöveget és elindítja a timer-t, amely az aktuális, begépelendő
+karaktereket hozza létre.
+
+jQuery-s függvények:
+$(document).keypress: Billentyű lenyomás event-je, kezeli a lenyomott billentyűket
+$(document).keydown: A lenyomott billentyűket kijelöli, azaz alkalmazza a lenyomott billentyű CSS stílusát a megfelelő elemre
+$(document).keyup: A felengedést kezeli, egyetlen célja van, a felengedett billentyűkről a kijelölés eltávolítása
+
+updateStats(): 
+- Frissíti a kezelőfelelületen megjelenő adatokat (pontok, szorzók, találatok), a keypress hívja
+
+removeKey(reason):
+- Törli a keysOnScreen tömb első elemét (a lenyomandó billentyűt)
+- reason: 1, ha azért töröljük, mert a user eltalálta, 0 különben
+
+scheduleForRemove(keyElement):
+- A removeKey() hívja, célja, hogy késleltetve, 1 másodperc múlva a HTML dokumentumból
+is eltűntesse a törölt billentyűhőz megfelelő elemet
+- keyElement: a törölt billentyű HTML eleme
+
+setAnimationEnd(key):
+- Feliratkozik a paraméterben megadott billentyű "animationend" event-jére.
+Ha a CSS animáció befejezte az átmenetet, akkor törli a billentyűt.
+
+generateNext():
+- Feladata, hogy a keysOnScreen listába belehelyezze a következő karakterhez megfelelő billentyűt.
+
+DetermineMultiplier():
+- Kiszámolja a user szorzóját a következő képlettel: ceil(streak / (15 + streak * 0.1))
+A streak a user egymás után, hiba nélkül leütött karakterek számát jelöli.
+
+endGame():
+- Kiszámolja a statisztikát a pontok alapján és megjeleníti a final menu-t.
+
+showMenu():
+- Megjeleníti a pause menu-t, a háttérben minden folyamatot szüneteltet.
+
+hideMenu():
+- A showMenu ellentétje.
+
+getScoreForChar(char):
+- Az adott karakterhez adandó pontot adja vissza.
+
+key.js
+------
+A beúszó billentyűk osztályát (Key) tartalmazza.
+Az osztály felépítése:
+
+Konstruktor(char):
+- Létrehoz a megadott karakterhez egy billentyű HTML elemet, majd ahhoz hozzáadja a megfelelő HTML classokat, ID-kat.
+
+key:
+- Getter, visszaadja a billentyű karakterének kódját
+
+static getClassForCharacter(char)
+- Visszaadja az adott karakterhez megfelelő CSS classot.
+
+static createKey(letter)
+- Factory metódus, létrehoz egy key objektumot, beleteszi a main keysOnScreen listájába, meghívja a setAnimationEnd metódust a létrehozott billentyűre.
+
+keyboard.js
+-----------
+A képernyőn lévő billentyűzet (Keyboard) osztálya.
+
+createKey(letter):
+- Létrehozza a billentyűzet egy billentyűjét, hozzáadja a megfelelő HTML ID-kat.
+
+getIdForKeyCode(keyCode):
+- A megadott karakterkódhoz visszaadja a hozzá tartozó HTML ID-t.
+
+textloader.js
+-------------
+A szöveget betöltő objektum osztálya (lényegében singleton).
+
+getRandomText(article, cb)
+- A paraméterben megkapott Wikipedia cikk tartalmát kéri le.
+cb: Callback, ami paraméterben kapja meg a lekért szöveget.
+
+------------------------------------------------------------
+
+A menu-höz tartozó HTML oldal (index) script-jei:
+
+menu.js
+-------
+A menu beállításait, valamint az input-ot kezeli.
+Nem tartalmaz osztályt.
+
+addListeners():
+- Hozzáadja az event-eket a UI elemekhez.
+
+checkBrowser():
+- Ellenőrzi, hogy milyen böngészőben nyitották meg az alkalmazást és figyelmeztetést ad vissza, ha nem támogatott.
+A Bowser API-t használja.
+
+setDifficulty():
+- A menuben lévő nehézség beállító gombok hívják meg kattintásra, beállítja a nehézséget.
+
+closeTextList():
+- Bezárja a szövegválasztó listát (hozzáadja a disabled HTML class-t az elemekhez).
+
+startNewGame():
+- Elindítja a játékot, átirányít hivatkozással a játék oldalára (game.html).
+
+setCharSpeed():
+- Beállítja a billentyűk beúszási sebességét, hogy később át lehessen adni a játéknak.
+
+addTextChoice(article):
+- Hozzáadja a szövegválasztó listához a paraméterben megadott wikipedia cikket.
+
+menuanimation.js
+----------------
+A menu hátterében lévő billentyűk mozgatását kezeli.
+
+generateRandomKey():
+- Legenerál egy billentyűt egy véletlen pozíción.
+
+setAnimation(keyId):
+- Beállít egy véletlenszerűen generált animációt a paraméterben megadott ID-jú billentyűhöz.
+
+generateFloatingKeys():
+- Lefuttatja véletlen számszor a generateRandomKey() metódust és ID-kat rendel hozzájuk.
+
+startAnimations():
+- A legenerált billentyűkre lefuttatja a setAnimation metódust.
+
+initializeAnimation():
+- Legenerálja a billentyűket és beállítja az animációjukat.
 
 =================
 FIZIKAI KÖRNYEZET
