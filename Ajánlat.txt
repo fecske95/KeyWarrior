@@ -7,7 +7,7 @@ A main menu-ben helyet kap egy játék indítására szolgáló gomb, egy legör
 amiben a szövegeket ki lehet választani. Ezeken felül nehézség állítására szolgáló 
 beviteli elemek helyezkednek még el. 
 	A játék menüben helyet kap egy amerikai/angol kiosztású billentyűzet,
-a billentyűzeten kap a játékos visszajelzést a leütésekről, Egy szövegdoboz amiben
+a billentyűzeten kap a játékos visszajelzést a leütésekről, egy szövegdoboz amiben
 a szöveg helyezkedik el és folyamatosan frissül a helyes leütések függvényében,
 találatokat számláló szövegdoboz. Ezen kívül megjelennek karakterek amik a soron
 következő karakter leütését jelzik. Valamint itt lehetőséget kínálunk visszalépésre
@@ -22,7 +22,7 @@ kurzor ráhelyezéskor változik.
 	A main menu háttere animált, a gamebord háttere átmenetes animálatlan
 [kizárólag parktikus okokból]. A final menu háttere kissé átlátszó és áttűnik 
 a gameboard.
-	A gameboard billentyűzete leütésre változik, és a a megjelenő karakterek
+	A gameboard billentyűzete leütésre változik, és a megjelenő karakterek
 beúszó animációt valamint helyes és helytelen leütére külön színt kap. 
 	A gameboardon elhelyezkedő textbox ami a szöveget jeleníti meg egyszerű 
 letisztult lesz a jobb láthatóság érdekében. 

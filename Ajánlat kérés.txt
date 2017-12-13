@@ -1,0 +1,24 @@
+﻿Felelős: Makovinyi Krisztina, Bettenbuk Dániel, Balog Balázs
+Határidő: 2017.12.14.
+=============================================================
+Bevezetés
+=========
+	Az XYZ Középiskola és Kollégium megrendelést ad egy gépírás oktatására
+szolgáló szoftver elkészítésére. A szoftver a diákokat célozza, de fontosnak tartja ,hogy
+bármely korosztály számára elérhető legyen. A programot szeretné minenki számára elérhetővé 
+tenni. Egy kimondottan szabad és játékos körülményeket akar biztosítani a diákjai , ezzel 
+megkönnyítve az órára való készülést és versenyhelyzetet szeretne kialakítani diákjai 
+között ezzel inspirációt adva a gyakorlásra. 
+
+Ajánlatkérő bemutatása:
+=======================
+	-Neve: *XYZ Középiskola és Kollégium
+	-Üzemel: *1986-ban alakult az iskola, és azóta is szünetmentesen üzemel
+	-Cím: *Kiskukutyin Bársonyhegy út 32.
+	-OM azonosító: *998877
+	-Tel: 80/8989898
+	- Műszaki-Informatikai és Elektroikai iskolai szakok találhatók az intézményben
+	
+Követelményspecifikáció
+=======================
+	-Lásd Követelményspecifikáció!
