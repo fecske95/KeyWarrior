@@ -18,7 +18,7 @@ A jelen fejlesztési projekt célja egy gépírás tanulásra alkalmas játékot
 
 2.Vezetői összefoglaló
 ----------------------
-A projekt tagjai megerősítik, hogy a jelen szerződésben szereplő Funkcionális Specifikáció elegendő (kellő és pontos) információt tartalmaz. A projektben résztvevő tagok nem jogosultak semmilyen további fizetségre, sem pedig nem mentesülnek a jelen Szerződésnek megfelelő semmilyen felelősség alól amiatt, ha bármilyen módon félreértelmezés történik a Funkcionális Specifikációt illetően.
+A projekt tagjai megerősítik, hogy a jelen dokumentumban szereplő Funkcionális Specifikáció elegendő (kellő és pontos) információt tartalmaz. A projektben résztvevő tagok nem jogosultak semmilyen további fizetségre, sem pedig nem mentesülnek a jelen dokumentumnak megfelelő semmilyen felelősség alól amiatt, ha bármilyen módon félreértelmezés történik a Funkcionális Specifikációt illetően.
 Az együttműködés szellemében, hogy ha bármelyik fél bármilyen feladattal vagy véleményeltéréssel kerül szembe a projekt során, akkor mindegyikük megkísérli azt biztosítani, hogy a véleményeltérés kölcsönösen elfogadható megoldást nyerjen, gyorsan, ésszerűen és szükségtelen fennakadás nélkül.
 
 3.Felhasználni kívánt technikák bemutatása
