@@ -1,21 +1,21 @@
-TesztelÅ‘;Tesztelt Elem;Tesztelt elem funkciÃ³ja ;Tesztelt elem helye az alkalmazÃ¡sban;"Google Chrome ""62.0.3202.94""";"Mozzila Firefox ""57.0.1""";"Opera ""49.0.2725.47""";"Safari ""5.1.10""";FelbontÃ¡s: 1920*1080 ;FelbontÃ¡s: 1366*768;100%Scale Teljes kijelzÅ‘(F11)
-Balog BalÃ¡zs;UI Start Game;ElindÃ­tja az alkalmazÃ¡st;Main menu;pipa;pipa;pipa;pipa;75%-125% Pipa;67%-110% pipa;pipa
-Balog BalÃ¡zs;UI Choose Text;SzÃ¶vegvÃ¡lasztÃ¡st tesz lehetÅ‘vÃ©;Main menu;pipa;pipa;pipa;pipa;75%-125% Pipa;67%-110% pipa;pipa
-Balog BalÃ¡zs;UI Easy;NehÃ©zsÃ©gi fokozat Ã¡llÃ­tÃ¡sa;Main menu;pipa;pipa;pipa;pipa;75%-125% Pipa;67%-110% pipa;pipa
-Balog BalÃ¡zs;UI Medium;NehÃ©zsÃ©gi fokozat Ã¡llÃ­tÃ¡sa;Main menu;pipa;pipa;pipa;pipa;75%-125% Pipa;67%-110% pipa;pipa
-Balog BalÃ¡zs;UI Hard;NehÃ©zsÃ©gi fokozat Ã¡llÃ­tÃ¡sa;Main menu;pipa;pipa;pipa;pipa;75%-125% Pipa;67%-110% pipa;pipa
-Balog BalÃ¡zs;UI Custom ;Lenyit egy miniablakot;Main menu;pipa;pipa;pipa;pipa;75%-125% Pipa;67%-110% pipa;pipa
-Balog BalÃ¡zs;UI Slider;NehÃ©zsÃ©gi fokozat Ã¡llÃ­tÃ¡sa Ã©rtÃ©k szerint;Main menu;pipa;pipa;pipa;pipa;75%-125% Pipa;67%-110% pipa;pipa
-Balog BalÃ¡zs;Text Indicator  On/Off;Ki/Be lehet kapcsolni a text indicatort ;Main menu;pipa;pipa;pipa;pipa;75%-125% Pipa;67%-110% pipa;pipa
-Makovinyi Krisztina;BillentyÅ±zet;AnimÃ¡ciÃ³ kijelzÃ©se leÃ¼tÃ©sre;Game Board;pipa;pipa;pipa;pipa;75%-125% Pipa;67%-110% pipa;pipa
-Makovinyi Krisztina;Text Indicator;"SzÃ¶veg kijelzÃ©se; soron kÃ¶vetkezÅ‘ karakter eltÅ±nÃ©se leÃ¼tÃ©sre az inicatorrÃ³l";Game Board;pipa;pipa;pipa;pipa;75%-125% Pipa;67%-110% pipa;pipa
-Makovinyi Krisztina;Pont/SzorzÃ³ kijelzÅ‘;Kijelzi az eddig elÃ©rt pontot Ã©s kiÃ­rja a jelenlegi szorzÃ³t;Game Board;pipa;pipa;pipa;pipa;75%-125% Pipa;67%-110% pipa;pipa
-Makovinyi Krisztina;Helyes leÃ¼tÃ©s szÃ¡mlÃ¡lÃ³;SzÃ¡molja a helyesen leÃ¼tÃ¶tt karaktereket;Game Board;pipa;pipa;pipa;pipa;75%-125% Pipa;67%-110% pipa;pipa
-Makovinyi Krisztina;Helytelen leÃ¼tÃ©s szÃ¡mlÃ¡lÃ³;SzÃ¡molja a helytelenÃ¼l leÃ¼tÃ¶tt karaktereket;Game Board;pipa;pipa;pipa;pipa;75%-125% Pipa;67%-110% pipa;pipa
-Makovinyi Krisztina;UI Menu;Feldob egy menÃ¼t amin van egy Resume Ã©s egy Exit gomb;Game Board;pipa;pipa;pipa;pipa;75%-125% Pipa;67%-110% pipa;pipa
-Makovinyi Krisztina;UI Resume;JÃ¡tÃ©k tovÃ¡bb folytatÃ³dik;Gamebord-menu;pipa;pipa;pipa;pipa;75%-125% Pipa;67%-110% pipa;pipa
-Makovinyi Krisztina;UI Exit;KilÃ©pÃ©s a fÅ‘menÃ¼be;Gamebord-menu;pipa;pipa;pipa;pipa;75%-125% Pipa;67%-110% pipa;pipa
-Makovinyi Krisztina;Score Textbox;KiÃ­rja a jÃ¡tÃ©k sorÃ¡n elÃ©rt Ã¶sszes pontszÃ¡mot;Final Menu;pipa;pipa;pipa;pipa;75%-125% Pipa;67%-110% pipa;pipa
-Bettenbuk DÃ¡niel;Csillagos Ã©rtÃ©kelÅ‘;A szÃ¡zalÃ©ktÃ³l fÃ¼ggÅ‘en kitÃ¶lti 1 Ã©s 5 kÃ¶ztt a csillagok szÃ­nÃ©t anrany szÃ­nÅ±re;Final Menu;pipa;pipa;pipa;pipa;75%-125% Pipa;67%-110% pipa;pipa
-Bettenbuk DÃ¡niel;EredmÃ©ny (szÃ¡zalÃ©kos) Ã©rtÃ©kelÅ‘;Az elÃ©rt pontokbÃ³l Ã©s az Ã¶sszpontszÃ¡mbÃ³l szÃ¡zalÃ©kot szÃ¡mol;Final Menu;pipa;pipa;pipa;pipa;75%-125% Pipa;67%-110% pipa;pipa
-Bettenbuk DÃ¡niel;UI Exit;KilÃ©pÃ©s a fÅ‘menÃ¼be;Final Menu;pipa;pipa;pipa;pipa;75%-125% Pipa;67%-110% pipa;pipa
+Tesztelõ;Tesztelt Elem;Tesztelt elem funkciója ;Tesztelt elem helye az alkalmazásban;"Google Chrome ""62.0.3202.94""";"Mozzila Firefox ""57.0.1""";"Opera ""49.0.2725.47""";"Safari ""5.1.10""";Felbontás: 1920*1080 ;;Felbontás: 1366*768;Felbontás: 1280*720 (MINIMÁL);100%Scale Teljes kijelzõ(F11)
+Balog Balázs;UI Start Game;Elindítja az alkalmazást;Main menu;pipa;pipa;pipa;pipa;75%-125% Pipa;;67%-110% pipa;67%-110% pipa;pipa
+Balog Balázs;UI Choose Text;Szövegválasztást tesz lehetõvé;Main menu;pipa;pipa;pipa;pipa;75%-125% Pipa;;67%-110% pipa;67%-110% pipa;pipa
+Balog Balázs;UI Easy;Nehézségi fokozat állítása;Main menu;pipa;pipa;pipa;pipa;75%-125% Pipa;;67%-110% pipa;67%-110% pipa;pipa
+Balog Balázs;UI Medium;Nehézségi fokozat állítása;Main menu;pipa;pipa;pipa;pipa;75%-125% Pipa;;67%-110% pipa;67%-110% pipa;pipa
+Balog Balázs;UI Hard;Nehézségi fokozat állítása;Main menu;pipa;pipa;pipa;pipa;75%-125% Pipa;;67%-110% pipa;67%-110% pipa;pipa
+Balog Balázs;UI Custom ;Lenyit egy miniablakot;Main menu;pipa;pipa;pipa;pipa;75%-125% Pipa;;67%-110% pipa;67%-110% pipa;pipa
+Balog Balázs;UI Slider;Nehézségi fokozat állítása érték szerint;Main menu;pipa;pipa;pipa;pipa;75%-125% Pipa;;67%-110% pipa;67%-110% pipa;pipa
+Balog Balázs;Text Indicator  On/Off;Ki/Be lehet kapcsolni a text indicatort ;Main menu;pipa;pipa;pipa;pipa;75%-125% Pipa;;67%-110% pipa;67%-110% pipa;pipa
+Makovinyi Krisztina;Billentyûzet;Animáció kijelzése leütésre;Game Board;pipa;pipa;pipa;pipa;75%-125% Pipa;;67%-110% pipa;67%-110% pipa;pipa
+Makovinyi Krisztina;Text Indicator;"Szöveg kijelzése;; soron következõ karakter eltûnése leütésre az inicatorról";Game Board;pipa;pipa;pipa;pipa;75%-125% Pipa;;67%-110% pipa;67%-110% pipa;pipa
+Makovinyi Krisztina;Pont/Szorzó kijelzõ;Kijelzi az eddig elért pontot és kiírja a jelenlegi szorzót;Game Board;pipa;pipa;pipa;pipa;75%-125% Pipa;;67%-110% pipa;67%-110% pipa;pipa
+Makovinyi Krisztina;Helyes leütés számláló;Számolja a helyesen leütött karaktereket;Game Board;pipa;pipa;pipa;pipa;75%-125% Pipa;;67%-110% pipa;67%-110% pipa;pipa
+Makovinyi Krisztina;Helytelen leütés számláló;Számolja a helytelenül leütött karaktereket;Game Board;pipa;pipa;pipa;pipa;75%-125% Pipa;;67%-110% pipa;67%-110% pipa;pipa
+Makovinyi Krisztina;UI Menu;Feldob egy menüt amin van egy Resume és egy Exit gomb;Game Board;pipa;pipa;pipa;pipa;75%-125% Pipa;;67%-110% pipa;67%-110% pipa;pipa
+Makovinyi Krisztina;UI Resume;Játék tovább folytatódik;Gamebord-menu;pipa;pipa;pipa;pipa;75%-125% Pipa;;67%-110% pipa;67%-110% pipa;pipa
+Makovinyi Krisztina;UI Exit;Kilépés a fõmenübe;Gamebord-menu;pipa;pipa;pipa;pipa;75%-125% Pipa;;67%-110% pipa;67%-110% pipa;pipa
+Makovinyi Krisztina;Score Textbox;Kiírja a játék során elért összes pontszámot;Final Menu;pipa;pipa;pipa;pipa;75%-125% Pipa;;67%-110% pipa;67%-110% pipa;pipa
+Bettenbuk Dániel;Csillagos értékelõ;A százaléktól függõen kitölti 1 és 5 köztt a csillagok színét anrany színûre;Final Menu;pipa;pipa;pipa;pipa;75%-125% Pipa;;67%-110% pipa;67%-110% pipa;pipa
+Bettenbuk Dániel;Eredmény (százalékos) értékelõ;Az elért pontokból és az összpontszámból százalékot számol;Final Menu;pipa;pipa;pipa;pipa;75%-125% Pipa;;67%-110% pipa;67%-110% pipa;pipa
+Bettenbuk Dániel;UI Exit;Kilépés a fõmenübe;Final Menu;pipa;pipa;pipa;pipa;75%-125% Pipa;;67%-110% pipa;67%-110% pipa;pipa
