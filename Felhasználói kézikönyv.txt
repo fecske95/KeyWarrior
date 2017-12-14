@@ -1,35 +1,122 @@
-﻿Elérés:keywarrior.herokuapp.com	
-	
--------------------------
-Használati Útmutató:
-	-Menü: 
-		*Start Game : Egérgomb lenyomására az alkalmazás elinul, adott nehézségi fokozaton. Alapértelmezett
-beállítása könnyű (EASY). 
-		*Choose text:Szöveg választásra szolgáló gomb ami a lenyomását követően megjelenít egy legördülő listát
-amiben a megadott szövegek közül tetszés szerint választhat.
-	
-	Easy/Medium/Hard Gombok kivalásztáskor színük feketére fált jelezve melyik nehézségi fokozat van jelenleg
-kiválasztva.
-		*Easy: Könnyű nehézségi fokozatra állítja a játékot (alapértelmezett érték).
-		*Medium: Közepes nehézségi fokozatra állítja a játékot.	
-		*Hard: Nehéz nehézségi fokozatra állítja a játékot. 
-		*Custom: Csúszka opciót ad aminek segítségével a játék nehézségi fokozatát lehet állítani 0-7.7 között.
-A nyullás értéket állítva a legkönnyebb nehézségi fokozatot, 7.7-re a legnehezebbet kapjuk.
-		*Text Indicator: Ki és Be lehet kapcsolni a segítségével a játékban megjelenő szöveget előrejelző dobozt.
+﻿A KeyWarrior játék felhasználói kézikönyve
+==========================================
 
-	-Alkalmazás:
-		*Billentyűzet: 
-			-Visszajelzére szolgál, amit karakter leütéskor citrom színnel jelöl az adott karakternél.
-		*Text Indicator: A kijelző tetején lévő  
-		*találatszámláló:
-			-Az ablak bal felső sarkában található számláló jelzi a helyes találatot és megmondja hány leütés volt eddig 
-helyes valamint a jobb felső sarokban lévő számláló mutatja mennyi  helytelen leütés történt.
-		*Beúszó karakterek: 
-			-A beúszó karakterek jelennek meg az ablak felső részében amik jelzik ,hogy mely billentyűt üssük le a 
-helyes eredmény érdekében, amennyiben rossz karakter kerül leütésre a beúszó karakter piros, helyes esetben 
-zöld színre vált és eltűnik.Amennyiben időhatáron belül nem történik leütés a karakter beúszik a klaviatúra megfelelő karaktere 
-fölé és piros színre vált ami helytelen eredményt ad.
-		*Játék vége: 
-			-Amennyiben elfogynak a leütni kívánt karakterek megjelenik egy menü ablak amelyben százalékos formában
-kiértékelődik felhasználó által elért teljesítmény. Ebben a menüben lehetőségünk van visszatérni a főmenübe melyet a program 
-elején láthatunk, és lehetőségünk van új játékot kezdeni.
+A játékot böngészőben kell megnyitni a következő linken:
+http://keywarrior.herokuapp.com
+
+Előfordulhat, hogy több ideig tölt be az oldal, mint kellene. Ilyenkor valójában az történik, hogy az alkalmazás éppen elindítja magát,
+mert valószínűleg órák óta nem volt használva.
+Hivatalosan támogatott böngészők:
+- Google Chrome 62
+- Mozilla Firefox 57
+- Opera 49
+- Safari 5.1.10
+
+...vagy ezek újabb verziói.
+Előfordulhat, hogy más böngészőkön is hibamentesen fut a játék, azonban a hivatalosan támogatott böngészők a fentiek.
+
+-------
+Fő menü
+-------
+
+Az oldal megnyitásakor a főmenü-t láthatjuk. Felül a logó, alatta az Start Game gomb, valamint a Choose Text (szövegválasztó) gomb.
+
+Start Game:
+- Elindítja a játékot a kiválasztott szöveggel, nehézséggel. Ilyenkor egy új oldalra vezet át.
+
+Choose Text:
+- Itt választhatjuk ki a begépelendő szöveget. A lista görgethető, benne soronként vannak felsorolva a szövegek címei.
+Ha az egyikre rákattintunk, akkor kiválasztjuk, a választást a lent található Ok gomb megnyomásával véglegesítjük.
+Ilyenkor a Choose Text gomb átvált a kiválasztott szöveg címére, hogy láthassuk, melyik szöveget választottuk ki.
+
+Alapértelmezetten: A Google című szöveg
+
+Alul egy panel található, amely beállításokat tartalmaz. Itt 4 gomb található, ezek a nehézséget hivatottak állítani.
+Játék közben, a billentyűk beúszási sebességét határozza meg a nehézség.
+A beúszási sebesség azt méri, hogy az adott billentyű hány másodperc alatt ér le a billentyűzeten lévő helyére.
+
+Easy: Könnyű nehézség, 7 másodperces idő
+Medium: Közepes, 4 másodperc
+Hard: Nehéz, 1 másodperc
+
+Custom:
+- Ez egy speciális gomb, ilyenkor a felhasználó finomhangolhatja a nehézséget. Ha ezt bekapcsoljuk,
+lenyílik még egy beállítás, ez a karakter sebesség csúszkája. 1-7.7-ig lehet vele állítani a nehézséget.
+Minél magasabb, annál gyorsabban fognak a billentyűk mozogni.
+
+Alapértelmezetten: Easy beállítás
+
+A panel legalján egy bepipálható opció található, "Text indicator" névvel.
+Ha ezt bekapcsoljuk, akkor játék közben, a képernyő tetején megjelenik egy szövegdoboz, amely a begépelendő
+szöveget folyamatosan jelzi, valamint kijelöli az éppen begépelendő karaktert.
+Alapértelmezetten: Bekapcsolva
+
+Ha mindent ízlésünk szerint beállítottunk, a Start game gombbal elindíthatjuk a játékot.
+
+-------
+A játék
+-------
+
+A játék indítása után egy billentyűzet fogad minket, ami angol kiosztású. A begépelendő szövegek is mind angol nyelvűek.
+Ha bekapcsoltuk a szövegdobozt, akkor fent, középre igazítva megjelenik és ha betöltött a szöveg, akkor kiírja.
+Itt nyomon lehet követni az aktuálisan begépelendő karaktert, valamint az egész szöveget.
+
+Jobb alul a pont kijelző panel található. Itt jelenik meg a pont és az aktuális szorzó.
+Pontot akkor kapunk, ha sikeresen leütöttünk egy karaktert.
+A pontozás a következőképpen van számolva:
+Alapvetően minden karakterért 5 pont jár, kivéve a szóköz, ami 2 pont, és egyéb speciális karakterek, amik 7 pontot érnek.
+Speciális karakternek számítanak: pont, vessző, kötőjel.
+Ezt megszorozzuk a nehézség és a szorzó összegével.
+A nehézségi értékek a következők:
+Easy: 1
+Medium: 2
+Hard: 3
+Custom: Változó, a csúszkával beállított értéktől függ, de szintén 1-3-ig terjed.
+
+Ha több karaktert sikerül egymás után leütnünk, egy úgynevezett streak-et kapunk. Ennek értéke minden egyes egymás utáni
+sikeres leütésnél 1-gyel nő. Ez határozza meg a szorzót a következőképpen:
+streak / (15 + streak * 0.1)
+A kapott értéket fölfelé kerekítve megkapjuk a szorzót.
+A streak minden egyes hibás leütésnél nullázódik.
+
+Bal felül az eddig helyes, jobb felül a helytelen találatok számát láthatjuk.
+Karakterenként a helytelen találatok száma maximum kétszer növekedhet. Egyszer, mikor elrontjuk, és mégegyszer, ha leér
+a helyére és még akkor sem sikerült leütnünk a megfelelő billentyűt. Ha többször rontjuk el ugyan azt a billentyűt,
+akkor nem fog nőni az értéke.
+
+Mikor egy billentyűt leütünk, a képernyőn lévő billentyűzeten is láthatjuk, hogy le van nyomva, ezt a billentyű sárga színe jelöli.
+
+Ha sikerül leütnünk a megfelelő gombot, akkor a beúszó billentyű zöld színre vált és eltűnik, majd jön a következő.
+Ha nem sikerül, azaz leér a helyére, akkor piros színű lesz és eltűnik, majd jön a következő.
+
+Akármilyen sebességgel lehet gépelni, mindenféleképpen jön egy új karakter minden egyes sikeres találat után.
+Ahogy eltaláljuk a megfelelő karaktereket, azok a fenti szövegdobozból eltűnnek, hogy folyamatosan az aktuális
+karaktert láthassa a játékos.
+
+Ha végeztünk a szöveggel, megjelenik egy panel, amely kiértékeli a teljesítményünket.
+A "Congratulations!" felirat alatt a százalékos értékelést láthatjuk, ez a következőképpen számolható:
+|(szöveg hoszza - rossz találatok) / szöveg hossza * 100)|
+Ezt lefelé kerekítve megkapjuk a százalékot.
+
+A százalék alatt található az 1-5-ig terjedő csillagos értékelés.
+A fehér csillagok mondják meg, hogy a felhasználó hány csillagot ért el. A maradék az üres csillagok.
+A csillagok száma a következőképpen számítandó:
+pont / maxpont * 100 / 20
+
+A maxpont a szöveg összes karakteréhez tartozó pontszám összegezve.
+
+A panel alján egy "Finish" nevű gomb található, ez visszavisz minket a főmenübe.
+
+
+-----------------------------------------------------------------------------
+KeyWarrior csapat
+
+
+
+
+
+
+
+
+
+
