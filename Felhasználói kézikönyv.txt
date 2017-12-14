@@ -3,14 +3,24 @@
 -------------------------
 Használati Útmutató:
 	-Menü: 
-		*Start Game gomb: Bal egér gombbal klikkelve a gombra betölt az alkalmazás és egyből
-elérhetővé válik a program használata.
-		*Options gomb: Klikkelve a gomra(bal egérgomb) a beállítási lehetőségek érhetők el. 	
+		*Start Game : Egérgomb lenyomására az alkalmazás elinul, adott nehézségi fokozaton. Alapértelmezett
+beállítása könnyű (EASY). 
+		*Choose text:Szöveg választásra szolgáló gomb ami a lenyomását követően megjelenít egy legördülő listát
+amiben a megadott szövegek közül tetszés szerint választhat.
+	
+	Easy/Medium/Hard Gombok kivalásztáskor színük feketére fált jelezve melyik nehézségi fokozat van jelenleg
+kiválasztva.
+		*Easy: Könnyű nehézségi fokozatra állítja a játékot (alapértelmezett érték).
+		*Medium: Közepes nehézségi fokozatra állítja a játékot.	
+		*Hard: Nehéz nehézségi fokozatra állítja a játékot. 
+		*Custom: Csúszka opciót ad aminek segítségével a játék nehézségi fokozatát lehet állítani 0-7.7 között.
+A nyullás értéket állítva a legkönnyebb nehézségi fokozatot, 7.7-re a legnehezebbet kapjuk.
+		*Text Indicator: Ki és Be lehet kapcsolni a segítségével a játékban megjelenő szöveget előrejelző dobozt.
+
 	-Alkalmazás:
 		*Billentyűzet: 
-			-Az alkalmazás indulásakor egy billentyűzet látható ,ami visszajelzésre szolgál. Billentyűk 
-lenyomásakor a virtuális klaviatúrán a citrom színnel jelzett billentyű jelenti azt ,hogy a felhasználó melyik 
-karaktert ütötte le.
+			-Visszajelzére szolgál, amit karakter leütéskor citrom színnel jelöl az adott karakternél.
+		*Text Indicator: A kijelző tetején lévő  
 		*találatszámláló:
 			-Az ablak bal felső sarkában található számláló jelzi a helyes találatot és megmondja hány leütés volt eddig 
 helyes valamint a jobb felső sarokban lévő számláló mutatja mennyi  helytelen leütés történt.
