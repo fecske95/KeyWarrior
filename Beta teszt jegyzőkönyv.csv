@@ -1,7 +1,21 @@
-﻿Tesztelő;Észrevétel helye (hol?);Dátum;Prioritás (1-10);Leírás;Melléklet(Opcionális);Böngésző
-Holló Márk;Főmenü;2017.12.08;5;Text Indikátor checkbox-ot nem rajzolja ki ;Kis kijelzőn a billentyűzet alsó gobjai nem látszanak, kilógnak a kijelző alján;Opera
-Horváth Krisztián;Játékablak;2017.12.08;4;Kis kijelzőn a billentyűzet alsó gobjai nem látszanak;kizárólag egy pipa látszódik és nem látja el a funkcióját;Böngészőtől független
-Tóth-Pál Márkó;Főmenü;2017.12.08;4;"""Choose text"" gomb nem működik és belelóg a ""Custom"",""Hard""-gonbokba";F11 használatával láthatóvá válik;Minden böngészőn észlelhető
-Sipos Dávid;Játék közben;2017.12.08.;2;Ha space a következő karakter, akkor azt is, meg az utána lévő betűt is kiemeli a textbox;;Google Chrome 62.0.3202.94
-Holló Márk;Főmenü;2017.12.08;1;A szövegválasztó menüben kiválasztunk egy szöveget akkor annak a sora fentebb csúszik;;Firefox Quantum
-Tóth-Pál Márkó;Játékablak;2017.12.09;5;Nem számolja a pontszámot Easy nehézségi fokozaton;;Google Chrome 62.0.3202.94
+Tesztelő,Tesztelt Elem,Tesztelt elem funkciója ,Tesztelt elem helye az alkalmazásban,"Google Chrome ""62.0.3202.94""","Mozzila Firefox ""57.0.1""","Opera ""49.0.2725.47""","Safari ""5.1.10""",Felbontás: 1920*1080 ,Felbontás: 1366*768,100%Scale Teljes kijelző(F11)
+Balog Balázs,UI Start Game,Elindítja az alkalmazást,Main menu,pipa,pipa,pipa,pipa,75%-125% Pipa,67%-110% pipa,pipa
+Balog Balázs,UI Choose Text,Szövegválasztást tesz lehetővé,Main menu,pipa,pipa,pipa,pipa,75%-125% Pipa,67%-110% pipa,pipa
+Balog Balázs,UI Easy,Nehézségi fokozat állítása,Main menu,pipa,pipa,pipa,pipa,75%-125% Pipa,67%-110% pipa,pipa
+Balog Balázs,UI Medium,Nehézségi fokozat állítása,Main menu,pipa,pipa,pipa,pipa,75%-125% Pipa,67%-110% pipa,pipa
+Balog Balázs,UI Hard,Nehézségi fokozat állítása,Main menu,pipa,pipa,pipa,pipa,75%-125% Pipa,67%-110% pipa,pipa
+Balog Balázs,UI Custom ,Lenyit egy miniablakot,Main menu,pipa,pipa,pipa,pipa,75%-125% Pipa,67%-110% pipa,pipa
+Balog Balázs,UI Slider,Nehézségi fokozat állítása érték szerint,Main menu,pipa,pipa,pipa,pipa,75%-125% Pipa,67%-110% pipa,pipa
+Balog Balázs,Text Indicator  On/Off,Ki/Be lehet kapcsolni a text indicatort ,Main menu,pipa,pipa,pipa,pipa,75%-125% Pipa,67%-110% pipa,pipa
+Makovinyi Krisztina,Billentyűzet,Animáció kijelzése leütésre,Game Board,pipa,pipa,pipa,pipa,75%-125% Pipa,67%-110% pipa,pipa
+Makovinyi Krisztina,Text Indicator,"Szöveg kijelzése, soron következő karakter eltűnése leütésre az inicatorról",Game Board,pipa,pipa,pipa,pipa,75%-125% Pipa,67%-110% pipa,pipa
+Makovinyi Krisztina,Pont/Szorzó kijelző,Kijelzi az eddig elért pontot és kiírja a jelenlegi szorzót,Game Board,pipa,pipa,pipa,pipa,75%-125% Pipa,67%-110% pipa,pipa
+Makovinyi Krisztina,Helyes leütés számláló,Számolja a helyesen leütött karaktereket,Game Board,pipa,pipa,pipa,pipa,75%-125% Pipa,67%-110% pipa,pipa
+Makovinyi Krisztina,Helytelen leütés számláló,Számolja a helytelenül leütött karaktereket,Game Board,pipa,pipa,pipa,pipa,75%-125% Pipa,67%-110% pipa,pipa
+Makovinyi Krisztina,UI Menu,Feldob egy menüt amin van egy Resume és egy Exit gomb,Game Board,pipa,pipa,pipa,pipa,75%-125% Pipa,67%-110% pipa,pipa
+Makovinyi Krisztina,UI Resume,Játék tovább folytatódik,Gamebord-menu,pipa,pipa,pipa,pipa,75%-125% Pipa,67%-110% pipa,pipa
+Makovinyi Krisztina,UI Exit,Kilépés a főmenübe,Gamebord-menu,pipa,pipa,pipa,pipa,75%-125% Pipa,67%-110% pipa,pipa
+Makovinyi Krisztina,Score Textbox,Kiírja a játék során elért összes pontszámot,Final Menu,pipa,pipa,pipa,pipa,75%-125% Pipa,67%-110% pipa,pipa
+Bettenbuk Dániel,Csillagos értékelő,A százaléktól függően kitölti 1 és 5 köztt a csillagok színét anrany színűre,Final Menu,pipa,pipa,pipa,pipa,75%-125% Pipa,67%-110% pipa,pipa
+Bettenbuk Dániel,Eredmény (százalékos) értékelő,Az elért pontokból és az összpontszámból százalékot számol,Final Menu,pipa,pipa,pipa,pipa,75%-125% Pipa,67%-110% pipa,pipa
+Bettenbuk Dániel,UI Exit,Kilépés a főmenübe,Final Menu,pipa,pipa,pipa,pipa,75%-125% Pipa,67%-110% pipa,pipa
