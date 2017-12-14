@@ -5,10 +5,6 @@ Eszterházy Károly Egyetem
 KeyWarrior játék specifikáció
 ------------------------------
 2017. szeptember 23. 
-
-	A dokumentum célja bemutatni a KeyWarrior játék követelményeit. A projekt agilis fejlesztési módszertanok alkalmazásával készül,
-így a technikai részleteket és a funkcionalitás részleteit a sprintek tervezésekor fogjuk véglegesíteni. A fejlesztés 6 sprintből fog 
-állni (2 hetes sprintekkel tervezve)
  
 A játék céljai
 -------------- 
