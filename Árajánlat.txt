@@ -43,7 +43,7 @@ Projektütemezés
 Függőségi gráf
   Mellékelve: Gráf.png
 
-A projekt fő fázisai „Ütemterv.txt”-ben van mellékelve.
+A projekt fő fázisai „Ütemterv.txt”-ben vannak mellékelve.
 
 6.Funkcionális specifikáció és ütemterv
 ---------------------------------------

@@ -29,30 +29,81 @@ Béta teszt
 ----------
 Tesztelendő böngészők: Opera, Firefox, Google Chrome, Safari
 Tesztelendő kijelzőméretek: 1280x720 (minimum), 1366x768, 1920x1080
-Tesztelendő elemek:
+Tesztelendő funkciók, elemek:
+
 Menu:
-- Az alkalmazás megnyitása a támogatott böngészőkben
-- A menu elrendezésének ellenőrzése
-- A háttér túlcsordul-e (HTML overflow) a különböző kijelző méreteken
-- A nehézség beállító gombok működése
-- Az egyéni nehézséget beállító slider működése
-- A text indicator (szövegdoboz) ki/be kapcsolhatóságának működése
-- A szövegválasztó gomb működése
+- A menu elrendezésének ellenőrzése:
+Elvárt működés: Az oldal tetején, felül középre rendezve kell lennie a logo-nak, kicsivel alatta, bal oldalon
+a játék elindító gomb, jobb oldalon a szövegválasztó gomb
+
+- A nehézség beállító gombok működése:
+Elvárt működés: Kattintáskor feketére kell váltaniuk, fehér szöveg színnel. Egyszerre csak egy lehet kijelölve.
+Az egyes gomboknak a nehézséget be kell állítaniuk, ezt a játék elindítása után lehet tesztelni.
+Easy: lassan jönnek a billentyűk
+Medium: kicsit gyorsabban
+Hard: gyorsan
+Custom: Ennek az opciónak meg kell jelenítenie a nehézségi gombok alatt egy csúszkát "Character Speed" néven.
+
+- Az egyéni nehézséget beállító slider működése:
+Elvárt működés: A csúszkát húzva a tőle jobbra lévő számot a pozíciojának megfelelően állítsa. Balra 0-hoz, jobbra 7.7-hez közelít.
+Játék közben ez a billentyűknek a billentyűzeten lévő helyükre való beúszás idejét jelöli másodpercekben.
+
+- A text indicator (szövegdoboz) ki/be kapcsolhatóságának működése:
+Elvárt működés: Ha ki van kapcsolva, akkor játék közben ne jelenjen meg a szövegdoboz felül. Ellenkező esetben jelenjen meg.
+
+- A szövegválasztó gomb működése:
+Elvárt működés: Kattintásra behoz egy legördülő listát, amiben a begépelhető szövegeket lehet kiválasztani.
+A listában ki lehessen választani a szöveget, majd utána a szövegválasztó gomb szövege cserélődjön ki a választott szöveg nevére.
+
+- A játék elindító gomb működése:
+Elvárt működés: Indítsa el a játékot, kattintásra irányítson át a játék oldalára.
 
 In game (játék közben):
-- Billentyű lenyomásra a képernyőn lévő billentyűzeten a megfelelő karakter kiemelésének működése
-- Text indicator működése (kijelzi-e a szöveget, kiemeli-e az első karaktert, kilóg-e a szöveg)
-- Score indicator (pont, szorzó kijelző) működése
-- Helyes leütés számláló működése
-- Helytelen leütés számláló működése
-- Karakter bevitel ellenőrzése (megfelelően ellenőrzi-e a bevitt billentyűt)
-- A játék közbeni menu működése (feldobja-e, használható-e)
-- Resume gomb működése
-- Exit gomb működése
-- A játék végén a statisztikát megjelenítő panel megjelenésének ellenőrzése
-- Az 5 csillagos értékelés során megjelennek-e a csillagok
-- A százalék megfelelő kiszámolásának, megjelenésének ellenőrzése
-- A kilépés gomb működése
+- Billentyű lenyomásra a képernyőn lévő billentyűzeten a megfelelő karakter kiemelésének működése:
+Elvárt működés: Ha lenyomunk egy billentyűt, akkor a képernyőn lévő billentyűzeten az annak megfelelő billentyű legyen sárga (amíg le van nyomva).
+
+- Text indicator működése (kijelzi-e a szöveget, kiemeli-e az első karaktert, kilóg-e a szöveg):
+Elvárt működés: A begépelendő szöveget írja ki, az éppen begépelendő karaktert emelje ki fehér színnel. A szöveg nem lóghat ki a szövegdobozból.
+
+- Score indicator (pont, szorzó kijelző) működése:
+Elvárt működés: Minden leütés után frissüljön, a pontokat megfelelően jelezze ki, ne lógjon ki a paneljéből.
+A szorzó maximum hatszoros lehet.
+
+- Helyes leütés számláló működése:
+Elvárt működés: Ha a megfelelő billentyűt ütöttük le, akkor az értéke nőljön 1-el.
+
+- Helytelen leütés számláló működése:
+Elvárt működés: Ha nem megfelelő billentyűt ütöttünk le, akkor az értéke nőljön 1-el. Ezt csak egyszer tegye meg az adott karakterre, viszont
+még egyet számolhat, ha a karakter leér a helyére és akkor sem sikerült leütni.
+
+- Karakter bevitel ellenőrzése (megfelelően ellenőrzi-e a bevitt billentyűt):
+Elvárt működés: Ha az éppen begépelendő karakterhez megfelelő gombot leütjük, akkor a képernyőn a karakter billentyűje váltson zöldre
+és közelítve tűnjön el, majd a következő karakter ússzon be.
+
+- A játék közbeni menu működése:
+Elvárt működés: Játék közben, a Menu gombra kattintva egy menu-nek kell megjelennie. Ilyenkor a billentyűk nem mozoghatnak, a billentyűzeten nem jelölhetők ki.
+Nem számít hibának, ha az aktuális karaktert kiemelő animáció ilyenkor is fut, csak ne mozogjon.
+
+- Resume gomb működése:
+Elvárt működés: Kattintásra zárja be a menu-t és a játék folytatódjon.
+
+- Exit gomb működése:
+Elvárt működés: Kattintásra lépjen vissza a főmenübe.
+
+- A játék végén a statisztikát megjelenítő panel megjelenésének ellenőrzése:
+Elvárt működés: Felül, középre igazítva egy "Congratulations!" szövegnek kell megjelennie, alatta az elért százalékkal, majd a 1-5-ig terjedő csillagos értékeléssel.
+
+
+- Az 5 csillagos értékelés során megjelennek-e a csillagok:
+Elvárt működés: A pontszámnak megfelelően 1-5-ig értékelje a felhasználó teljesítményét. 
+A fehér csillag jelenti azt, hogy azt a szintet a felhasználó elérte-e.
+Például: 3 fehér csillag, 2 üres, ez 3 csillagos értékelést jelent.
+
+- A százalék megfelelő kiszámolásának, megjelenésének ellenőrzése:
+Elvárt működés: A százaléknak 1-100 között kell lennie, legyen reális a felhasználó teljesítménye alapján.
+
+- A statisztikát jelző panel kilépés gombjának működése:
+Elvárt működés: Kattintásra lépjen vissza a főmenübe.
 
 Tesztterv
 ---------
