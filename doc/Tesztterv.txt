@@ -22,7 +22,7 @@ Tesztelés azonosító: 002 – Béta teszt
   - Időtartam: 4 nap
   - Teszt kezdete: 2017/12/08
   - Teszt befejezése: 2017/12/11
-  - A teszt elsődleges célja: Minden meglévő funkció megfelelő működésének ellenőrzése. A tesztet harmadik személyek végzik.
+  - A teszt elsődleges célja: Minden meglévő funkció megfelelő működésének ellenőrzése. A tesztet a fejlesztők és harmadik személyek végzik.
   - Az eljárás sikeres, ha minden funkció megfelelően működik a harmadik személyek által tesztelve is.
 
 Béta teszt
