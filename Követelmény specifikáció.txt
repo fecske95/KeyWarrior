@@ -39,6 +39,5 @@ Pontozás elkészítése. Választható szövegek hozzáadása.
 
 Jelenlegi helyzet leírása:
 -------------------
-	 	
-	*A szoftver segítségnyújtásra szolgál azon emberek számára amik igénylik a gyors és gépírás tanulását.
+A szoftver segítségnyújtásra szolgál azon emberek számára amik igénylik a gyors és gépírás tanulását.
 Jelenleg más hasnonló szoftver nem érhető el a weben ami ilyen játékos körülményeket biztosít a tanulásra.

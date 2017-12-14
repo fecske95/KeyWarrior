@@ -25,6 +25,35 @@ Tesztelés azonosító: 002 – Béta teszt
   - A teszt elsődleges célja: Minden meglévő funkció megfelelő működésének ellenőrzése. A tesztet harmadik személyek végzik.
   - Az eljárás sikeres, ha minden funkció megfelelően működik a harmadik személyek által tesztelve is.
 
+Béta teszt
+----------
+Tesztelendő böngészők: Opera, Firefox, Google Chrome, Safari
+Tesztelendő kijelzőméretek: 1280x720 (minimum), 1366x768, 1920x1080
+Tesztelendő elemek:
+Menu:
+- Az alkalmazás megnyitása a támogatott böngészőkben
+- A menu elrendezésének ellenőrzése
+- A háttér túlcsordul-e (HTML overflow) a különböző kijelző méreteken
+- A nehézség beállító gombok működése
+- Az egyéni nehézséget beállító slider működése
+- A text indicator (szövegdoboz) ki/be kapcsolhatóságának működése
+- A szövegválasztó gomb működése
+
+In game (játék közben):
+- Billentyű lenyomásra a képernyőn lévő billentyűzeten a megfelelő karakter kiemelésének működése
+- Text indicator működése (kijelzi-e a szöveget, kiemeli-e az első karaktert, kilóg-e a szöveg)
+- Score indicator (pont, szorzó kijelző) működése
+- Helyes leütés számláló működése
+- Helytelen leütés számláló működése
+- Karakter bevitel ellenőrzése (megfelelően ellenőrzi-e a bevitt billentyűt)
+- A játék közbeni menu működése (feldobja-e, használható-e)
+- Resume gomb működése
+- Exit gomb működése
+- A játék végén a statisztikát megjelenítő panel megjelenésének ellenőrzése
+- Az 5 csillagos értékelés során megjelennek-e a csillagok
+- A százalék megfelelő kiszámolásának, megjelenésének ellenőrzése
+- A kilépés gomb működése
+
 Tesztterv
 ---------
 Jelen dokumentum célja a KeyWarrior megvalósítása projektben a rendszerek tesztelési elvárásait ismertesse.
@@ -46,13 +75,21 @@ Tesztelési folyamat leírása
 ---------------------------
 Az alfa és béta teszt során a fejlesztők elkészítik a jegyzőkönyv sablonját, majd felteszik egy online felületre.
 A tesztelők megnyitják az alkalmazást a webes felületen és elkezdik normál user-ként használni.
-A felmerülő hibákat, esetleg nem várt viselkedést feljegyzik a jegyzőkönyvbe. Ez a következőket tartalmazza:
+A felmerülő hibákat, esetleg nem várt viselkedést feljegyzik a jegyzőkönyvbe. Az alfa teszt esetén ez a következőket tartalmazza:
 - Tesztelő neve
 - Rögzítés ideje
 - A hiba helye
 - A hiba leírása
 - Opcionális mellékletek
 - Böngésző neve, amelyben a hiba fellépett
+
+A béta teszt jegyzőkönyvének mezői:
+- Tesztelő neve
+- Tesztelt elem
+- Tesztelt elem funkciója
+- Tesztelt elem helye az alkalmazásban
+- A támogatott böngészőkben megfelelően működik-e, vagy sem
+- A támogatott felbontásokon megfelelően működik-e, vagy sem
 
 A tesztek után a jegyzőkönyv véglegesítésre kerül, felkerül a verziókezelő rendszerbe. A rögzített
 hibákat a fejlesztők ellenőrzik, reprodukálják, majd létrehoznak hozzá egy feladatot és javítják.
